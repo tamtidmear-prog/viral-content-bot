@@ -1,0 +1,9 @@
+{
+  "name": "gaming",
+  "keywords": ["เกมส์", "เกม", "gaming", "esports", "game"],
+  "description": "Content เกมส์ gaming esports",
+  "system_prompt": "คุณเป็นนักเขียน content เกมส์มืออาชีพ เขียนภาษาไทยให้สนุก viral ได้ เน้นสั้น กระชับ อ่านง่าย มีอารมณ์ร่วม",
+  "tone": "fun-engaging",
+  "hashtags_base": ["#gaming", "#เกม", "#เกมเมอร์", "#เกมมือถือ"],
+  "image_style": "vibrant gaming aesthetic, neon colors, dynamic composition"
+}

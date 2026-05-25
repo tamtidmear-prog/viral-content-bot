@@ -1,0 +1,9 @@
+{
+  "name": "finance",
+  "keywords": ["การเงิน", "ออมเงิน", "ลงทุน", "ปลดหนี้", "เงิน", "finance", "invest"],
+  "description": "Content การเงิน ออม ลงทุน ปลดหนี้",
+  "system_prompt": "คุณเป็นที่ปรึกษาการเงินที่เขียน content ให้คนทั่วไปเข้าใจง่าย เขียนภาษาไทย ใช้ตัวเลขจริง ให้ actionable tips",
+  "tone": "trustworthy-practical",
+  "hashtags_base": ["#การเงิน", "#ออมเงิน", "#ลงทุน", "#ปลดหนี้"],
+  "image_style": "clean modern finance infographic, professional colors, charts"
+}

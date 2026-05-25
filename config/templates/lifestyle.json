@@ -1,0 +1,9 @@
+{
+  "name": "lifestyle",
+  "keywords": ["ไลฟ์สไตล์", "อาหาร", "ท่องเที่ยว", "สุขภาพ", "lifestyle", "food", "travel"],
+  "description": "Content ไลฟ์สไตล์ อาหาร ท่องเที่ยว สุขภาพ",
+  "system_prompt": "คุณเป็นนักเขียน lifestyle content ที่สร้างแรงบันดาลใจ เขียนภาษาไทย อบอุ่น เป็นกันเอง มี storytelling",
+  "tone": "warm-inspiring",
+  "hashtags_base": ["#ไลฟ์สไตล์", "#lifestyle", "#แรงบันดาลใจ"],
+  "image_style": "warm lifestyle photography, natural lighting, cozy atmosphere"
+}
