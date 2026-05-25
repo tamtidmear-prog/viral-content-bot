@@ -109,7 +109,7 @@ export async function generateContent(topic: string): Promise<BrainOutput> {
 }
 
 กฎ:
-- caption ต้องภาษาไทย สั้น กระชับ อ่านง่าย มี hook แรก
+- caption ต้องภาษาไทย สั้น กระชับ อ่านง่าย มี hook แรก ใส่ emoji น่ารักๆ ประกอบให้โพสดูสดใสน่าอ่าน (เช่น ✨🔥💡🎮💰🌟❤️)
 - hashtags ${config.defaults.hashtag_count} อัน ผสมไทย+อังกฤษ
 - image_prompt ต้องเป็นภาษาอังกฤษ ละเอียดพอสร้างรูปได้`;
 

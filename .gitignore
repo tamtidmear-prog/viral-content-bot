@@ -3,3 +3,6 @@ output/
 config/platforms.json
 .env
 *.log
+.fb-session/
+.tmp/
+.venv/

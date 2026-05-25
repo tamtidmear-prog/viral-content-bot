@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viral Content Bot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .drop-zone { border: 2px dashed #cbd5e1; transition: all 0.2s; }
+    .drop-zone.dragover { border-color: #6366f1; background: #eef2ff; }
+    .preview-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; }
+    .toast { animation: slideIn 0.3s ease-out; }
+    @keyframes slideIn { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .spinner { border: 3px solid #e5e7eb; border-top: 3px solid #6366f1; border-radius: 50%; width: 20px; height: 20px; animation: spin 0.8s linear infinite; display: inline-block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- ============================
+       Header
+       ============================ -->
+  <header class="bg-indigo-600 text-white py-4 px-6 shadow-lg">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-bold">Viral Content Bot</h1>
+        <p class="text-indigo-200 text-sm">AI สร้าง content + โพส Facebook อัตโนมัติ</p>
+      </div>
+      <button onclick="showTab('history')" class="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-sm">
+        ประวัติโพส
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto py-8 px-6">
+
+    <!-- ============================
+         Tab: Create Post
+         ============================ -->
+    <div id="tab-create">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- ส่วนซ้าย: ฟอร์มสร้าง content -->
+        <div class="space-y-6">
+
+          <!-- เลือก Page -->
+          <div class="bg-white rounded-xl shadow p-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Facebook Page</label>
+            <select id="pageSelect" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+              <option value="">กำลังโหลด...</option>
+            </select>
+          </div>
+
+          <!-- หัวข้อ + AI Generate -->
+          <div class="bg-white rounded-xl shadow p-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">หัวข้อ / Topic</label>
+            <div class="flex gap-2">
+              <input id="topicInput" type="text" placeholder="เช่น เกมส์ใหม่น่าเล่น 2026"
+                class="flex-1 border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+              <button onclick="aiGenerate()" id="btnGenerate"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-lg font-medium whitespace-nowrap">
+                AI Generate
+              </button>
+            </div>
+            <p class="text-xs text-gray-400 mt-1">ใส่หัวข้อ แล้วกด AI Generate — ระบบจะสร้าง caption + hashtag + emoji ให้อัตโนมัติ</p>
+          </div>
+
+          <!-- Caption -->
+          <div class="bg-white rounded-xl shadow p-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Caption</label>
+            <textarea id="captionInput" rows="4" placeholder="พิมพ์เองหรือให้ AI สร้างให้..."
+              class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-none"></textarea>
+          </div>
+
+          <!-- Hashtags -->
+          <div class="bg-white rounded-xl shadow p-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Hashtags</label>
+            <input id="hashtagInput" type="text" placeholder="#AI #viral #content"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+          </div>
+
+          <!-- อัพโหลดรูป -->
+          <div class="bg-white rounded-xl shadow p-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">รูปภาพ (ไม่บังคับ — แนบได้หลายรูป)</label>
+            <div id="dropZone" class="drop-zone rounded-lg p-8 text-center cursor-pointer"
+              onclick="document.getElementById('fileInput').click()">
+              <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <p class="mt-2 text-sm text-gray-500">คลิกเลือกรูป หรือลากมาวาง</p>
+              <p class="text-xs text-gray-400">PNG, JPG — ได้หลายรูป</p>
+            </div>
+            <input id="fileInput" type="file" multiple accept="image/*" class="hidden" onchange="handleFiles(this.files)">
+            <div id="imagePreview" class="flex flex-wrap gap-3 mt-4"></div>
+          </div>
+        </div>
+
+        <!-- ส่วนขวา: Preview + Post -->
+        <div class="space-y-6">
+
+          <!-- Preview -->
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="text-sm font-semibold text-gray-700 mb-4">Preview</h3>
+            <div id="previewArea" class="border border-gray-200 rounded-lg p-4 min-h-[200px]">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 font-bold">AI</div>
+                <div>
+                  <p id="previewPageName" class="font-semibold text-sm">เลือก Page</p>
+                  <p class="text-xs text-gray-400">Just now</p>
+                </div>
+              </div>
+              <p id="previewCaption" class="text-sm text-gray-600 whitespace-pre-wrap">caption จะแสดงที่นี่...</p>
+              <p id="previewHashtags" class="text-sm text-indigo-500 mt-2"></p>
+              <div id="previewMeta" class="flex gap-2 mt-3 text-xs"></div>
+              <div id="previewImages" class="grid grid-cols-3 gap-2 mt-3"></div>
+            </div>
+          </div>
+
+          <!-- Post Button -->
+          <button onclick="postToFacebook()" id="btnPost"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg transition-all">
+            โพสไป Facebook
+          </button>
+
+          <!-- Result -->
+          <div id="resultArea" class="hidden bg-green-50 border border-green-200 rounded-xl p-6">
+            <h3 class="font-semibold text-green-800 mb-2">โพสสำเร็จ!</h3>
+            <a id="resultLink" href="#" target="_blank" class="text-blue-600 underline text-sm break-all"></a>
+          </div>
+
+          <!-- Error -->
+          <div id="errorArea" class="hidden bg-red-50 border border-red-200 rounded-xl p-6">
+            <h3 class="font-semibold text-red-800 mb-2">เกิดข้อผิดพลาด</h3>
+            <p id="errorMsg" class="text-sm text-red-600"></p>
+          </div>
+
+          <!-- Template Info -->
+          <div class="bg-white rounded-xl shadow p-6">
+            <h3 class="text-sm font-semibold text-gray-700 mb-3">Template ที่ใช้ได้</h3>
+            <div id="templateList" class="space-y-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================
+         Tab: History
+         ============================ -->
+    <div id="tab-history" class="hidden">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-gray-800">ประวัติโพส</h2>
+        <button onclick="showTab('create')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm">
+          สร้างโพสใหม่
+        </button>
+      </div>
+      <div id="historyList" class="space-y-4"></div>
+    </div>
+
+  </main>
+
+  <!-- ============================
+       Toast Notification
+       ============================ -->
+  <div id="toast" class="fixed top-4 right-4 z-50 hidden"></div>
+
+  <!-- ============================
+       JavaScript
+       ============================ -->
+  <script>
+    // ============================
+    // State
+    // ============================
+    let uploadedFiles = [];
+    let pages = [];
+
+    // ============================
+    // Init — โหลดข้อมูลตอนเปิดหน้า
+    // ============================
+    async function init() {
+      // โหลด pages
+      const pagesRes = await fetch('/api/pages');
+      const pagesData = await pagesRes.json();
+      pages = pagesData.pages;
+      const sel = document.getElementById('pageSelect');
+      sel.innerHTML = pages.map(p =>
+        `<option value="${p.id}" ${p.id === pagesData.currentPageId ? 'selected' : ''}>${p.name}</option>`
+      ).join('');
+      updatePreview();
+
+      // โหลด templates
+      const tplRes = await fetch('/api/templates');
+      const templates = await tplRes.json();
+      const tplList = document.getElementById('templateList');
+      tplList.innerHTML = templates.map(t =>
+        `<div class="flex items-center gap-2 text-sm">
+          <span class="bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded text-xs font-medium">${t.name}</span>
+          <span class="text-gray-500">${t.keywords.join(', ')}</span>
+        </div>`
+      ).join('');
+    }
+
+    // ============================
+    // AI Generate — สร้าง caption/hashtag จากหัวข้อ
+    // ============================
+    async function aiGenerate() {
+      const topic = document.getElementById('topicInput').value.trim();
+      if (!topic) { showToast('ใส่หัวข้อก่อน', 'warn'); return; }
+
+      const btn = document.getElementById('btnGenerate');
+      btn.innerHTML = '<span class="spinner"></span> กำลังสร้าง...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topic })
+        });
+        const data = await res.json();
+
+        if (data.error) throw new Error(data.error);
+
+        document.getElementById('captionInput').value = data.caption;
+        document.getElementById('hashtagInput').value = data.hashtags.join(' ');
+        updatePreview();
+        showToast('AI สร้าง content สำเร็จ!', 'success');
+      } catch (err) {
+        showToast('สร้างไม่ได้: ' + err.message, 'error');
+      } finally {
+        btn.innerHTML = 'AI Generate';
+        btn.disabled = false;
+      }
+    }
+
+    // ============================
+    // File Upload — ลากวางหรือเลือกรูป
+    // ============================
+    const dropZone = document.getElementById('dropZone');
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+    dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('dragover'); });
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      handleFiles(e.dataTransfer.files);
+    });
+
+    async function handleFiles(fileList) {
+      const form = new FormData();
+      for (const f of fileList) {
+        form.append('images', f);
+      }
+
+      showToast('กำลังอัพโหลด...', 'info');
+      const res = await fetch('/api/upload', { method: 'POST', body: form });
+      const data = await res.json();
+
+      if (data.files) {
+        uploadedFiles.push(...data.files);
+        renderImagePreviews();
+        updatePreview();
+        showToast(`อัพโหลด ${data.files.length} รูปสำเร็จ`, 'success');
+      }
+    }
+
+    function renderImagePreviews() {
+      const container = document.getElementById('imagePreview');
+      container.innerHTML = uploadedFiles.map((f, i) =>
+        `<div class="relative group">
+          <img src="/uploads/${f}" class="preview-img shadow">
+          <button onclick="removeImage(${i})"
+            class="absolute -top-2 -right-2 bg-red-500 text-white w-6 h-6 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-opacity">x</button>
+        </div>`
+      ).join('');
+    }
+
+    function removeImage(index) {
+      uploadedFiles.splice(index, 1);
+      renderImagePreviews();
+      updatePreview();
+    }
+
+    // ============================
+    // Preview — แสดงตัวอย่างก่อนโพส
+    // ============================
+    function updatePreview() {
+      const pageId = document.getElementById('pageSelect').value;
+      const page = pages.find(p => p.id === pageId);
+      document.getElementById('previewPageName').textContent = page ? page.name : 'เลือก Page';
+      document.getElementById('previewCaption').textContent = document.getElementById('captionInput').value || 'caption จะแสดงที่นี่...';
+      document.getElementById('previewHashtags').textContent = document.getElementById('hashtagInput').value;
+
+      document.getElementById('previewMeta').innerHTML = '<span class="bg-green-100 text-green-600 px-2 py-0.5 rounded">🌍 โพสทันที (สาธารณะ)</span>';
+
+      const imgContainer = document.getElementById('previewImages');
+      imgContainer.innerHTML = uploadedFiles.map(f =>
+        `<img src="/uploads/${f}" class="rounded-lg object-cover w-full aspect-square">`
+      ).join('');
+    }
+
+    // Live preview
+    document.getElementById('captionInput').addEventListener('input', updatePreview);
+    document.getElementById('hashtagInput').addEventListener('input', updatePreview);
+    document.getElementById('pageSelect').addEventListener('change', updatePreview);
+
+    // ============================
+    // Post — โพสไป Facebook
+    // ============================
+    async function postToFacebook() {
+      const pageId = document.getElementById('pageSelect').value;
+      const caption = document.getElementById('captionInput').value.trim();
+      const hashtags = document.getElementById('hashtagInput').value.trim();
+
+      if (!pageId) { showToast('เลือก Page ก่อน', 'warn'); return; }
+      if (!caption) { showToast('ใส่ caption ก่อน', 'warn'); return; }
+
+      const btn = document.getElementById('btnPost');
+      btn.innerHTML = '<span class="spinner"></span> กำลังโพส...';
+      btn.disabled = true;
+      document.getElementById('resultArea').classList.add('hidden');
+      document.getElementById('errorArea').classList.add('hidden');
+
+      try {
+        const res = await fetch('/api/post', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pageId, caption, hashtags, images: uploadedFiles })
+        });
+        const data = await res.json();
+
+        if (data.error) throw new Error(data.error);
+
+        document.getElementById('resultArea').classList.remove('hidden');
+        document.getElementById('resultLink').href = data.postUrl;
+        document.getElementById('resultLink').textContent = data.postUrl;
+        showToast('โพสสำเร็จ!', 'success');
+
+        // clear uploaded files
+        uploadedFiles = [];
+        renderImagePreviews();
+        updatePreview();
+      } catch (err) {
+        document.getElementById('errorArea').classList.remove('hidden');
+        document.getElementById('errorMsg').textContent = err.message;
+        showToast('โพสไม่สำเร็จ', 'error');
+      } finally {
+        btn.innerHTML = 'โพสไป Facebook';
+        btn.disabled = false;
+      }
+    }
+
+    // ============================
+    // History — ดูประวัติโพส
+    // ============================
+    async function loadHistory() {
+      const res = await fetch('/api/history');
+      const history = await res.json();
+      const list = document.getElementById('historyList');
+
+      if (history.length === 0) {
+        list.innerHTML = '<p class="text-gray-400 text-center py-8">ยังไม่มีประวัติโพส</p>';
+        return;
+      }
+
+      list.innerHTML = history.map(h => {
+        const caption = h.caption || h.topic || h.folder || 'ไม่มี caption';
+        const time = h.timestamp || h.folder || '';
+        const url = h.publishResults?.facebook?.postUrl || h.postUrl || '';
+        const success = h.publishResults?.facebook?.success || h.success || false;
+        return `<div class="bg-white rounded-xl shadow p-4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-gray-400">${time}</span>
+            ${success ? '<span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded">สำเร็จ</span>' : '<span class="bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded">draft</span>'}
+          </div>
+          <p class="text-sm text-gray-700 line-clamp-2">${caption.substring(0, 150)}</p>
+          ${url ? `<a href="${url}" target="_blank" class="text-xs text-blue-500 underline mt-1 block">${url}</a>` : ''}
+        </div>`;
+      }).join('');
+    }
+
+    // ============================
+    // Tab Navigation
+    // ============================
+    function showTab(tab) {
+      document.getElementById('tab-create').classList.toggle('hidden', tab !== 'create');
+      document.getElementById('tab-history').classList.toggle('hidden', tab !== 'history');
+      if (tab === 'history') loadHistory();
+    }
+
+    // ============================
+    // Toast
+    // ============================
+    function showToast(msg, type = 'info') {
+      const colors = { success: 'bg-green-500', error: 'bg-red-500', warn: 'bg-yellow-500', info: 'bg-indigo-500' };
+      const toast = document.getElementById('toast');
+      toast.innerHTML = `<div class="toast ${colors[type]} text-white px-6 py-3 rounded-lg shadow-lg text-sm">${msg}</div>`;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+
+    // ============================
+    // Start
+    // ============================
+    init();
+  </script>
+</body>
+</html>
