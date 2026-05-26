@@ -1,0 +1,7 @@
+[PLACEHOLDER — ยังไม่มีรูป]
+
+Image Prompt:
+A futuristic illustration of a person surrounded by various AI-powered devices and robots, with a cityscape in the background, showcasing how AI integrates into daily life, with vibrant colors and detailed textures, in a social media post format
+
+ใส่รูปเองที่: output/2026-05-25_AI_กับชีวิตประจำวัน/image.png
+หรือรอ Phase 4 ที่จะมี image gen API เต็มรูปแบบ

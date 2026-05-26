@@ -1,0 +1,29 @@
+{
+  "topic": "โพส content เกี่ยวกับเกมส์",
+  "brief": {
+    "topic": "โพส content เกี่ยวกับเกมส์",
+    "content_type": "image_post",
+    "tone": "fun-engaging",
+    "style": "vibrant gaming aesthetic, neon colors, dynamic composition",
+    "template_used": "gaming"
+  },
+  "caption": "เกมส์ใหม่มาแล้ว! พร้อมที่จะท้าทายความสามารถของคุณหรือยัง? ไม่ว่าจะเป็นเกมส์แนวผจญภัย หรือเกมส์แนวยิงกัน ก็มีเกมส์ที่เหมาะสำหรับทุกคน",
+  "hashtags": [
+    "#gaming",
+    "#เกม",
+    "#เกมเมอร์",
+    "#เกมมือถือ",
+    "#เกมส์ใหม่",
+    "#GamingCommunity",
+    "#เกมส์ออนไลน์",
+    "#GameLover"
+  ],
+  "imagePrompt": "Vibrant gaming scene with neon lights, dynamic composition, and high-quality graphics, featuring a group of gamers playing together, with a large screen displaying a thrilling game in the background, and a cityscape at night with a futuristic atmosphere",
+  "imageResult": {
+    "type": "placeholder",
+    "path": "output/2026-05-25_โพส_content_เกี่ยวกับเกมส์/image.txt"
+  },
+  "publishResults": {},
+  "elapsed_seconds": 1.8,
+  "timestamp": "2026-05-25T04:55:44.163Z"
+}

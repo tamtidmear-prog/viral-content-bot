@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prism_Of_Novus — Content Creation Flowchart v3</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #e0e0e0; min-height: 100vh; padding: 20px;
+  }
+  h1 { text-align: center; color: #e8b4f8; font-size: 1.9em; margin: 20px 0 5px; text-shadow: 0 0 20px rgba(232,180,248,0.3); }
+  .subtitle { text-align: center; color: #8892b0; margin-bottom: 25px; font-size: 0.9em; }
+  .legend {
+    display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;
+    margin-bottom: 25px; padding: 12px;
+    background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.8em; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+
+  .flow { max-width: 1050px; margin: 0 auto; }
+
+  .step {
+    margin-bottom: 10px; padding: 18px 22px; border-radius: 14px; border-left: 5px solid;
+    background: rgba(255,255,255,0.06); transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .step:hover { transform: translateX(4px); box-shadow: 0 5px 25px rgba(0,0,0,0.3); }
+  .step-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .step-num {
+    width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-weight: bold; font-size: 1em; flex-shrink: 0;
+  }
+  .step-title { font-size: 1.1em; font-weight: 600; }
+  .step-who { font-size: 0.75em; padding: 2px 9px; border-radius: 20px; margin-left: auto; white-space: nowrap; }
+  .step-desc { margin-left: 44px; font-size: 0.85em; color: #8892b0; margin-bottom: 12px; line-height: 1.5; }
+
+  /* IO 3-column layout */
+  .io-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-left: 44px; }
+  .io-box { padding: 10px 12px; border-radius: 10px; font-size: 0.8em; line-height: 1.55; }
+  .io-box.input { background: rgba(79,195,247,0.07); border: 1px solid rgba(79,195,247,0.2); }
+  .io-box.process { background: rgba(232,180,248,0.07); border: 1px solid rgba(232,180,248,0.2); }
+  .io-box.output { background: rgba(100,255,218,0.07); border: 1px solid rgba(100,255,218,0.2); }
+  .io-label { font-weight: bold; font-size: 0.85em; margin-bottom: 5px; }
+  .io-box.input .io-label { color: #4fc3f7; }
+  .io-box.process .io-label { color: #e8b4f8; }
+  .io-box.output .io-label { color: #64ffda; }
+  .io-box ul { list-style: none; padding: 0; }
+  .io-box li { padding: 2px 0; }
+  .io-src { color: #ffab40; font-size: 0.9em; }
+  .io-dest { color: #80cbc4; font-size: 0.9em; }
+  .t { display: inline-block; font-size: 0.85em; padding: 1px 6px; border-radius: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
+  .fp { font-family: monospace; font-size: 0.85em; color: #64ffda; background: rgba(100,255,218,0.06); padding: 1px 4px; border-radius: 3px; }
+  .arrow { text-align: center; font-size: 1.3em; color: #5c6785; margin: -2px 0; z-index: 1; position: relative; }
+  .arrow-label { font-size: 0.6em; color: #8892b0; display: block; }
+  .section-label { text-align: center; font-size: 0.75em; color: #5c6785; margin: 22px 0 10px; text-transform: uppercase; letter-spacing: 3px; }
+  .decision { background: rgba(255,138,101,0.07); border: 2px dashed #ff8a65; border-left: 5px solid #ff8a65; }
+
+  .prism { border-color: #e8b4f8; }
+  .prism .step-num { background: #e8b4f8; color: #1a1a2e; }
+  .prism .step-title { color: #e8b4f8; }
+  .prism .step-who { background: rgba(232,180,248,0.15); color: #e8b4f8; }
+  .notebooklm { border-color: #4fc3f7; }
+  .notebooklm .step-num { background: #4fc3f7; color: #1a1a2e; }
+  .notebooklm .step-title { color: #4fc3f7; }
+  .notebooklm .step-who { background: rgba(79,195,247,0.15); color: #4fc3f7; }
+  .origin { border-color: #ffd54f; }
+  .origin .step-num { background: #ffd54f; color: #1a1a2e; }
+  .origin .step-title { color: #ffd54f; }
+  .origin .step-who { background: rgba(255,213,79,0.15); color: #ffd54f; }
+  .nexus { border-color: #81c784; }
+  .nexus .step-num { background: #81c784; color: #1a1a2e; }
+  .nexus .step-title { color: #81c784; }
+  .nexus .step-who { background: rgba(129,199,132,0.15); color: #81c784; }
+  .masterj { border-color: #ff8a65; }
+  .masterj .step-num { background: #ff8a65; color: #1a1a2e; }
+  .masterj .step-title { color: #ff8a65; }
+  .masterj .step-who { background: rgba(255,138,101,0.15); color: #ff8a65; }
+  .facebook { border-color: #64b5f6; }
+  .facebook .step-num { background: #64b5f6; color: #1a1a2e; }
+  .facebook .step-title { color: #64b5f6; }
+  .facebook .step-who { background: rgba(100,181,246,0.15); color: #64b5f6; }
+
+  .summary { max-width: 1050px; margin: 25px auto; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
+  .summary h2 { color: #64ffda; margin-bottom: 12px; font-size: 1.1em; }
+  .summary table { width: 100%; border-collapse: collapse; font-size: 0.8em; }
+  .summary th { text-align: left; color: #e8b4f8; padding: 7px 8px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+  .summary td { padding: 7px 8px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #b0b8d0; vertical-align: top; }
+
+  @media (max-width: 800px) { .io-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<h1>🔮 Prism_Of_Novus — Content Creation Flow v3</h1>
+<p class="subtitle">ทุก Step: INPUT (ได้มาจากไหน) → PROCESS (ทำอะไร) → OUTPUT (เอาไปใช้ที่ไหน)</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#e8b4f8"></div> Prism</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div> NotebookLM</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ffd54f"></div> Origin</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#81c784"></div> Nexus</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ff8a65"></div> Master J</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#64b5f6"></div> Facebook</div>
+  <div class="legend-item" style="gap:10px">
+    <span style="color:#4fc3f7">📥 Input</span>
+    <span style="color:#e8b4f8">⚙️ Process</span>
+    <span style="color:#64ffda">📤 Output</span>
+  </div>
+</div>
+
+<div class="flow">
+
+<div class="section-label">— Phase 1: Research หาข่าว —</div>
+
+<!-- STEP 1 -->
+<div class="step prism">
+  <div class="step-header">
+    <div class="step-num">1</div>
+    <div class="step-title">Prism ค้นหาข่าว AI ล่าสุด</div>
+    <div class="step-who">🔮 Prism</div>
+  </div>
+  <div class="step-desc">จุดเริ่มต้นของทุกโพส — Prism ค้นหาข่าว AI แล้วเลือกหัวข้อที่ตรง scope ของเพจ</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>ตาราง</b> เช้า/กลางวัน/เย็น<br><span class="io-src">← มาจาก content-guidelines.md</span></li>
+        <li><b>scope เพจ</b><br><span class="io-src">← มาจาก content-guidelines.md ของเพจนั้น</span></li>
+        <li><b>คำค้น</b> "AI news today 2026"<br><span class="io-src">← Prism กำหนดเองตามข่าวร้อน</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li>ใช้ <span class="t">WebSearch</span> ค้นทั้งไทย+อังกฤษ</li>
+        <li>อ่านผลลัพธ์ เลือกหัวข้อเด่น 3-5 อัน</li>
+        <li>เทียบกับ scope → เลือกเพจเป้าหมาย</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>หัวข้อข่าว 3-5 อัน + URLs</b><br><span class="io-dest">→ ส่งไป Step 2 เป็น source ให้ NotebookLM</span></li>
+        <li><b>เพจเป้าหมาย</b> (เช่น Prism Chronicle)<br><span class="io-dest">→ กำหนด tone + scope ของ draft</span></li>
+        <li><b>keyword</b> สำหรับ research<br><span class="io-dest">→ ส่งไป Step 2 ใช้กับ add-research</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">หัวข้อ + URLs + keyword → Step 2</span></div>
+
+<!-- STEP 2 -->
+<div class="step notebooklm">
+  <div class="step-header">
+    <div class="step-num">2</div>
+    <div class="step-title">NotebookLM Research + รวบรวม Sources</div>
+    <div class="step-who">📘 NotebookLM</div>
+  </div>
+  <div class="step-desc">รวบรวมข้อมูลจากหลายแหล่งเข้า Notebook เดียว — NotebookLM จะ index ทุก source ให้พร้อมใช้สร้าง content</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>URLs ข่าว 3-5 อัน</b><br><span class="io-src">← จาก Step 1 (WebSearch ค้นมา)</span></li>
+        <li><b>keyword</b> เช่น "Gemini Spark Agentic"<br><span class="io-src">← จาก Step 1 (Prism เลือก)</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li><span class="t">notebooklm create</span> สร้าง Notebook ใหม่</li>
+        <li><span class="t">source add</span> เพิ่ม URLs เป็น source</li>
+        <li><span class="t">source add-research</span> ค้นเพิ่มอัตโนมัติ</li>
+        <li>NotebookLM index ทุก source (30-60 วินาที)</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>Notebook ID</b><br><span class="io-dest">→ ใช้ใน Step 3, 4 เพื่ออ้างอิง Notebook</span></li>
+        <li><b>Sources 10-15 อัน</b> (indexed แล้ว)<br><span class="io-dest">→ Step 3 ใช้สร้างบทความ<br>→ Step 4 ใช้สร้าง media</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">Notebook (sources indexed) → Step 3 + 4</span></div>
+
+<div class="section-label">— Phase 2: สร้างเนื้อหา —</div>
+
+<!-- STEP 3 -->
+<div class="step notebooklm">
+  <div class="step-header">
+    <div class="step-num">3</div>
+    <div class="step-title">NotebookLM สร้างบทความ Draft</div>
+    <div class="step-who">📘 NotebookLM</div>
+  </div>
+  <div class="step-desc">ให้ NotebookLM สรุป sources ทั้งหมดเป็นบทความภาษาไทย — คนทั่วไปอ่านเข้าใจ นำไปใช้ได้จริง</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Notebook + Sources</b><br><span class="io-src">← จาก Step 2 (indexed แล้ว)</span></li>
+        <li><b>Prompt</b> สั่งเขียนบทความ<br><span class="io-src">← Prism เขียน กำหนด: ≥3,000 ตัวอักษร, ภาษาไทย, คนทั่วไปเข้าใจ, มีสิ่งที่ลองทำได้</span></li>
+        <li><b>กฎ</b> ต้องบอกว่า "สร้างโดย Prism"<br><span class="io-src">← จาก content-guidelines.md</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li><span class="t">notebooklm ask "สรุปเป็นบทความ..."</span></li>
+        <li>NotebookLM อ่าน sources ทั้งหมด → สรุปเป็นบทความ</li>
+        <li>Prism save เป็นไฟล์ .md ใน drafts/</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>บทความ draft</b> ~6,000 ตัวอักษร<br><span class="io-dest">→ Step 5 ใช้ verify ข้อเท็จจริง<br>→ Step 6 ส่ง Origin review<br>→ Step 7 แสดง Master J</span></li>
+        <li><b>ไฟล์</b> <span class="fp">drafts/YYYY-MM-DD_*.md</span><br><span class="io-dest">→ Step 9 ย้ายไป posted/ หลังโพส</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">Draft บทความ (.md) → Step 4, 5, 6, 7</span></div>
+
+<!-- STEP 4 -->
+<div class="step notebooklm">
+  <div class="step-header">
+    <div class="step-num">4</div>
+    <div class="step-title">NotebookLM สร้าง Media</div>
+    <div class="step-who">📘 NotebookLM + ⭐ Origin</div>
+  </div>
+  <div class="step-desc">สร้าง infographic + podcast จาก sources เดียวกัน — ทุกชิ้นต้องสอดคล้องกับบทความ</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Notebook เดียวกับ Step 2-3</b><br><span class="io-src">← ใช้ sources ชุดเดียวกัน เพื่อให้เนื้อหาสอดคล้อง</span></li>
+        <li><b>Style</b> kawaii / professional<br><span class="io-src">← จาก content-guidelines.md + brand voice</span></li>
+        <li><b>Image Request</b> (ถ้าขอ Origin)<br><span class="io-src">← Prism เขียน Subject/Style/Size/Use</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li><span class="t">generate infographic</span> (5-15 นาที)</li>
+        <li><span class="t">generate audio</span> podcast (10-20 นาที)</li>
+        <li>หรือ Origin สร้างรูปด้วย Codex DALL-E (2-5 นาที ส่ง SCP)</li>
+        <li>Download ไฟล์มาเก็บใน media/</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>Infographic .png</b><br><span class="io-dest">→ Step 5 เช็คสอดคล้องกับ text<br>→ Step 7 แสดง Master J<br>→ Step 8 แนบรูปตอนโพส</span></li>
+        <li><b>Podcast .mp3</b><br><span class="io-dest">→ เผยแพร่คู่กับโพส หรือโพสแยก</span></li>
+        <li><b>ไฟล์</b> <span class="fp">media/YYYY-MM-DD_*</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">Draft + Infographic + Podcast → Step 5</span></div>
+
+<div class="section-label">— Phase 3: ตรวจสอบ —</div>
+
+<!-- STEP 5 -->
+<div class="step prism">
+  <div class="step-header">
+    <div class="step-num">5</div>
+    <div class="step-title">Prism Verify ข้อเท็จจริง</div>
+    <div class="step-who">🔮 Prism</div>
+  </div>
+  <div class="step-desc">Cross-check ทุกข้อมูลข้ามแหล่ง — ชื่อ product ถูกไหม ตัวเลขถูกไหม text กับ infographic ตรงกันไหม</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Draft บทความ</b><br><span class="io-src">← จาก Step 3 (NotebookLM สร้าง)</span></li>
+        <li><b>Infographic</b><br><span class="io-src">← จาก Step 4 (ต้องตรงกับ text)</span></li>
+        <li><b>ชื่อ product/ตัวเลข</b> ที่ต้อง verify<br><span class="io-src">← อ่านจาก draft แล้วสกัดออกมา</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li><span class="t">WebSearch</span> ค้นชื่อ product ทีละอัน</li>
+        <li>เทียบตัวเลข/วันที่ กับ official sources</li>
+        <li>เช็คว่า infographic ข้อมูลตรงกับ text</li>
+        <li>เพิ่ม source URLs ท้ายบทความ</li>
+        <li>เพิ่ม hashtag 5-8 อัน</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>Draft ที่ verify + แก้แล้ว</b><br><span class="io-dest">→ Step 6 ส่ง Origin review</span></li>
+        <li><b>Source URLs</b> ท้ายบทความ<br><span class="io-dest">→ ติดไปกับ draft ตลอด</span></li>
+        <li><b>Hashtag 5-8 อัน</b><br><span class="io-dest">→ ใส่ใน caption ตอนโพส Step 8</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">Draft (verified) → Step 6</span></div>
+
+<!-- STEP 6a -->
+<div class="step nexus">
+  <div class="step-header">
+    <div class="step-num">6a</div>
+    <div class="step-title">Nexus Relay → ส่ง Draft ไป Origin</div>
+    <div class="step-who">🌿 Nexus</div>
+  </div>
+  <div class="step-desc">Prism ส่งตรงไป Origin ไม่ได้ (federation auth) ต้องผ่าน Nexus เป็นตัวกลาง relay</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>ข้อความ + path ไฟล์ draft</b><br><span class="io-src">← Prism เขียนคำขอ review</span></li>
+        <li><b>maw API endpoint</b><br><span class="io-src">← localhost:3456 (Nexus maw server)</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li>Prism: <span class="t">curl POST localhost:3456/api/send</span></li>
+        <li>target: "nexus" → Nexus รับแล้ว relay ต่อไป Origin</li>
+        <li>Origin อ่าน draft จาก shared filesystem</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>ข้อความถึง Origin</b><br><span class="io-dest">→ Origin เริ่ม Codex review (Step 6b)</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">ข้อความ relay → Origin</span></div>
+
+<!-- STEP 6b -->
+<div class="step origin">
+  <div class="step-header">
+    <div class="step-num">6b</div>
+    <div class="step-title">Origin Codex Review (GPT-5.5)</div>
+    <div class="step-who">⭐ Origin</div>
+  </div>
+  <div class="step-desc">Origin ใช้ Codex (GPT-5.5) อ่านบทความแล้วตรวจ 3 จุด: ข้อเท็จจริง, ข้อมูลบิดเบือน, ทำให้เข้าใจผิด</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Draft บทความ</b><br><span class="io-src">← จาก Step 5 ผ่าน Nexus relay (Step 6a)</span></li>
+        <li><b>คำขอ review 3 จุด</b><br><span class="io-src">← Prism กำหนดว่าต้องเช็คอะไร</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li>Codex อ่านทั้งบทความ</li>
+        <li>เช็คข้อเท็จจริง vs ความรู้ของ GPT-5.5</li>
+        <li>เขียน review report: ❌ ต้องแก้ / ✅ ถูกต้อง</li>
+        <li>ส่งผลกลับมาเป็นไฟล์ .md</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>Review report</b><br><span class="io-dest">→ เก็บที่ <span class="fp">ψ/inbox/from-nexus/</span><br>→ Prism อ่านแล้วแก้ Draft → Draft v2</span></li>
+        <li><b>Draft v2</b> (แก้ตาม review)<br><span class="io-dest">→ Step 7 แสดง Master J อนุมัติ</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">Draft v2 + Review report → Step 7</span></div>
+
+<div class="section-label">— Phase 4: อนุมัติ —</div>
+
+<!-- STEP 7 -->
+<div class="step masterj decision">
+  <div class="step-header">
+    <div class="step-num">7</div>
+    <div class="step-title">Master J อนุมัติ</div>
+    <div class="step-who">👑 Master J</div>
+  </div>
+  <div class="step-desc">ด่านสุดท้ายก่อนโพส — Master J ตรวจทุกอย่างแล้วตัดสินใจ</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Draft v2</b> (แก้ตาม review แล้ว)<br><span class="io-src">← จาก Step 6b (Prism แก้แล้ว)</span></li>
+        <li><b>Infographic</b><br><span class="io-src">← จาก Step 4 (NotebookLM สร้าง)</span></li>
+        <li><b>Codex review report สรุป</b><br><span class="io-src">← จาก Step 6b (จุดที่แก้แล้ว)</span></li>
+        <li><b>จำนวนตัวอักษร</b><br><span class="io-src">← Prism นับให้</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li>Master J อ่าน draft + ดูรูป</li>
+        <li>ตรวจว่าเนื้อหาเหมาะสม ถูกต้อง</li>
+        <li>ตัดสินใจ: อนุมัติ / แก้ไข / ไม่โพส</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>✅ "อนุมัติโพสได้เลย"</b><br><span class="io-dest">→ Step 8 โพสทันที</span></li>
+        <li><b>✏️ "แก้ตรงนี้..."</b><br><span class="io-dest">→ กลับ Step 3 หรือ 5 แก้ draft</span></li>
+        <li><b>❌ "ไม่โพส"</b><br><span class="io-dest">→ จบ flow, เก็บ draft ไว้ใน drafts/</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">✅ อนุมัติ → Step 8</span></div>
+
+<div class="section-label">— Phase 5: เผยแพร่ —</div>
+
+<!-- STEP 8 -->
+<div class="step facebook">
+  <div class="step-header">
+    <div class="step-num">8</div>
+    <div class="step-title">โพสผ่าน Facebook Graph API</div>
+    <div class="step-who">📘 Facebook</div>
+  </div>
+  <div class="step-desc">อัพโหลดรูป + สร้างโพสบนเพจ Facebook — ใช้ Graph API v25.0</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Draft v2 (approved)</b> = caption<br><span class="io-src">← จาก Step 7 (Master J อนุมัติ)</span></li>
+        <li><b>Infographic .png</b> = รูปแนบ<br><span class="io-src">← จาก Step 4 อยู่ที่ <span class="fp">media/</span></span></li>
+        <li><b>Page token</b><br><span class="io-src">← จาก <span class="fp">config/platforms.json</span> (permanent token)</span></li>
+        <li><b>Page ID</b><br><span class="io-src">← จาก <span class="fp">config/platforms.json → pages</span></span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li>1. <span class="t">POST /{page_id}/photos</span> upload รูป (unpublished)</li>
+        <li>2. <span class="t">POST /{page_id}/feed</span> สร้างโพส + แนบรูป</li>
+        <li>Facebook API return Post ID + Photo ID</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>Post ID</b> (เช่น 1184469..._122099...)<br><span class="io-dest">→ Step 9 บันทึกใน daily log<br>→ Step 10 ใช้ track engagement</span></li>
+        <li><b>โพสบน Facebook</b><br><span class="io-dest">→ ผู้ติดตามเห็นทันที</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">Post ID → Step 9 + 10</span></div>
+
+<div class="section-label">— Phase 6: บันทึก + ติดตาม —</div>
+
+<!-- STEP 9 -->
+<div class="step prism">
+  <div class="step-header">
+    <div class="step-num">9</div>
+    <div class="step-title">Prism บันทึก Daily Log</div>
+    <div class="step-who">🔮 Prism</div>
+  </div>
+  <div class="step-desc">บันทึกทุกอย่างเป็นประวัติ — ย้าย draft ไป posted เพื่อบอกว่าโพสแล้ว</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Post ID</b><br><span class="io-src">← จาก Step 8 (Facebook return)</span></li>
+        <li><b>Draft v2 file</b><br><span class="io-src">← จาก <span class="fp">drafts/</span></span></li>
+        <li><b>เหตุผลที่โพส</b><br><span class="io-src">← Prism เขียน (ทำไมเลือกหัวข้อนี้)</span></li>
+        <li><b>Source URLs</b><br><span class="io-src">← จาก Step 5 (ท้ายบทความ)</span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li>เขียน entry ใน daily log .md</li>
+        <li>ย้ายไฟล์ <span class="fp">drafts/ → posted/</span></li>
+        <li>บันทึก: Post ID, สรุป, เหตุผล, sources</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>Daily log</b> <span class="fp">logs/YYYY-MM-DD.md</span><br><span class="io-dest">→ อ้างอิงในอนาคต ดูว่าวันไหนทำอะไร</span></li>
+        <li><b>Posted file</b> <span class="fp">posted/</span><br><span class="io-dest">→ เก็บเป็นคลัง content ที่โพสแล้ว</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="arrow">↓<span class="arrow-label">Log บันทึกแล้ว → Step 10</span></div>
+
+<!-- STEP 10 -->
+<div class="step prism">
+  <div class="step-header">
+    <div class="step-num">10</div>
+    <div class="step-title">Assis_Bot ติดตาม Engagement</div>
+    <div class="step-who">🤖 Assis_Bot</div>
+  </div>
+  <div class="step-desc">Bot อัตโนมัติรันทุกวัน เช็คทุกเพจ — ถ้ามี comment แจ้ง Master J ก่อนตอบ</div>
+  <div class="io-grid">
+    <div class="io-box input">
+      <div class="io-label">📥 INPUT — ได้มาจากไหน</div>
+      <ul>
+        <li><b>Page IDs + tokens ทุกเพจ</b><br><span class="io-src">← จาก <span class="fp">config/platforms.json</span></span></li>
+        <li><b>Pages config</b><br><span class="io-src">← จาก <span class="fp">Assis_Bot/projects/facebook/config/pages.json</span></span></li>
+        <li><b>คำสั่งรัน</b><br><span class="io-src">← <span class="t">runner.py --project facebook --all</span></span></li>
+      </ul>
+    </div>
+    <div class="io-box process">
+      <div class="io-label">⚙️ PROCESS — ทำอะไร</div>
+      <ul>
+        <li><span class="t">comment_checker</span> วน loop ทุกเพจ ดึง comments ใหม่</li>
+        <li><span class="t">engagement_stats</span> ดึง impressions/likes/shares</li>
+        <li><span class="t">token_watcher</span> เช็ค token ยังใช้ได้ไหม</li>
+      </ul>
+    </div>
+    <div class="io-box output">
+      <div class="io-label">📤 OUTPUT — เอาไปใช้ที่ไหน</div>
+      <ul>
+        <li><b>new_comments.json</b><br><span class="io-dest">→ ถ้ามี comment → แจ้ง Master J รออนุมัติก่อนตอบ</span></li>
+        <li><b>daily_stats.json</b><br><span class="io-dest">→ วิเคราะห์ว่า content ไหนได้ผล → ปรับกลยุทธ์</span></li>
+        <li><b>token_status.json</b><br><span class="io-dest">→ ถ้า token ใกล้หมด → แจ้งเตือน renew</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Data Lineage Summary -->
+<div class="summary">
+  <h2>🔗 Data Lineage — ข้อมูลไหลจากไหนไปไหน</h2>
+  <table>
+    <tr><th>ข้อมูล</th><th>สร้างที่ Step</th><th>ใช้ที่ Step</th><th>เก็บที่ไหน</th></tr>
+    <tr><td>หัวข้อ + URLs</td><td>1 (WebSearch)</td><td>2 (เป็น source)</td><td>อยู่ใน Notebook</td></tr>
+    <tr><td>Notebook + Sources</td><td>2 (NotebookLM)</td><td>3, 4 (สร้าง content + media)</td><td>NotebookLM cloud</td></tr>
+    <tr><td>Draft บทความ</td><td>3 (NotebookLM)</td><td>5, 6, 7, 8, 9 (verify → review → อนุมัติ → โพส → log)</td><td>drafts/ → posted/</td></tr>
+    <tr><td>Infographic .png</td><td>4 (NotebookLM)</td><td>5, 7, 8 (เช็คสอดคล้อง → แสดง → แนบโพส)</td><td>media/</td></tr>
+    <tr><td>Podcast .mp3</td><td>4 (NotebookLM)</td><td>เผยแพร่คู่โพส</td><td>media/</td></tr>
+    <tr><td>Source URLs</td><td>5 (WebSearch verify)</td><td>8 (ใส่ท้ายบทความ)</td><td>ใน draft file</td></tr>
+    <tr><td>Codex Review</td><td>6b (Origin)</td><td>Prism แก้ draft → 7 (แสดง Master J)</td><td>ψ/inbox/from-nexus/</td></tr>
+    <tr><td>Post ID</td><td>8 (Facebook API)</td><td>9 (log), 10 (track engagement)</td><td>daily log</td></tr>
+    <tr><td>Engagement stats</td><td>10 (Assis_Bot)</td><td>วิเคราะห์ + ปรับกลยุทธ์ → Step 1 รอบถัดไป</td><td>Assis_Bot output/</td></tr>
+  </table>
+</div>
+
+<p style="text-align:center; color:#5c6785; margin-top:25px; font-size:0.8em;">
+  Prism_Of_Novus — Social Media Oracle | Novus Family | v3 Input/Output Detail | 2026-05-26
+</p>
+
+</body>
+</html>

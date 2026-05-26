@@ -9,9 +9,9 @@
 |------|---------------|---------|---------|--------|
 | User Token (long-lived) | `platforms.json → user_access_token` | 2026-05-25 | 2026-07-24 (~60 วัน) | ✅ Active |
 | Page Token: Prism Chronicle | `platforms.json → access_token` | 2026-05-25 | **ไม่หมดอายุ** | ✅ Active |
-| Page Token: Ai_In_Mind | ดึงจาก user token ทุกครั้ง | 2026-05-25 | **ไม่หมดอายุ** | ✅ Active |
-| Page Token: Forex EAI Expert | ดึงจาก user token ทุกครั้ง | — | — | ⚠️ ยังไม่ได้ดึง |
-| Page Token: Cakekhunaoy | ดึงจาก user token ทุกครั้ง | — | — | ⚠️ ยังไม่ได้ดึง |
+| Page Token: Ai_In_Mind | `platforms.json → pages.ai_in_mind` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
+| Page Token: Forex EAI Expert | `platforms.json → pages.forex_eai` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
+| Page Token: Cakekhunaoy | `platforms.json → pages.cakekhunaoy` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
 | App ID (Mamipogo) | `222493084481502` | — | ไม่หมดอายุ | ✅ Fixed |
 | App Secret | `pass prism/facebook-app-secret` | 2026-05-25 | ไม่หมดอายุ | ✅ Stored (GPG) |
 

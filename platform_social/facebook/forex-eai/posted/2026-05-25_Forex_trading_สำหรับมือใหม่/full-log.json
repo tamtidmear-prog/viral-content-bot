@@ -1,0 +1,35 @@
+{
+  "topic": "Forex trading สำหรับมือใหม่",
+  "brief": {
+    "topic": "Forex trading สำหรับมือใหม่",
+    "content_type": "image_post",
+    "tone": "viral-engaging",
+    "style": "realistic",
+    "template_used": null
+  },
+  "caption": "เริ่มต้นการเทรด Forex กับเรา! ไม่ต้องมีประสบการณ์ก็สามารถสร้างรายได้ได้ มาเรียนรู้และเติบโตไปด้วยกัน",
+  "hashtags": [
+    "#ForexTrading",
+    "#มือใหม่เทรด",
+    "#การลงทุน",
+    "#เทรดง่ายๆ",
+    "#ForexForBeginners",
+    "#การสร้างรายได้",
+    "#เทรดเดอร์มือใหม่",
+    "#การลงทุนที่ดี"
+  ],
+  "imagePrompt": "A young Asian woman sitting in front of a laptop with a surprised and excited expression, looking at a trading chart on the screen with a cityscape background at sunset",
+  "imageResult": {
+    "type": "placeholder",
+    "path": "output/2026-05-25_Forex_trading_สำหรับมือใหม่/image.txt"
+  },
+  "publishResults": {
+    "facebook": {
+      "success": true,
+      "postId": "811730625603539_1423946263092938",
+      "postUrl": "https://facebook.com/811730625603539_1423946263092938"
+    }
+  },
+  "elapsed_seconds": 5,
+  "timestamp": "2026-05-25T07:51:26.384Z"
+}

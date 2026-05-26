@@ -1,0 +1,35 @@
+{
+  "topic": "AI กับชีวิตประจำวัน",
+  "brief": {
+    "topic": "AI กับชีวิตประจำวัน",
+    "content_type": "image_post",
+    "tone": "viral-engaging",
+    "style": "realistic",
+    "template_used": null
+  },
+  "caption": "AI เข้ามาเปลี่ยนชีวิตเราแล้ว! ตั้งแต่การช่วยงานประจำวัน ไปจนถึงการแนะนำสินค้าที่เราชอบ AI กำลังเข้ามาเป็นส่วนหนึ่งของชีวิตเราอย่างแท้จริง แต่คุณรู้หรือไม่ว่า AI สามารถช่วยให้คุณมีเวลาเหลือสำหรับสิ่งที่คุณรักได้อย่างไร?",
+  "hashtags": [
+    "#AIในชีวิตประจำวัน",
+    "#ชีวิตด้วยAI",
+    "#เทคโนโลยีใหม่",
+    "#ชีวิตที่ง่ายขึ้น",
+    "#AIforLife",
+    "#SmartLiving",
+    "#Innovation",
+    "#FutureTech"
+  ],
+  "imagePrompt": "A futuristic illustration of a person surrounded by various AI-powered devices and robots, with a cityscape in the background, showcasing how AI integrates into daily life, with vibrant colors and detailed textures, in a social media post format",
+  "imageResult": {
+    "type": "placeholder",
+    "path": "output/2026-05-25_AI_กับชีวิตประจำวัน/image.txt"
+  },
+  "publishResults": {
+    "facebook": {
+      "success": true,
+      "postId": "108423905655889_836935279473562",
+      "postUrl": "https://facebook.com/108423905655889_836935279473562"
+    }
+  },
+  "elapsed_seconds": 5.9,
+  "timestamp": "2026-05-25T07:45:06.899Z"
+}

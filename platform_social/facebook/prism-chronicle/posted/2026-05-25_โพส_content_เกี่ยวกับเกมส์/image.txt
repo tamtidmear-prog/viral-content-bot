@@ -1,0 +1,7 @@
+[PLACEHOLDER — ยังไม่มีรูป]
+
+Image Prompt:
+Vibrant gaming scene with neon lights, dynamic composition, and high-quality graphics, featuring a group of gamers playing together, with a large screen displaying a thrilling game in the background, and a cityscape at night with a futuristic atmosphere
+
+ใส่รูปเองที่: output/2026-05-25_โพส_content_เกี่ยวกับเกมส์/image.png
+หรือรอ Phase 4 ที่จะมี image gen API เต็มรูปแบบ
