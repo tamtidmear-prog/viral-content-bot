@@ -1,6 +1,7 @@
 node_modules/
 output/
 config/platforms.json
+config/credentials-tracker.md
 .env
 *.log
 .fb-session/
@@ -8,3 +9,5 @@ config/platforms.json
 *.bak
 .tmp/
 .venv/
+platform_social/facebook/accounts/
+*.Zone.Identifier

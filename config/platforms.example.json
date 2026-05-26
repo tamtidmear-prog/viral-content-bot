@@ -1,0 +1,30 @@
+{
+  "facebook": {
+    "enabled": true,
+    "user_access_token": "YOUR_LONG_LIVED_USER_TOKEN_HERE",
+    "page_id": "YOUR_DEFAULT_PAGE_ID",
+    "access_token": "YOUR_DEFAULT_PAGE_TOKEN",
+    "api_version": "v25.0",
+    "pages": {
+      "my_page": {
+        "id": "PAGE_ID_HERE",
+        "name": "My Page Name",
+        "access_token": "PAGE_ACCESS_TOKEN_HERE"
+      }
+    },
+    "_comment": "Copy this file to platforms.json and fill in your tokens. See SETUP.md for details."
+  },
+  "x": {
+    "enabled": false,
+    "api_key": "",
+    "api_secret": "",
+    "access_token": "",
+    "access_secret": "",
+    "_comment": "Phase 2 — X (Twitter) API v2"
+  },
+  "line": {
+    "enabled": false,
+    "channel_access_token": "",
+    "_comment": "Phase 2 — LINE OA Messaging API"
+  }
+}

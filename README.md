@@ -1,300 +1,173 @@
-# Viral Content Bot
+# viral-content-bot
 
-บอกหัวข้อ → AI สร้าง content → โพส Facebook อัตโนมัติ
+AI-powered social media content bot — give it a topic, it creates captions, hashtags, images, and posts to Facebook automatically.
 
----
+```
+Topic → AI Brain → Caption + Hashtags + Image → Post to Facebook
+         (2s)                                       (total ~5s)
+```
 
-## สารบัญ
+## Features
 
-1. [ติดตั้ง](#ติดตั้ง)
-2. [ตั้งค่าก่อนใช้งาน](#ตั้งค่าก่อนใช้งาน)
-3. [วิธีใช้งาน](#วิธีใช้งาน)
-4. [ตัวอย่างการใช้งาน](#ตัวอย่างการใช้งาน)
-5. [Template หมวดหมู่](#template-หมวดหมู่)
-6. [สร้าง Template ใหม่](#สร้าง-template-ใหม่)
-7. [เปลี่ยน Facebook Page](#เปลี่ยน-facebook-page)
-8. [ปรับแต่ง AI](#ปรับแต่ง-ai)
-9. [Output ที่ได้](#output-ที่ได้)
-10. [แก้ปัญหา](#แก้ปัญหา)
+- **AI Content Generation** — Groq (free), Gemini, or Claude as AI backend
+- **Template System** — auto-match topics to content templates (gaming, finance, lifestyle, etc.)
+- **Facebook Graph API** — post text, single image, or multi-image to any Facebook Page
+- **Web UI** — browser interface at `localhost:3939`
+- **CLI** — one-command posting from terminal
+- **Multi-Page** — manage multiple Facebook Pages from one config
 
----
-
-## ติดตั้ง
+## Quick Start
 
 ```bash
-cd ~/Oracle_Project/Prism/viral-content-bot
+# 1. Install
 bun install
+
+# 2. Configure
+cp config/platforms.example.json config/platforms.json
+# Edit platforms.json with your Facebook Page token (see SETUP.md)
+
+# 3. Set AI API key
+export GROQ_API_KEY="your_key_here"    # Free at https://console.groq.com/
+
+# 4. Run
+bun run src/index.ts "AI trends 2026"
 ```
 
----
+## Usage
 
-## ตั้งค่าก่อนใช้งาน
-
-### 1. API Key (ต้องมี)
-
+### CLI
 ```bash
-# Groq — ใช้สร้าง caption/hashtag (ฟรี)
-export GROQ_API_KEY="gsk_xxxxxxxxxxxx"
-
-# หรือเก็บใน pass vault
-pass insert nexus/groq_api_key
+bun run src/index.ts "topic here"
 ```
 
-สมัคร Groq API Key ได้ที่: https://console.groq.com/keys
-
-### 2. Facebook Page Token (ต้องมี — ถ้าจะโพส)
-
-ไฟล์: `config/platforms.json`
-
-```json
-{
-  "facebook": {
-    "enabled": true,
-    "page_id": "108423905655889",
-    "access_token": "EAADKWzVD994BR...",
-    "api_version": "v25.0",
-    "_comment": "ชื่อ page ของคุณ"
-  }
-}
-```
-
-**วิธีได้ Token:**
-1. ไปที่ https://developers.facebook.com/tools/explorer/
-2. เลือก App → Mamipogo
-3. เลือก permissions: `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`
-4. กด "Generate Access Token" → อนุญาตเพจที่ต้องการ
-5. Query: `me/accounts?fields=id,name,access_token` → กด "ส่ง"
-6. copy `id` และ `access_token` ของเพจที่ต้องการใส่ใน platforms.json
-
-**ถ้าเพจไม่ขึ้นใน me/accounts:**
-Query ตรงด้วย page ID: `{page_id}?fields=id,name,access_token`
-
-**สำคัญ:** Token จาก Graph API Explorer หมดอายุภายในไม่กี่ชั่วโมง ต้อง generate ใหม่ทุกวันที่ใช้
-
-### 3. Image Generation (ไม่บังคับ)
-
+### Web UI
 ```bash
-export GEMINI_API_KEY="AIzaSy..."
+bun run src/server.ts
+# Open http://localhost:3939
 ```
 
-ถ้าไม่มี → ระบบโพสแค่ caption (ไม่มีรูป) ยังทำงานได้ปกติ
-
----
-
-## วิธีใช้งาน
-
+### Examples
 ```bash
-# รูปแบบ
-GROQ_API_KEY=$(pass nexus/groq_api_key) bun run src/index.ts "หัวข้อ"
-
-# หรือ export ไว้ก่อน
-export GROQ_API_KEY="gsk_xxx"
-bun run src/index.ts "หัวข้อ"
+bun run src/index.ts "เกมส์ใหม่น่าเล่น 2026"     # matches gaming template
+bun run src/index.ts "วิธีออมเงิน 50-30-20"        # matches finance template
+bun run src/index.ts "ที่เที่ยวเชียงใหม่หน้าฝน"      # matches lifestyle template
+bun run src/index.ts "Top 5 AI tools for work"     # default template
 ```
 
-**Flow การทำงาน:**
+## How It Works
+
 ```
-หัวข้อ → AI วิเคราะห์ → สร้าง caption + hashtag → สร้างรูป → โพส Facebook
-         (1-2 วินาที)                                            (รวม ~5 วินาที)
-```
-
----
-
-## ตัวอย่างการใช้งาน
-
-```bash
-# โพสเรื่องเกมส์ (จับ template gaming อัตโนมัติ)
-bun run src/index.ts "เกมส์ใหม่น่าเล่น 2026"
-
-# โพสเรื่องการเงิน (จับ template finance อัตโนมัติ)
-bun run src/index.ts "วิธีออมเงิน 50-30-20"
-
-# โพสเรื่องท่องเที่ยว (จับ template lifestyle อัตโนมัติ)
-bun run src/index.ts "ที่เที่ยวเชียงใหม่หน้าฝน"
-
-# หัวข้อทั่วไป (ไม่ตรง template — ใช้ default prompt)
-bun run src/index.ts "AI กับชีวิตประจำวัน"
-
-# หัวข้อภาษาอังกฤษก็ได้
-bun run src/index.ts "Top 5 productivity apps for 2026"
+src/brain.ts        → AI generates caption + hashtags + image prompt
+src/image.ts        → AI generates image (optional)
+src/publisher/      → Posts to Facebook via Graph API v25.0
+config/templates/   → Content templates auto-matched by keywords
+config/app.json     → AI provider + model settings
+config/platforms.json → Facebook tokens (gitignored)
 ```
 
----
+### Content Flow
+1. **Input** — topic string (Thai or English)
+2. **Template Match** — scan `config/templates/*.json` for keyword match
+3. **AI Brain** — send topic + template prompt to AI → get caption, hashtags, image prompt
+4. **Image Gen** — generate image from prompt (optional, needs Gemini API key)
+5. **Publish** — post caption + image to Facebook Page via Graph API
+6. **Log** — save all outputs to `output/` folder
 
-## Template หมวดหมู่
+## Facebook Setup
 
-ระบบจับ template อัตโนมัติจาก keyword ในหัวข้อ:
+> Full step-by-step guide: **[SETUP.md](SETUP.md)**
+
+Key points:
+1. Create a Meta Developer App at `developers.facebook.com`
+2. **Switch to Live Mode** (Development Mode = posts invisible to public)
+3. Generate Page Access Token via Graph API Explorer
+4. Exchange for long-lived token (60 days)
+5. Page tokens from long-lived user tokens are **permanent**
+
+## Template System
+
+Auto-matches topics to templates by keywords:
 
 | Template | Keywords | Tone |
 |----------|----------|------|
-| **gaming** | เกมส์, เกม, gaming, esports, game | สนุก viral |
-| **finance** | การเงิน, ออมเงิน, ลงทุน, ปลดหนี้, เงิน | น่าเชื่อถือ practical |
-| **lifestyle** | ไลฟ์สไตล์, อาหาร, ท่องเที่ยว, สุขภาพ | อบอุ่น แรงบันดาลใจ |
+| gaming | เกมส์, gaming, esports | fun, viral |
+| finance | การเงิน, ออมเงิน, ลงทุน | trustworthy |
+| lifestyle | ไลฟ์สไตล์, อาหาร, ท่องเที่ยว | warm, inspiring |
 
-ถ้าหัวข้อไม่ตรง keyword ไหน → ใช้ default prompt (ยังทำงานได้)
-
----
-
-## สร้าง Template ใหม่
-
-สร้างไฟล์ JSON ใน `config/templates/`:
-
-```bash
-# ตัวอย่าง: config/templates/tech.json
-```
+Create custom templates in `config/templates/`:
 
 ```json
 {
   "name": "tech",
-  "keywords": ["เทคโนโลยี", "tech", "AI", "gadget", "แอป"],
-  "description": "Content เทคโนโลยี AI gadget",
-  "system_prompt": "คุณเป็นนักเขียน tech content ที่อธิบายเรื่องยากให้ง่าย เขียนภาษาไทย สนุก ทันสมัย",
+  "keywords": ["tech", "AI", "gadget", "app"],
+  "system_prompt": "You are a tech content creator...",
   "tone": "smart-casual",
-  "hashtags_base": ["#เทคโนโลยี", "#tech", "#AI"],
-  "image_style": "modern tech aesthetic, clean design, futuristic"
+  "hashtags_base": ["#Tech", "#AI"],
+  "image_style": "modern tech aesthetic"
 }
 ```
 
-**ฟิลด์ที่ต้องมี:**
-- `name` — ชื่อ template (ไม่ซ้ำกัน)
-- `keywords` — คำที่ใช้จับ template (ไทย+อังกฤษ)
-- `description` — อธิบายสั้นๆ
-- `system_prompt` — บอก AI ว่าเขียนแบบไหน
-- `tone` — อารมณ์ของ content
-- `hashtags_base` — hashtag พื้นฐานที่ใส่ทุกโพส
-- `image_style` — สไตล์รูปที่ต้องการ
-
-บันทึกแล้วใช้ได้เลย ไม่ต้อง restart
-
----
-
-## เปลี่ยน Facebook Page
-
-แก้ `config/platforms.json`:
-
-```json
-{
-  "facebook": {
-    "enabled": true,
-    "page_id": "ID_ของเพจ",
-    "access_token": "TOKEN_ของเพจนั้น",
-    "api_version": "v25.0",
-    "_comment": "ชื่อเพจ"
-  }
-}
-```
-
-**Page ที่ใช้ได้ (token ต้อง generate ใหม่ทุกวัน):**
-
-| Page | ID |
-|------|----|
-| Ai_In_Mind | 108423905655889 |
-| Forex EAI Expert | 811730625603539 |
-| Cakekhunaoy By Sweetjeed | 137411833080593 |
-
----
-
-## ปรับแต่ง AI
-
-แก้ `config/app.json`:
-
-```json
-{
-  "ai": {
-    "provider": "groq",
-    "model": "llama-3.3-70b-versatile",
-    "language": "th",
-    "max_tokens": 1024
-  },
-  "defaults": {
-    "content_type": "auto",
-    "tone": "viral-engaging",
-    "hashtag_count": 8,
-    "output_dir": "./output"
-  }
-}
-```
-
-| ตั้งค่า | ค่าที่เปลี่ยนได้ | ผล |
-|---------|-----------------|-----|
-| `language` | `"th"` / `"en"` | ภาษา caption |
-| `hashtag_count` | 5-15 | จำนวน hashtag |
-| `tone` | `"viral-engaging"` / `"professional"` / `"casual"` | อารมณ์เริ่มต้น |
-| `model` | `"llama-3.3-70b-versatile"` | model ที่ใช้ |
-
----
-
-## Output ที่ได้
-
-ทุกครั้งที่รัน จะสร้าง folder ใน `output/`:
-
-```
-output/2026-05-25_AI_กับชีวิตประจำวัน/
-├── brief.json         # ผลวิเคราะห์หัวข้อ (type, template ที่ใช้)
-├── caption.txt        # caption ที่ AI สร้าง
-├── hashtags.txt       # hashtag ทั้งหมด
-├── image-prompt.txt   # prompt สำหรับสร้างรูป
-├── image.png          # รูปที่ AI สร้าง (ถ้ามี)
-├── post-result.json   # ผลโพส (URL, สำเร็จ/ล้มเหลว)
-└── full-log.json      # log รวมทุก step
-```
-
----
-
-## แก้ปัญหา
-
-### Token หมดอายุ
-```
-Error: Session has expired
-```
-→ ไป Graph API Explorer generate token ใหม่ แล้วใส่ใน `config/platforms.json`
-
-### GROQ_API_KEY ไม่มี
-```
-Error: GROQ_API_KEY not set
-```
-→ `export GROQ_API_KEY="gsk_xxx"` หรือ `GROQ_API_KEY=$(pass nexus/groq_api_key) bun run ...`
-
-### รูปสร้างไม่ได้
-```
-[Image] สร้างรูปไม่ได้: GEMINI_API_KEY not set
-```
-→ ไม่ blocking — ระบบโพสแค่ caption ได้ ถ้าต้องการรูปให้ set `GEMINI_API_KEY`
-
-### โพสไม่ขึ้น
-```
-[Publish] Facebook ล้มเหลว
-```
-→ เช็ค:
-1. Token หมดอายุหรือเปล่า
-2. page_id ถูกไหม
-3. permissions ครบไหม (`pages_manage_posts`)
-
-### Template ไม่จับ
-→ เช็ค `keywords` ใน template ว่าตรงกับคำในหัวข้อไหม (ต้องตรงทั้งคำ ไม่ใช่ substring)
-
----
-
-## โครงสร้างโปรเจค
+## Project Structure
 
 ```
 viral-content-bot/
 ├── config/
-│   ├── app.json              # ตั้งค่า AI + defaults
-│   ├── platforms.json        # Facebook token (gitignored)
-│   └── templates/            # prompt templates
-│       ├── gaming.json
-│       ├── finance.json
-│       └── lifestyle.json
+│   ├── app.json                  # AI provider + model config
+│   ├── platforms.json            # Facebook tokens (gitignored)
+│   ├── platforms.example.json    # Template for platforms.json
+│   └── templates/                # Content templates
 ├── src/
-│   ├── index.ts              # CLI entry point
-│   ├── brain.ts              # AI content generation
-│   ├── image.ts              # Image generation
-│   ├── logger.ts             # Output file management
+│   ├── index.ts                  # CLI entry point
+│   ├── server.ts                 # Web UI server (port 3939)
+│   ├── brain.ts                  # AI content generation
+│   ├── image.ts                  # Image generation
+│   ├── logger.ts                 # Output file management
+│   ├── token.ts                  # Token management
 │   └── publisher/
-│       ├── index.ts          # Platform router
-│       └── facebook.ts       # Facebook Graph API
-├── output/                   # ผลลัพธ์ทุกครั้งที่รัน
-├── package.json
-└── README.md                 # ไฟล์นี้
+│       ├── index.ts              # Platform router
+│       └── facebook.ts           # Facebook Graph API
+├── platform_social/              # Per-page docs, logs, posted content
+├── scripts/                      # Utility scripts
+├── output/                       # Generated content output
+├── SETUP.md                      # Full setup guide
+├── POSTING_SOP.md                # Posting workflow (12 steps)
+└── README.md
 ```
+
+## AI Providers
+
+| Provider | Model | Free? | Speed |
+|----------|-------|-------|-------|
+| **Groq** | llama-3.3-70b-versatile | Yes | Fast |
+| Gemini | gemini-2.0-flash | Free tier | Medium |
+| Claude | claude-sonnet-4-6 | Paid | Medium |
+
+Change provider in `config/app.json`:
+```json
+{ "ai": { "provider": "groq", "model": "llama-3.3-70b-versatile" } }
+```
+
+## Facebook API Reference
+
+| Action | Endpoint | Method |
+|--------|----------|--------|
+| Post text | `/{page_id}/feed` | POST |
+| Post with image | `/{page_id}/photos` | POST |
+| Multi-image | Upload unpublished → `/{page_id}/feed` with `attached_media` | POST |
+| Delete post | `/{post_id}` | DELETE |
+
+## Security
+
+- `config/platforms.json` is **gitignored** — never commit tokens
+- API keys read from environment variables, not hardcoded
+- Use `platforms.example.json` as template when sharing
+
+## Requirements
+
+- [Bun](https://bun.sh/) v1.0+
+- Facebook Page (admin access)
+- API key: Groq (free) / Gemini / Anthropic
+
+## License
+
+MIT
