@@ -4,5 +4,7 @@ config/platforms.json
 .env
 *.log
 .fb-session/
+.fb-session-*/
+*.bak
 .tmp/
 .venv/
