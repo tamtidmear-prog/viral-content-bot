@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://civitai.com/
+HostUrl=https://civitai-delivery-worker-prod.5ac0637cfd0766c97916cefa3764fbdf.r2.cloudflarestorage.com/training-images/1625446/889548TrainingData.4W21.zip?X-Amz-Expires=86400&response-content-disposition=attachment%3B%20filename%3D%22889548_training_data.zip%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=e01358d793ad6966166af8b3064953ad/20240925/us-east-1/s3/aws4_request&X-Amz-Date=20240925T101534Z&X-Amz-SignedHeaders=host&X-Amz-Signature=052d5fa05812b87f4d77755ce2149e130a058d24ecd1c092a537569c53ac08c7

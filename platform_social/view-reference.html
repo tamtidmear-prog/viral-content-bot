@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platform API Reference — Prism_Of_Novus</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --red: #f85149;
+    --yellow: #d29922;
+    --purple: #bc8cff;
+    --orange: #f0883e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+  h2 { color: var(--purple); font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+  h3 { color: var(--green); font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  .subtitle { color: var(--muted); margin-bottom: 1.5rem; font-size: 0.9rem; }
+  p { margin: 0.5rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+  th { background: var(--card); color: var(--accent); text-align: left; padding: 0.6rem 0.8rem; border: 1px solid var(--border); font-weight: 600; white-space: nowrap; }
+  td { padding: 0.5rem 0.8rem; border: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: rgba(22,27,34,0.5); }
+  tr:hover td { background: rgba(88,166,255,0.08); }
+  code { background: var(--card); color: var(--green); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.85rem; font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+  pre { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; overflow-x: auto; margin: 0.8rem 0; }
+  pre code { background: none; padding: 0; color: var(--text); }
+  .free { color: var(--green); font-weight: 600; }
+  .paid { color: var(--red); font-weight: 600; }
+  .tier1 { border-left: 3px solid var(--green); }
+  .tier2 { border-left: 3px solid var(--yellow); }
+  .tier3 { border-left: 3px solid var(--muted); }
+  .platform-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    transition: border-color 0.2s;
+  }
+  .platform-card:hover { border-color: var(--accent); }
+  .platform-card h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 0.3rem;
+  }
+  .badge-free { background: rgba(63,185,80,0.15); color: var(--green); }
+  .badge-paid { background: rgba(248,81,73,0.15); color: var(--red); }
+  .badge-easy { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .badge-medium { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .badge-hard { background: rgba(248,81,73,0.15); color: var(--red); }
+  .badge-active { background: rgba(63,185,80,0.2); color: var(--green); }
+  .badge-tier { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1rem; margin: 1rem 0; }
+  .nav { position: sticky; top: 0; background: var(--bg); padding: 0.8rem 0; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; z-index: 10; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: 0.8rem; padding: 0.3rem 0.6rem; border: 1px solid var(--border); border-radius: 6px; transition: all 0.2s; }
+  .nav a:hover { color: var(--accent); border-color: var(--accent); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  .token-inf { color: var(--green); }
+  .token-short { color: var(--yellow); }
+  .explain {
+    background: rgba(88,166,255,0.06);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .explain strong { color: var(--accent); }
+  .explain em { color: var(--yellow); font-style: normal; }
+  .warning {
+    background: rgba(210,153,34,0.1);
+    border: 1px solid rgba(210,153,34,0.3);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  .info {
+    background: rgba(88,166,255,0.08);
+    border: 1px solid rgba(88,166,255,0.2);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  .step-list { list-style: none; counter-reset: steps; padding: 0; }
+  .step-list li { counter-increment: steps; padding: 0.5rem 0 0.5rem 2.5rem; position: relative; border-left: 2px solid var(--border); margin-left: 0.8rem; }
+  .step-list li:last-child { border-left: 2px solid transparent; }
+  .step-list li::before {
+    content: counter(steps);
+    position: absolute; left: -0.85rem; top: 0.4rem;
+    width: 1.5rem; height: 1.5rem;
+    background: var(--accent); color: var(--bg);
+    border-radius: 50%; text-align: center; line-height: 1.5rem;
+    font-size: 0.8rem; font-weight: 700;
+  }
+  .analogy { color: var(--orange); }
+  .flow-arrow { color: var(--green); font-weight: bold; }
+  .summary-box {
+    background: linear-gradient(135deg, rgba(88,166,255,0.08), rgba(188,140,255,0.08));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Platform API Reference</h1>
+<p class="subtitle">Prism_Of_Novus | 2026-05-27 | 11 Platforms + NotebookLM</p>
+
+<div class="explain">
+  <strong>หน้านี้คืออะไร?</strong><br>
+  รวมข้อมูลทุก social media platform ที่ Prism จะใช้โพสต์ content — แต่ละที่ต้องทำอะไรบ้าง ฟรีไหม ยากแค่ไหน ใช้เวลาเท่าไหร่
+  <br><br>
+  <span class="analogy">เปรียบเทียบง่ายๆ:</span> เหมือนเราจะเปิดร้านขายของหลายสาขา — แต่ละสาขา (platform) มีกฎของตัวเอง บางที่เปิดร้านฟรี บางที่ต้องจ่ายค่าเช่า บางที่ต้องยื่นใบอนุญาตรอเป็นเดือน
+</div>
+
+<nav class="nav">
+  <a href="#concept">หลักการ</a>
+  <a href="#comparison">เปรียบเทียบ</a>
+  <a href="#priority">ลำดับควรทำ</a>
+  <a href="#facebook">Facebook</a>
+  <a href="#instagram">Instagram</a>
+  <a href="#threads">Threads</a>
+  <a href="#discord">Discord</a>
+  <a href="#twitter">X/Twitter</a>
+  <a href="#youtube">YouTube</a>
+  <a href="#line">LINE OA</a>
+  <a href="#reddit">Reddit</a>
+  <a href="#pinterest">Pinterest</a>
+  <a href="#linkedin">LinkedIn</a>
+  <a href="#tiktok">TikTok</a>
+  <a href="#tokens">กุญแจ (Tokens)</a>
+  <a href="#notebooklm">NotebookLM</a>
+</nav>
+
+<!-- CONCEPT -->
+<h2 id="concept">หลักการพื้นฐาน — API คืออะไร?</h2>
+
+<div class="explain">
+  <strong>API (Application Programming Interface)</strong> = ช่องทางที่ให้โปรแกรมคุยกับ platform ได้โดยตรง<br><br>
+  <span class="analogy">เปรียบเทียบ:</span> ปกติเราโพสต์ Facebook ต้องเปิดเว็บ พิมพ์ แนบรูป กดโพสต์ — แต่ถ้าใช้ API เราเขียนโค้ดสั่งให้มันทำแทนเราได้อัตโนมัติ เหมือนจ้างพนักงานที่พิมพ์เร็วมากทำให้<br><br>
+  <strong>ทุก platform ต้องมี 3 สิ่ง:</strong>
+  <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+    <li><strong>App (แอป)</strong> — สมัครเป็น developer สร้าง "แอป" ของเราใน platform นั้น = เหมือนขอใบอนุญาตเปิดร้าน</li>
+    <li><strong>Token (กุญแจ)</strong> — รหัสพิเศษที่พิสูจน์ว่าเราได้รับอนุญาตแล้ว = เหมือนกุญแจร้าน บางที่กุญแจไม่หมดอายุ บางที่ต้องเปลี่ยนทุกวัน</li>
+    <li><strong>Endpoint (ช่องส่ง)</strong> — URL ที่เราส่งข้อมูลไป = เหมือนเคาน์เตอร์รับงาน เราส่งข้อความ+รูปไป แล้ว platform จะโพสต์ให้</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <strong>ขั้นตอนทั่วไปทุก platform:</strong><br>
+  <span class="flow-arrow">สมัคร Developer</span> &rarr;
+  <span class="flow-arrow">สร้าง App</span> &rarr;
+  <span class="flow-arrow">ได้ Token (กุญแจ)</span> &rarr;
+  <span class="flow-arrow">เขียนโค้ดส่งข้อมูลไป API</span> &rarr;
+  <span class="flow-arrow">Platform โพสต์ให้!</span>
+</div>
+
+<!-- QUICK COMPARISON -->
+<h2 id="comparison">เปรียบเทียบทุก Platform</h2>
+
+<div class="explain">
+  ตารางนี้เปรียบเทียบ 11 platform ในมุมที่สำคัญ: <em>ฟรีไหม</em>, <em>ตั้งค่ายากแค่ไหน</em>, <em>โพสต์ได้วันละเท่าไหร่</em>, <em>กุญแจ (token) หมดอายุเมื่อไหร่</em>
+</div>
+
+<div style="overflow-x: auto;">
+<table>
+<tr>
+  <th>Platform</th><th>ฟรี?</th><th>ค่าใช้จ่าย</th><th>ใช้เวลา Setup</th><th>ความยาก</th><th>โพสต์ได้/วัน</th><th>กุญแจหมดอายุ?</th>
+</tr>
+<tr>
+  <td><strong>Facebook</strong></td><td class="free">ฟรี</td><td>$0</td><td>ทำเสร็จแล้ว</td><td><span class="badge badge-active">ใช้งานอยู่</span></td><td>ไม่จำกัด</td><td class="token-inf">ไม่หมด</td>
+</tr>
+<tr>
+  <td><strong>Instagram</strong></td><td class="free">ฟรี</td><td>$0</td><td>~30 นาที</td><td><span class="badge badge-easy">ง่าย</span></td><td>50-100</td><td class="token-inf">ไม่หมด</td>
+</tr>
+<tr>
+  <td><strong>Discord</strong></td><td class="free">ฟรี</td><td>$0</td><td>~10 นาที</td><td><span class="badge badge-easy">ง่ายมาก</span></td><td>ไม่จำกัด</td><td class="token-inf">ไม่หมด</td>
+</tr>
+<tr>
+  <td><strong>Threads</strong></td><td class="free">ฟรี</td><td>$0</td><td>1-2 สัปดาห์</td><td><span class="badge badge-medium">ปานกลาง</span></td><td>250</td><td class="token-short">60 วัน</td>
+</tr>
+<tr>
+  <td><strong>YouTube</strong></td><td class="free">ฟรี</td><td>$0</td><td>~1 ชม.</td><td><span class="badge badge-medium">ปานกลาง</span></td><td>66-100 วิดีโอ</td><td class="token-inf">ไม่หมด (ถ้าใช้ต่อ)</td>
+</tr>
+<tr>
+  <td><strong>X / Twitter</strong></td><td class="paid">จ่าย</td><td>$0.01/โพสต์</td><td>~1 ชม.</td><td><span class="badge badge-easy">ง่าย</span></td><td>~500 (แต่แนบรูปได้ 17)</td><td class="token-inf">ไม่หมด</td>
+</tr>
+<tr>
+  <td><strong>Reddit</strong></td><td class="free">ฟรี</td><td>$0</td><td>ทันที</td><td><span class="badge badge-easy">ง่าย</span></td><td>60 ครั้ง/นาที</td><td class="token-short">1 ชม. (ต่ออายุอัตโนมัติ)</td>
+</tr>
+<tr>
+  <td><strong>LINE OA</strong></td><td class="free">ฟรี 300 ข้อความ</td><td>0 บาท</td><td>~30 นาที</td><td><span class="badge badge-medium">ปานกลาง</span></td><td>300 ข้อความ/เดือน</td><td class="token-inf">ไม่หมด</td>
+</tr>
+<tr>
+  <td><strong>Pinterest</strong></td><td class="free">ฟรี</td><td>$0</td><td>1 วัน</td><td><span class="badge badge-medium">ปานกลาง</span></td><td>100 ครั้ง/นาที</td><td class="token-short">30 วัน (ต่อได้)</td>
+</tr>
+<tr>
+  <td><strong>LinkedIn</strong></td><td class="free">ฟรี</td><td>$0</td><td>1-8 สัปดาห์</td><td><span class="badge badge-hard">ยาก</span></td><td>~150</td><td class="token-short">60 วัน</td>
+</tr>
+<tr>
+  <td><strong>TikTok</strong></td><td class="free">ฟรี</td><td>$0</td><td>4-10 สัปดาห์</td><td><span class="badge badge-hard">ยากสุด</span></td><td>15-25</td><td class="token-short">24 ชม. (ต่ออัตโนมัติ)</td>
+</tr>
+</table>
+</div>
+
+<!-- PRIORITY -->
+<h2 id="priority">ลำดับควรทำ</h2>
+
+<div class="explain">
+  แบ่งเป็น 3 กลุ่ม ตาม<em>ความเร็วที่เริ่มใช้ได้จริง</em> — กลุ่มแรกทำได้ภายในวันนี้ กลุ่มสองต้อง setup ใหม่แต่ไม่นาน กลุ่มสามต้องรอคนอนุมัติ
+</div>
+
+<h3>กลุ่ม 1 — ทำได้เลยวันนี้</h3>
+<div class="grid">
+  <div class="platform-card tier1">
+    <h3>1. Instagram <span class="badge badge-free">ฟรี</span> <span class="badge badge-easy">ง่าย</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนเปิดอีกสาขาในห้างเดียวกัน</span> — เราใช้ระบบเดิมของ Facebook (Meta) ได้เลย แค่เปิดห้องเพิ่ม ไม่ต้องสมัครใหม่ ไม่ต้องรอใคร<br>
+      <strong>ข้อแม้:</strong> รูปต้อง upload ขึ้นเว็บก่อน (เป็น URL สาธารณะ) แล้วค่อยบอก IG ให้ดึงไป
+    </div>
+    <p><strong>Setup:</strong> ~30 นาที | <strong>โพสต์:</strong> 50-100/วัน</p>
+  </div>
+  <div class="platform-card tier1">
+    <h3>2. Discord <span class="badge badge-free">ฟรี</span> <span class="badge badge-easy">ง่ายมาก</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนส่งข้อความเข้ากลุ่ม LINE</span> — ไม่ต้องเขียนโปรแกรมซับซ้อน แค่มี URL พิเศษ (Webhook) แล้วยิงข้อความเข้าไป จบ<br>
+      <strong>เหมาะ:</strong> ประกาศข่าว AI ในเซิร์ฟเวอร์ Discord ของเรา
+    </div>
+    <p><strong>Setup:</strong> ~10 นาที | <strong>โพสต์:</strong> ไม่จำกัด</p>
+  </div>
+  <div class="platform-card tier1">
+    <h3>3. Threads <span class="badge badge-free">ฟรี</span> <span class="badge badge-medium">ปานกลาง</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือน Twitter แต่เป็นของ Meta</span> — ใช้ระบบ Meta เดียวกับ FB/IG แต่ต้องส่งแอปให้ Meta ตรวจก่อน (1-2 สัปดาห์)<br>
+      <strong>เหมาะ:</strong> โพสต์สั้นๆ ข่าว AI (ได้ 500 ตัวอักษร)
+    </div>
+    <p><strong>Setup:</strong> 1-2 สัปดาห์ | <strong>โพสต์:</strong> 250/วัน</p>
+  </div>
+</div>
+
+<h3>กลุ่ม 2 — ต้อง setup ใหม่ แต่ไม่ยาก</h3>
+<div class="grid">
+  <div class="platform-card tier2">
+    <h3>4. YouTube <span class="badge badge-free">ฟรี</span> <span class="badge badge-medium">ปานกลาง</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนเปิดร้านในห้างใหม่ (Google)</span> — สมัคร Google Cloud สร้างแอป ทำ login ครั้งเดียว หลังจากนั้นอัพวิดีโอได้เรื่อยๆ<br>
+      <strong>เหมาะ:</strong> อัพ Shorts, podcast audio, infographic แบบวิดีโอ<br>
+      <strong>ข้อจำกัด:</strong> โพสต์แบบข้อความ (Community Posts) ทำผ่าน API ไม่ได้ — ต้องทำเองใน YouTube Studio
+    </div>
+    <p><strong>Setup:</strong> ~1 ชม. | <strong>อัพได้:</strong> 66-100 วิดีโอ/วัน</p>
+  </div>
+  <div class="platform-card tier2">
+    <h3>5. X / Twitter <span class="badge badge-paid">$0.01/โพสต์</span> <span class="badge badge-easy">ง่าย</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนร้านค้าที่คิดค่าส่งรายชิ้น</span> — ตั้งแต่ Feb 2026 ไม่มีแพลนฟรีแล้ว จ่ายตามจำนวนโพสต์ ถ้าโพสต์วันละ 3 ครั้ง = <em>เดือนละประมาณ 30 บาท</em><br>
+      <strong>ข้อจำกัด:</strong> แนบรูปได้แค่ 17 รูป/วัน
+    </div>
+    <p><strong>Setup:</strong> ~1 ชม. | <strong>ค่าใช้จ่าย:</strong> ~$0.90/เดือน (3 โพสต์/วัน)</p>
+  </div>
+  <div class="platform-card tier2">
+    <h3>6. Reddit <span class="badge badge-free">ฟรี</span> <span class="badge badge-easy">ง่าย</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนไปโพสต์ในฟอรัม Pantip</span> — สมัครเสร็จใช้ได้เลย แต่แต่ละกลุ่ม (subreddit) มีกฎต่างกัน บางที่ต้องมีคะแนน (karma) ก่อนโพสต์ได้<br>
+      <strong>เหมาะ:</strong> ร่วมชุมชน r/artificial, r/MachineLearning, r/Thailand
+    </div>
+    <p><strong>Setup:</strong> ทันที | <strong>ข้อจำกัด:</strong> กฎ subreddit ต่างกัน</p>
+  </div>
+</div>
+
+<h3>กลุ่ม 3 — ต้องรอคนอนุมัติ</h3>
+<div class="grid">
+  <div class="platform-card tier3">
+    <h3>7. LINE OA <span class="badge badge-free">ฟรี 300</span> <span class="badge badge-medium">ปานกลาง</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนเปิดร้านค้าบน LINE</span> — ได้ส่งข้อความฟรี 300 ครั้ง/เดือน (นับตามจำนวนคนที่ได้รับ) แต่<em>ตอบแชทฟรีไม่จำกัด!</em><br>
+      <strong>ตลาดไทย:</strong> คนไทยใช้ LINE เยอะ เหมาะมากถ้าเน้น content ภาษาไทย<br>
+      <strong>ถ้าต้องการส่งเยอะ:</strong> แพลน Basic = 1,280 บาท/เดือน (15,000 ข้อความ)
+    </div>
+    <p><strong>Setup:</strong> ~30 นาที | <strong>ฟรี:</strong> 300 broadcast/เดือน + ตอบแชทไม่จำกัด</p>
+  </div>
+  <div class="platform-card tier3">
+    <h3>8. Pinterest <span class="badge badge-free">ฟรี</span> <span class="badge badge-medium">ปานกลาง</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนบอร์ดรูปสวยๆ</span> — platform สำหรับแชร์รูปภาพเป็นหลัก เหมาะกับ infographic + รูป kawaii ของ Prism<br>
+      <strong>ได้ทดลอง (Trial) ใน 1 วัน</strong> — แต่ถ้าจะใช้เต็มที่ต้องถ่ายวิดีโอโชว์แอปให้ Pinterest ดู
+    </div>
+    <p><strong>Setup:</strong> 1 วัน (Trial) | <strong>เหมาะ:</strong> Visual content</p>
+  </div>
+  <div class="platform-card tier3">
+    <h3>9. LinkedIn <span class="badge badge-free">ฟรี</span> <span class="badge badge-hard">ยาก</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนโพสต์บนบอร์ดบริษัท</span> — สำหรับ content แนว professional (AI industry, tech insights) ต้องยื่นขออนุมัติ ใช้เวลา 1-8 สัปดาห์<br>
+      <strong>ข้อดี:</strong> โพสต์ได้ทั้งรูป, วิดีโอ, เอกสาร PDF, โพล
+    </div>
+    <p><strong>Setup:</strong> 1-8 สัปดาห์ | <strong>เหมาะ:</strong> Professional AI content</p>
+  </div>
+  <div class="platform-card tier3">
+    <h3>10. TikTok <span class="badge badge-free">ฟรี</span> <span class="badge badge-hard">ยากสุด</span></h3>
+    <div class="explain">
+      <span class="analogy">เหมือนขอใบอนุญาตจากราชการ</span> — ต้องสมัคร, ถ่ายวิดีโอ demo, ส่งให้ TikTok ตรวจ (2-6 สัปดาห์) แล้วยังต้อง<em>ผ่าน audit อีกรอบ</em>ก่อนโพสต์สาธารณะได้<br>
+      <strong>ถ้ายังไม่ผ่าน audit:</strong> โพสต์ได้แต่คนอื่นจะ<em>มองไม่เห็น</em> (private เท่านั้น)<br>
+      <strong>ข้อบังคับ:</strong> content ที่สร้างด้วย AI ต้องติด label บอก
+    </div>
+    <p><strong>Setup:</strong> 4-10 สัปดาห์ | <strong>ข้อจำกัด:</strong> 15-25 โพสต์/วัน</p>
+  </div>
+</div>
+
+<!-- INDIVIDUAL PLATFORMS DETAIL -->
+<hr>
+
+<h2 id="facebook">Facebook <span class="badge badge-active">ใช้งานอยู่</span></h2>
+<div class="platform-card">
+<div class="explain">
+  <strong>สถานะ:</strong> ใช้งานอยู่แล้ว! Prism โพสต์ Facebook ได้ทั้ง 4 เพจ ผ่าน <code>viral-content-bot</code><br>
+  <span class="analogy">เปรียบเทียบ:</span> นี่คือร้านสาขาแรกที่เปิดแล้ว — ทุกอย่างพร้อม กุญแจไม่หมดอายุ
+</div>
+<table>
+<tr><th>รายการ</th><th>ข้อมูล</th></tr>
+<tr><td>API</td><td>Facebook Graph API v25.0</td></tr>
+<tr><td>วิธีโพสต์</td><td>ส่งรูป+ข้อความไปที่ <code>POST /{page-id}/photos</code></td></tr>
+<tr><td>กุญแจ</td><td>Page Access Token — <strong>ไม่มีวันหมดอายุ</strong></td></tr>
+<tr><td>โค้ดอยู่ที่</td><td><code>src/publisher/facebook.ts</code></td></tr>
+<tr><td>ตั้งค่าอยู่ที่</td><td><code>config/platforms.json</code></td></tr>
+</table>
+</div>
+
+<h2 id="instagram">Instagram <span class="badge badge-tier">กลุ่ม 1</span></h2>
+<div class="platform-card tier1">
+<div class="explain">
+  <strong>ทำไมง่าย?</strong> เพราะ Instagram เป็นของ Meta เหมือน Facebook — ใช้แอปเดียวกัน (Prism_Oracle) ใช้กุญแจเดียวกัน แค่เพิ่ม permission<br>
+  <span class="analogy">เหมือนเปิดประตูห้องข้างๆ ที่อยู่ในตึกเดียวกัน</span>
+</div>
+
+<h3>ต้องทำอะไรบ้าง?</h3>
+<ol class="step-list">
+  <li><strong>เปลี่ยน IG เป็น Business account</strong> — ฟรี, ทำใน IG app Settings &rarr; Switch to Professional</li>
+  <li><strong>เชื่อม IG กับ Facebook Page</strong> — ใน IG Settings &rarr; Linked Accounts &rarr; Facebook</li>
+  <li><strong>เพิ่ม "Instagram Graph API"</strong> ใน Prism_Oracle app dashboard (developers.facebook.com)</li>
+  <li><strong>ขอ permission</strong>: <code>instagram_basic</code> + <code>instagram_content_publish</code></li>
+  <li><strong>หา IG ID</strong>: ถาม API ว่า Facebook Page นี้เชื่อมกับ IG ไหน</li>
+  <li><strong>สร้าง Token</strong> — ทำเหมือน FB เลย (exchange เป็น Page Token ที่ไม่หมดอายุ)</li>
+</ol>
+
+<h3>วิธีโพสต์ (2 ขั้นตอน)</h3>
+<div class="explain">
+  <span class="analogy">เหมือนสั่งอาหาร 2 ขั้น:</span><br>
+  <strong>ขั้น 1:</strong> บอก IG ว่า "เตรียมโพสต์นี้ให้หน่อย" (สร้าง container) — ส่ง URL รูป + caption ไป<br>
+  <strong>ขั้น 2:</strong> บอก IG ว่า "โพสต์ได้เลย!" (publish container)
+</div>
+<pre><code>ขั้น 1: POST /{ig-user-id}/media?image_url=URL_รูป&caption=ข้อความ
+        &rarr; ได้ container-id กลับมา
+
+ขั้น 2: POST /{ig-user-id}/media_publish?creation_id=container-id
+        &rarr; โพสต์ขึ้น IG เรียบร้อย!</code></pre>
+
+<h3>โพสต์อะไรได้บ้าง?</h3>
+<table>
+<tr><th>ประเภท</th><th>รายละเอียด</th></tr>
+<tr><td>รูปเดี่ยว</td><td>JPEG, แนะนำ 1080x1350 (แนวตั้ง), ไม่เกิน 8MB</td></tr>
+<tr><td>หลายรูป (Carousel)</td><td>2-10 รูป/วิดีโอในโพสต์เดียว</td></tr>
+<tr><td>Reels (วิดีโอสั้น)</td><td>แนวตั้ง 1080x1920, 3 วินาที ถึง 15 นาที</td></tr>
+<tr><td>Stories</td><td>รูปหรือวิดีโอ, หายไปหลัง 24 ชม.</td></tr>
+</table>
+<div class="warning"><strong>ข้อสำคัญ:</strong> รูปต้องเป็น URL สาธารณะ — IG API ไม่รับอัพโหลดไฟล์ตรงๆ ต้อง host ไว้ที่ไหนสักที่ก่อน (เช่น server ของเรา, cloud storage)</div>
+</div>
+
+<h2 id="threads">Threads <span class="badge badge-tier">กลุ่ม 1</span></h2>
+<div class="platform-card tier1">
+<div class="explain">
+  <strong>Threads คืออะไร?</strong> แอปของ Meta (เจ้าเดียวกับ FB/IG) สำหรับโพสต์ข้อความสั้นๆ คล้าย Twitter<br>
+  <span class="analogy">เหมือนเปิดบูธชั่วคราวในงาน</span> — ใช้บัตรพนักงาน Meta เดิมเข้าได้ แต่ต้องลงทะเบียนที่เคาน์เตอร์ก่อน (App Review 1-2 สัปดาห์)
+</div>
+<table>
+<tr><th>รายการ</th><th>ข้อมูล</th></tr>
+<tr><td>ต้องมี</td><td>Instagram Business/Creator account ที่ link กับ Threads</td></tr>
+<tr><td>ข้อความ</td><td>ได้ 500 ตัวอักษร + รูป/วิดีโอ/Carousel (2-20 รูป)</td></tr>
+<tr><td>กุญแจ</td><td>Long-lived token — ใช้ได้ 60 วัน ต้องต่ออายุ</td></tr>
+<tr><td>โพสต์ได้</td><td>250 โพสต์/วัน</td></tr>
+</table>
+</div>
+
+<h2 id="discord">Discord <span class="badge badge-tier">กลุ่ม 1</span></h2>
+<div class="platform-card tier1">
+<div class="explain">
+  <strong>ง่ายที่สุดในทุก platform!</strong><br>
+  <span class="analogy">เหมือนส่งข้อความเข้ากลุ่มไลน์</span> — สร้าง "Webhook URL" (ลิงก์พิเศษ) ของช่อง Discord แล้วยิงข้อความเข้าไปได้เลย ไม่ต้องเขียนโปรแกรมซับซ้อน ไม่ต้องติดตั้งอะไร<br><br>
+  <strong>ทำได้:</strong> ข้อความ, รูป, Embed (การ์ดสวยๆ มีสี/รูป/link)<br>
+  <strong>ทำไม่ได้:</strong> อ่านข้อความคนอื่น, ตอบแชท (ถ้าต้องการต้องใช้ Bot แทน)
+</div>
+
+<h3>ต้องทำอะไร?</h3>
+<ol class="step-list">
+  <li><strong>เปิดเซิร์ฟเวอร์ Discord</strong> (ถ้ายังไม่มี)</li>
+  <li>คลิกขวาที่ช่องที่ต้องการ &rarr; <strong>Edit Channel</strong> &rarr; <strong>Integrations</strong> &rarr; <strong>Webhooks</strong> &rarr; <strong>New Webhook</strong></li>
+  <li>ตั้งชื่อ (เช่น "Prism Chronicle") แล้ว <strong>Copy Webhook URL</strong></li>
+  <li>ใช้ URL นี้ยิงข้อความเข้าไปได้เลย!</li>
+</ol>
+
+<h3>ตัวอย่างโค้ด</h3>
+<pre><code>// แค่นี้เอง! ไม่ต้องติดตั้ง library อะไร
+await fetch(WEBHOOK_URL, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    username: 'Prism Chronicle',
+    embeds: [{
+      title: 'AI News วันนี้',
+      description: 'เนื้อหาข่าว...',
+      color: 3447003,  // สีฟ้า
+      image: { url: 'https://example.com/image.png' }
+    }]
+  })
+});</code></pre>
+</div>
+
+<h2 id="twitter">X / Twitter <span class="badge badge-tier">กลุ่ม 2</span></h2>
+<div class="platform-card tier2">
+<div class="explain">
+  <strong>Platform เดียวที่ไม่ฟรี</strong> — ตั้งแต่ Feb 2026 ยกเลิกแพลนฟรีแล้ว จ่ายตามจำนวนโพสต์<br>
+  <span class="analogy">เหมือนส่งพัสดุ — จ่ายค่าส่งรายชิ้น</span> โพสต์ละ ~35 สตางค์ ถ้าโพสต์ 3 ครั้ง/วัน = <em>เดือนละ ~30 บาท</em><br><br>
+  <strong>ข้อดี:</strong> setup ง่าย กุญแจไม่หมดอายุ มี library ดีมาก<br>
+  <strong>ข้อจำกัด:</strong> แนบรูปได้แค่ 17 รูป/วัน, ต้องติด label "Bot" ใน bio
+</div>
+
+<h3>ต้องทำอะไร?</h3>
+<ol class="step-list">
+  <li>สมัคร developer ที่ <code>console.x.com</code></li>
+  <li>สร้าง Project &rarr; สร้าง App</li>
+  <li>ตั้ง App Permissions เป็น "Read and write"</li>
+  <li>สร้างกุญแจ 4 ตัว: API Key, API Secret, Access Token, Access Token Secret</li>
+  <li>ติด label "Bot" ใน bio ของ X account</li>
+</ol>
+
+<h3>ตัวอย่างโค้ด</h3>
+<pre><code>import { TwitterApi } from 'twitter-api-v2';
+
+const client = new TwitterApi({
+  appKey: 'xxx', appSecret: 'xxx',
+  accessToken: 'xxx', accessSecret: 'xxx'
+});
+
+await client.v2.tweet('สวัสดี จาก Prism! 🌈');</code></pre>
+</div>
+
+<h2 id="youtube">YouTube <span class="badge badge-tier">กลุ่ม 2</span></h2>
+<div class="platform-card tier2">
+<div class="explain">
+  <strong>ฟรี 100%</strong> — อัพวิดีโอได้ 66-100 ตัว/วัน (เหลือเฟือ!)<br>
+  <span class="analogy">เหมือนเช่าร้านฟรีแต่ต้องทำบัตรสมาชิกครั้งแรก</span> — สมัคร Google Cloud + ทำ login ครั้งเดียว หลังจากนั้นอัพได้เรื่อยๆ<br><br>
+  <strong>เหมาะ:</strong> อัพ Shorts (วิดีโอสั้นแนวตั้ง), podcast audio, infographic เป็นวิดีโอ<br>
+  <strong>ไม่ได้:</strong> Community Posts (โพสต์ข้อความ/รูปในแท็บชุมชน) — ต้องทำมือใน YouTube Studio
+</div>
+
+<h3>Shorts คือ YouTube เวอร์ชัน TikTok</h3>
+<div class="explain">
+  <span class="analogy">วิดีโอสั้นแนวตั้ง</span> ไม่เกิน 3 นาที — อัพด้วย API เดียวกับวิดีโอปกติ แค่ทำให้เป็นแนวตั้ง (9:16) แล้วใส่ <code>#Shorts</code> ใน title<br>
+  YouTube จะจัดหมวดให้เองอัตโนมัติ
+</div>
+
+<h3>ต้องทำอะไร?</h3>
+<ol class="step-list">
+  <li>สร้าง Project ใน Google Cloud Console</li>
+  <li>เปิดใช้ "YouTube Data API v3"</li>
+  <li>ตั้ง OAuth consent screen + เพิ่มตัวเองเป็น test user</li>
+  <li>สร้าง OAuth credentials &rarr; ดาวน์โหลด <code>client_secret.json</code></li>
+  <li>รันโค้ด login ครั้งเดียว &rarr; ได้ Refresh Token (กุญแจถาวร)</li>
+  <li>Verify เบอร์โทรในช่อง YouTube (สำหรับ custom thumbnail)</li>
+</ol>
+</div>
+
+<h2 id="line">LINE OA <span class="badge badge-tier">กลุ่ม 3</span></h2>
+<div class="platform-card tier3">
+<div class="explain">
+  <strong>สำคัญมากสำหรับตลาดไทย</strong> — คนไทยใช้ LINE เยอะมาก ถ้าทำ content ภาษาไทย LINE OA คือ must-have<br>
+  <span class="analogy">เหมือนเปิด Official Account บน LINE</span><br><br>
+  <strong>ฟรี:</strong> ส่งข้อความ broadcast ได้ 300 ครั้ง/เดือน (นับตามจำนวนคนที่ได้รับ)<br>
+  <strong>แต่! ตอบแชทฟรีไม่จำกัด</strong> — ถ้ามีคนทักมา ตอบกลับกี่ครั้งก็ได้<br><br>
+  <span class="analogy">ตัวอย่าง:</span> ถ้ามี follower 30 คน ส่ง broadcast ได้ 10 ครั้ง/เดือน (30 x 10 = 300)<br>
+  <strong>ต้องการเยอะกว่านี้?</strong> แพลน Basic = 1,280 บาท/เดือน ได้ 15,000 ข้อความ
+</div>
+
+<h3>ฟีเจอร์เด่น</h3>
+<div class="explain">
+  <strong>Flex Message</strong> — ออกแบบการ์ดข้อความสวยๆ ได้เอง มีรูป ปุ่ม ลิงก์ เหมือนออกแบบ email สวยๆ แต่ส่งทาง LINE<br>
+  <strong>Rich Menu</strong> — เมนูด้านล่างแชท กดแล้วทำอะไรก็ได้ (เปิดลิงก์, ส่งข้อความ, ฯลฯ) ตั้งผ่าน API ได้
+</div>
+</div>
+
+<h2 id="reddit">Reddit <span class="badge badge-tier">กลุ่ม 2</span></h2>
+<div class="platform-card tier2">
+<div class="explain">
+  <span class="analogy">Reddit = Pantip เวอร์ชันสากล</span> — มีห้องย่อย (subreddit) ตามหัวข้อ เช่น r/artificial (AI), r/MachineLearning, r/Thailand<br>
+  <strong>สมัครใช้ได้ทันที</strong> ไม่ต้องรอ แต่ต้องระวัง:<br>
+  &bull; แต่ละ subreddit มีกฎต่างกัน (บางที่ต้องมีคะแนน karma ก่อน)<br>
+  &bull; โพสต์บ่อยเกินไปจะโดน spam filter<br>
+  &bull; ใช้เชิงพาณิชย์ = $0.24/1000 API calls
+</div>
+</div>
+
+<h2 id="pinterest">Pinterest <span class="badge badge-tier">กลุ่ม 3</span></h2>
+<div class="platform-card tier3">
+<div class="explain">
+  <span class="analogy">Pinterest = บอร์ดรูปสวยๆ</span> — คนมาเพื่อดูรูปและหา inspiration เหมาะมากกับ infographic + kawaii content ของ Prism<br>
+  <strong>ได้ทดลอง (Trial) ใน 1 วัน</strong> จำกัด 25 test users — ถ้าจะใช้เต็มที่ต้องถ่ายวิดีโอ demo แอปให้ Pinterest ดู<br>
+  <strong>ฟรี 100%</strong> ไม่มีค่าใช้จ่าย
+</div>
+</div>
+
+<h2 id="linkedin">LinkedIn <span class="badge badge-tier">กลุ่ม 3</span></h2>
+<div class="platform-card tier3">
+<div class="explain">
+  <span class="analogy">LinkedIn = Facebook สำหรับคนทำงาน</span> — เหมาะกับ content แนว professional (AI industry insights, tech articles)<br>
+  <strong>ยากตรงไหน?</strong> ต้องยื่นขออนุมัติ "Community Management API" ซึ่งใช้เวลา 4-8 สัปดาห์<br>
+  <strong>โพสต์ได้:</strong> ข้อความ, รูป (9 รูป), วิดีโอ, PDF/เอกสาร, โพล, บทความ
+</div>
+</div>
+
+<h2 id="tiktok">TikTok <span class="badge badge-tier">กลุ่ม 3</span></h2>
+<div class="platform-card tier3">
+<div class="explain">
+  <strong>ยากที่สุดในทุก platform</strong><br>
+  <span class="analogy">เหมือนขอใบอนุญาตจากราชการ — ต้องยื่นเอกสาร รอตรวจ รอตรวจอีกรอบ</span><br><br>
+  <strong>ขั้นตอน:</strong><br>
+  &bull; สมัคร + สร้างแอป + ถ่ายวิดีโอ demo &rarr; ส่งให้ TikTok review (2-6 สัปดาห์)<br>
+  &bull; ผ่าน review แล้ว ทดสอบใน sandbox ได้ (แต่โพสต์เป็น<em>แบบส่วนตัว</em>คนอื่นมองไม่เห็น!)<br>
+  &bull; ต้องผ่าน compliance audit <em>อีกรอบ</em> ก่อนโพสต์สาธารณะได้<br><br>
+  <strong>ข้อบังคับ:</strong> content ที่สร้างด้วย AI ต้องติด label <code>is_aigc: true</code> ทุกครั้ง<br>
+  <strong>ไม่มี SDK</strong> — ต้องเขียน HTTP calls เอง ไม่มี library สำเร็จรูป
+</div>
+</div>
+
+<!-- TOKEN MANAGEMENT -->
+<hr>
+<h2 id="tokens">กุญแจ (Token) — สรุปอายุทุก Platform</h2>
+
+<div class="explain">
+  <strong>Token คืออะไร?</strong> คือ "กุญแจดิจิทัล" ที่พิสูจน์ว่าเราได้รับอนุญาตให้โพสต์ แต่ละ platform มีกุญแจคนละแบบ<br><br>
+  <span class="analogy">เปรียบเทียบ:</span><br>
+  &bull; <strong class="token-inf">กุญแจถาวร (สีเขียว)</strong> = ทำครั้งเดียวใช้ได้ตลอด ไม่ต้องทำใหม่<br>
+  &bull; <strong class="token-short">กุญแจชั่วคราว (สีเหลือง)</strong> = มีวันหมดอายุ ต้องต่ออายุ (บางอันต่อได้อัตโนมัติ บางอันต้องทำเอง)
+</div>
+
+<table>
+<tr><th>Platform</th><th>ประเภทกุญแจ</th><th>อายุ</th><th>ต้องทำอะไร?</th></tr>
+<tr><td>Facebook</td><td>Page Token</td><td class="token-inf">ไม่หมดอายุ</td><td>ไม่ต้องทำอะไร</td></tr>
+<tr><td>Instagram</td><td>Page Token</td><td class="token-inf">ไม่หมดอายุ</td><td>ไม่ต้องทำอะไร (ใช้ร่วมกับ FB)</td></tr>
+<tr><td>Discord</td><td>Webhook URL</td><td class="token-inf">ไม่หมดอายุ</td><td>ไม่ต้องทำอะไร</td></tr>
+<tr><td>X / Twitter</td><td>OAuth 1.0a (4 keys)</td><td class="token-inf">ไม่หมดอายุ</td><td>ไม่ต้องทำอะไร</td></tr>
+<tr><td>LINE OA</td><td>Long-lived Token</td><td class="token-inf">ไม่หมดอายุ</td><td>ไม่ต้องทำอะไร</td></tr>
+<tr><td>YouTube</td><td>Refresh Token</td><td class="token-inf">ไม่หมดอายุ (ถ้าใช้ต่อ)</td><td>โค้ดต่ออายุ access token อัตโนมัติทุก 1 ชม.</td></tr>
+<tr><td>Threads</td><td>Long-lived Token</td><td class="token-short">60 วัน</td><td>ต้องต่ออายุทุก 60 วัน</td></tr>
+<tr><td>TikTok</td><td>Refresh Token</td><td class="token-short">365 วัน</td><td>โค้ดต่อ access token อัตโนมัติทุก 24 ชม.</td></tr>
+<tr><td>LinkedIn</td><td>Refresh Token</td><td class="token-short">365 วัน</td><td>ต่อ access token ทุก 60 วัน</td></tr>
+<tr><td>Pinterest</td><td>Refresh Token</td><td class="token-short">60 วัน (ต่อได้เรื่อยๆ)</td><td>ต่อ access token ทุก 30 วัน</td></tr>
+<tr><td>Reddit</td><td>Access Token</td><td class="token-short">1 ชม.</td><td>โค้ดต่ออัตโนมัติทุก 1 ชม.</td></tr>
+</table>
+
+<div class="info">
+  <strong>สรุป:</strong> FB, IG, Discord, X, LINE = ทำครั้งเดียวจบ | YouTube, TikTok, Reddit = โค้ดจัดการให้อัตโนมัติ | Threads, LinkedIn, Pinterest = ต้องดูแลเป็นระยะ
+</div>
+
+<!-- NOTEBOOKLM -->
+<hr>
+<h2 id="notebooklm">NotebookLM — เครื่องมือสร้าง Content</h2>
+
+<div class="explain">
+  <strong>NotebookLM ไม่ใช่ social media</strong> แต่เป็น<em>เครื่องมือสร้าง content</em> ที่แจกไปโพสต์บน platform อื่นได้<br>
+  <span class="analogy">เหมือนโรงงานผลิต</span> — ผลิตสินค้า (podcast, report, slides) แล้วส่งไปขายที่ร้านต่างๆ<br><br>
+  <strong>ผลิตอะไรได้?</strong>
+</div>
+
+<table>
+<tr><th>สร้างอะไร</th><th>ส่งไปไหน</th></tr>
+<tr><td>Podcast Audio</td><td>YouTube, Spotify, LINE OA, Facebook</td></tr>
+<tr><td>Report / Slides</td><td>LinkedIn, Facebook, Discord</td></tr>
+<tr><td>Mind Map / Quiz</td><td>Discord, Reddit, Threads</td></tr>
+<tr><td>Infographic Source</td><td>Instagram, Pinterest, Facebook</td></tr>
+</table>
+
+<div class="info">
+  <strong>ใน Prism:</strong> ใช้ NotebookLM เป็น research pipeline ก่อนสร้าง content ทุกโพสต์ (ตาม POSTING_SOP 12 steps)
+</div>
+
+<!-- ARCHITECTURE -->
+<hr>
+<h2 id="architecture">สถาปัตยกรรม — ภาพรวมระบบ</h2>
+
+<div class="explain">
+  <strong>ทุก platform จะเป็นไฟล์เดียวใน <code>src/publisher/</code></strong> — ทำงานเหมือนกันหมด: รับ content เข้า &rarr; ส่งไป platform &rarr; ได้ผลลัพธ์กลับมา<br>
+  <span class="analogy">เหมือนพนักงานส่งของ</span> — ทุกคนทำงานเหมือนกัน (รับของ &rarr; ส่ง &rarr; รายงาน) แต่ส่งคนละเส้นทาง
+</div>
+
+<pre><code>src/publisher/
+  facebook.ts     ✅ ใช้งานอยู่
+  instagram.ts    📋 ถัดไป — ใช้ Meta API เดิม
+  discord.ts      📋 ง่ายมาก — Webhook
+  threads.ts      📋 Meta API
+  twitter.ts      📋 ใช้ library twitter-api-v2
+  youtube.ts      📋 ใช้ library googleapis
+  line.ts         📋 ใช้ library @line/bot-sdk
+  tiktok.ts       📋 เขียนเอง (ไม่มี library)
+  linkedin.ts     📋 ใช้ library linkedin-api-client
+  pinterest.ts    📋 เขียนเอง
+  reddit.ts       📋 ใช้ library snoowrap</code></pre>
+
+<div class="summary-box" style="margin-top: 2rem; text-align: center;">
+  <strong>Full reference:</strong> <code>platform_social/PLATFORM_API_REFERENCE.md</code><br>
+  <span class="subtitle">Prism_Of_Novus | Research: 2026-05-27</span>
+</div>
+
+</body>
+</html>

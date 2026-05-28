@@ -32,16 +32,20 @@
 
 **Account**: [PapaJinna Wirunputi](facebook/accounts/papajinna.md)
 
-## Planned
+## Planned (ดู [PLATFORM_API_REFERENCE.md](PLATFORM_API_REFERENCE.md) สำหรับรายละเอียด API ครบทุก platform)
 
-| Platform | Folder | สถานะ | README |
-|----------|--------|-------|--------|
-| Instagram | `instagram/` | 📋 Planned | [README](instagram/README.md) |
-| X / Twitter | `x-twitter/` | 📋 Planned | [README](x-twitter/README.md) |
-| LINE OA | `line-oa/` | 📋 Planned | [README](line-oa/README.md) |
-| TikTok | `tiktok/` | 📋 Planned | [README](tiktok/README.md) |
-| YouTube | `youtube/` | 📋 Planned | [README](youtube/README.md) |
-| Discord | `discord/` | 📋 Planned | [README](discord/README.md) |
+| Platform | Folder | ฟรี? | ความยาก | Priority | README |
+|----------|--------|------|---------|----------|--------|
+| **Instagram** | `instagram/` | ✅ ฟรี | ง่าย (ใช้ Meta API เดิม) | 🥇 Tier 1 | [README](instagram/README.md) |
+| **Discord** | `discord/` | ✅ ฟรี | ง่ายมาก (webhook) | 🥇 Tier 1 | [README](discord/README.md) |
+| **Threads** | `threads/` | ✅ ฟรี | กลาง (Meta App Review) | 🥇 Tier 1 | — |
+| **YouTube** | `youtube/` | ✅ ฟรี | กลาง (OAuth one-time) | 🥈 Tier 2 | [README](youtube/README.md) |
+| **X / Twitter** | `x-twitter/` | ❌ $0.01/post | ง่าย | 🥈 Tier 2 | [README](x-twitter/README.md) |
+| **Reddit** | `reddit/` | ✅ ฟรี | ง่าย | 🥈 Tier 2 | — |
+| **LINE OA** | `line-oa/` | ✅ 300 msg free | กลาง | 🥉 Tier 3 | [README](line-oa/README.md) |
+| **Pinterest** | `pinterest/` | ✅ ฟรี | กลาง | 🥉 Tier 3 | — |
+| **LinkedIn** | `linkedin/` | ✅ ฟรี | ยาก (1-8 wk approval) | 🥉 Tier 3 | — |
+| **TikTok** | `tiktok/` | ✅ ฟรี | ยาก (4-10 wk audit) | 🥉 Tier 3 | [README](tiktok/README.md) |
 
 ---
-*Owner: Prism_Of_Novus | Updated: 2026-05-26*
+*Owner: Prism_Of_Novus | Updated: 2026-05-27*
