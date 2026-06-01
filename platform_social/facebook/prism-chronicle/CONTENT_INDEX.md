@@ -12,6 +12,7 @@
 | 27 พ.ค. | กลางวัน | AI ในการศึกษา สุขภาพ เครื่องมือสร้างสรรค์ |
 | 28 พ.ค. | เช้า | Agentic AI, Google Universal Cart, Meta Ray-Ban, KPMG+Claude, Anthropic SMB, AI cybersecurity |
 | 29 พ.ค. | เช้า | AI creativity 100K test, YouTube AI labels, OpenClaw, AI jailbreak 97%, Cohere+Aleph Alpha $20B |
+| 1 มิ.ย. | เช้า | Microsoft Build 2026 — AI Agents, Project Polaris, Windows AI Foundry, CUAs |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
