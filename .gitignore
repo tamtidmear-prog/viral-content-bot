@@ -11,3 +11,4 @@ config/credentials-tracker.md
 .venv/
 platform_social/facebook/accounts/
 *.Zone.Identifier
+*:Zone.Identifier
