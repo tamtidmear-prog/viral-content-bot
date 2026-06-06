@@ -13,6 +13,7 @@
 | 28 พ.ค. | เช้า | Agentic AI, Google Universal Cart, Meta Ray-Ban, KPMG+Claude, Anthropic SMB, AI cybersecurity |
 | 29 พ.ค. | เช้า | AI creativity 100K test, YouTube AI labels, OpenClaw, AI jailbreak 97%, Cohere+Aleph Alpha $20B |
 | 1 มิ.ย. | เช้า | Microsoft Build 2026 — AI Agents, Project Polaris, Windows AI Foundry, CUAs |
+| 4 มิ.ย. | เช้า | Anthropic $65B, GitHub Copilot token billing, Gemini 3.5 Flash, AGI 2029, Agentic AI |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
