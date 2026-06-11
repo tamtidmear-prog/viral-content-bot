@@ -1,0 +1,29 @@
+# Image Prompt — Ai_In_Mind / Cafe Pen Mustache
+
+Output image:
+/home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/ai_in_mind_cafe_pen_mustache_20260609_173518.png
+
+Face reference images used as face identity only:
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (62).png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (80).png
+
+Original request:
+
+Same girl from reference image, balancing a pen under her nose like a fake mustache while waiting for her iced coffee, making a playful pout without realizing it, reaching toward her drink with one hand, open book on the table, warm late afternoon sunlight through cafe windows, photographed secretly by her boyfriend sitting across the table, completely unaware of camera, candid everyday moment, slight motion blur on hand, amateur snapshot, imperfect framing, dreamy film bloom, faded greenish-brown tones, compact CCD camera photo, nostalgic movie aesthetic, memory-like photograph.
+
+Prompt used:
+
+Use case: identity-preserve photorealistic candid lifestyle
+Asset type: Facebook post image for Ai_In_Mind
+Input images: Use the two visible reference images only as face identity references. Preserve the same adult East Asian woman's face identity: face shape, eyes, brows, nose, lips, skin tone impression, and natural features. Do not copy reference outfits, backgrounds, props, pose, or lighting.
+
+Create a photorealistic candid cafe snapshot of the same adult woman sitting at a cafe table. She balances a pen horizontally under her nose like a fake mustache while waiting for iced coffee, making a playful pout without realizing it. One hand reaches toward the iced coffee. An open book is on the table. Warm late afternoon sunlight enters through cafe windows.
+
+Camera story: secretly photographed by her boyfriend sitting across the table; she is unaware of the camera. Amateur compact CCD camera photo, imperfect framing, slightly off-center, nostalgic movie aesthetic, dreamy film bloom, faded greenish-brown tones, memory-like photograph. Slight motion blur on the reaching hand only; face should remain recognizable and mostly sharp.
+
+Character: adult East Asian woman, long dark brown hair, casual modest cafe outfit, playful and natural, non-sexual everyday moment.
+
+Composition: vertical Facebook post, cafe table foreground with open book and iced coffee, upper body visible, pen fake mustache clearly visible, no text.
+
+Negative:
+low quality, distorted face, face identity drift, extra fingers, bad hands, bad anatomy, text, watermark, anime, cartoon, illustration, plastic skin, overexposed, sexualized pose, lingerie, overly revealing clothing, duplicate person.

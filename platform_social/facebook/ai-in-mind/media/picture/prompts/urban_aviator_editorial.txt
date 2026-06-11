@@ -1,0 +1,11 @@
+Use case: identity-preserve
+Asset type: urban fashion editorial portrait
+Input reference: use the visible reference image as the identity reference for the adult East Asian woman's facial structure, eyes, nose, lips, soft jawline, skin tone, and recognizable face. Preserve the same face as closely as possible while creating a new urban editorial portrait.
+Primary request: A poised adult East Asian woman in her 20s with long straight dark hair and dark aviator sunglasses stands in a modern urban environment, wearing a crisp white oversized collared shirt and fitted black pants. Her pose is confident and contemplative with one hand adjusting her sunglasses.
+Setting: modern upscale metropolitan district, blurred geometric architectural elements, clean street-level backdrop, refined city atmosphere, shallow depth of field.
+Composition: classic fashion portrait, subject positioned slightly off-center, captured at eye level with a slight upward camera angle to convey sophistication and poise. Frame from upper thigh or waist up, polished editorial crop.
+Lighting and style: contemporary fashion editorial style with stark black-and-white monochromatic tones punctuated by warm golden-hour light catching her hair and the white shirt fabric. Dramatic contrast and dimension, cinematic luxury lifestyle photography.
+Color palette: cool blacks, pure whites, soft background grays, warm amber-gold accents illuminating hair and clothing. Minimalist, refined, timeless contemporary elegance.
+Wardrobe and safety: crisp oversized white collared shirt, fitted black pants, dark aviator sunglasses, tasteful high-fashion styling, covered chest, non-lingerie, adult subject, no explicit posing.
+Mood: cool, self-assured, effortlessly chic, minimalist, editorial, cinematic, contemplative.
+Avoid: minors, teen appearance, nudity, lingerie, exposed chest, transparent shirt, explicit sensuality, wardrobe malfunction, distorted hands, extra fingers, changed facial structure, text, watermark, logo, cartoon, anime, plastic skin, cluttered background.

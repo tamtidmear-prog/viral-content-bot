@@ -1,0 +1,32 @@
+Video demo concept:
+Original AI IN MIND fragrance editorial prototype inspired by luxury fashion/fragrance ad pacing, not a copy of the Miu Miu reference.
+
+Output:
+ai_in_mind_fragrance_editorial_test.mp4
+
+Format:
+Landscape 16:9, 1920x1080, 30fps, 21 seconds, H.264 video + AAC audio.
+
+Structure:
+1. Graphic fragrance-style intro card
+2. Cheongsam autumn portrait shot
+3. Minimalist living room portrait shot
+4. Urban aviator editorial shot
+5. Studio top bun portrait set shot
+6. Product-style graphic card
+7. AI IN MIND outro card
+
+Source images:
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/cheongsam_autumn_portrait.png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/minimalist_living_room_portrait.png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/urban_aviator_editorial.png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/studio_top_bun_portrait_set.png
+
+Music:
+Generated locally as an original chill/lo-fi rhythm bed with chords, arpeggio, kick, snare, and hi-hat.
+Verified loudness:
+- mean_volume: -15.5 dB
+- max_volume: -1.2 dB
+
+Render notes:
+Made with ffmpeg using image scale/crop, fades, vignette, text overlays, graphic cards, concat, and synthesized audio.

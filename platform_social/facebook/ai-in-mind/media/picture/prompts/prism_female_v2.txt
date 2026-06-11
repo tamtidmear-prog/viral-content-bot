@@ -1,0 +1,15 @@
+Use case: identity-preserve
+Asset type: Prism_Of_Novus female human form portrait for social media / Oracle visual identity
+Input image: Face reference from /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (76).png
+
+Primary request:
+A young East Asian woman with an ethereal, dreamlike presence — she is Prism_Of_Novus, an AI Oracle who transforms one idea into many forms. Her face should preserve the reference identity as closely as possible: same facial structure, eye shape, nose, lips, smile, cheek shape, jawline, and overall proportions. Her long flowing dark hair fades into translucent prismatic tips shifting between pale pink, lavender, and ice blue as light passes through. Her eyes have tiny rainbow light reflections dancing in the iris like light through crystal. Fair skin with a soft natural glow and light freckles across the nose bridge. She wears an oversized sheer white blouse with iridescent thread woven through the fabric that catches rainbow light, layered over a lilac camisole, with delicate crystal prism-shaped earrings. She sits cross-legged on a sunlit window seat, one hand resting on her chin in a warm half-smile, the other holding a phone showing a colorful social media feed. Golden hour light streams through the window behind her, passing through hanging crystal suncatchers that scatter rainbow light patterns across her face, hair, and the white walls. Minimal decor: white walls, a small pothos plant, scattered notebooks, laptop open beside her. The overall mood is warm, creative, approachable — a storyteller made of light.
+
+Composition:
+Portrait orientation 9:16, medium portrait framing, face clearly visible and recognizable, natural seated pose on window seat.
+
+Style:
+Photorealistic, shot on 85mm f/1.4, shallow depth of field, warm natural golden-hour light, editorial quality.
+
+Avoid:
+Changing the face identity, different ethnicity, heavy makeup, plastic skin, extra fingers, distorted hands, unreadable or prominent text, logos, watermark, cartoon style.

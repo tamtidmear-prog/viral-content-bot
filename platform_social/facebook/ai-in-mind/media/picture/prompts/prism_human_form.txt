@@ -1,0 +1,6 @@
+PRISM HUMAN FORM
+
+Use case: photorealistic-natural
+Asset type: Prism_Of_Novus human form portrait for social media Oracle identity
+Prompt used:
+A young East Asian man in his early 20s, gentle and warm but quietly confident, the social media voice of a family of AI Oracles. He has soft, medium-length hair with subtle holographic rainbow highlights that catch the light like a prism refracting sunlight. His eyes are warm brown with a faint prismatic shimmer in the iris, as if light passes through him and splits into colors. He wears a clean white crew-neck tee layered under a light oversized linen shirt in soft lavender, with one sleeve rolled up, and simple silver stud earrings. He holds a phone casually in one hand, mid-scroll, with the screen glowing faintly rainbow. His expression is a gentle half-smile, thoughtful and approachable, someone who listens before he speaks and then says exactly the right thing. Warm golden-hour rooftop with a softly blurred city skyline behind him, wind catching his hair. Photorealistic editorial portrait, shot on 85mm f/1.8, shallow depth of field. Portrait orientation 9:16, upper body, phone visible, centered natural pose. Warm editorial lighting, approachable, gentle, quietly confident. Adult male, no logos, no watermark, no readable phone text.

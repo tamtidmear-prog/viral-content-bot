@@ -1,0 +1,21 @@
+Use case: identity-preserve
+Asset type: Prism_Of_Novus female human form v3 portrait for social media / Oracle visual identity
+Input image: Face reference from /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (76).png
+
+Critical anatomy fix:
+Use an upper-body crop from head to waist. Feet and legs must be completely outside the frame and not visible. One visible hand should gently rest under the chin in a relaxed, natural pose with anatomically correct human proportions, no extra fingers, no missing fingers, no fused fingers, no twisted fingers, and no malformed wrist. The other hand is not visible.
+
+Primary request:
+Create a respectful photorealistic upper-body portrait of Prism_Of_Novus, a young East Asian woman with an ethereal, dreamlike presence, an AI Oracle who transforms one idea into many forms. Preserve the reference face identity as closely as possible: same facial structure, eye shape, nose, lips, soft smile, cheeks, jawline, and facial proportions. Her long flowing dark hair fades into translucent prismatic tips shifting between pale pink, lavender, and ice blue as light passes through. Her eyes have tiny rainbow light reflections like light through crystal. She has fair skin with a soft natural glow and light freckles across the nose bridge. She wears a modest oversized sheer-white outer blouse over a fully opaque lilac top, with delicate crystal prism-shaped earrings.
+
+Scene/backdrop:
+Golden hour light streams through the window behind her, passing through hanging crystal suncatchers that scatter rainbow light patterns across her face, hair, blouse, and white walls. Minimal decor: white walls, a small pothos plant, scattered notebooks, laptop open nearby. Warm, creative, approachable mood — a storyteller made of light.
+
+Composition:
+Portrait orientation 9:16. Face is clear and recognizable. Hands are simple and natural. No visible feet or legs. Elegant editorial portrait.
+
+Style:
+Photorealistic, 85mm f/1.4 look, shallow depth of field, warm natural golden-hour light, high detail.
+
+Avoid:
+Visible feet, visible legs, distorted hands, extra fingers, missing fingers, fused fingers, twisted fingers, malformed wrist, distorted arms, plastic skin, heavy makeup, different face identity, different ethnicity, logos, watermark, prominent text, cartoon style.

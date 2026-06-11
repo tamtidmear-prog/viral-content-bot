@@ -1,0 +1,29 @@
+# Image Prompt — Ai_In_Mind / Cafe Phone Chin On Table
+
+Output image:
+/home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/ai_in_mind_cafe_phone_chin_table_20260609_175324.png
+
+Face reference images used as face identity only:
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (24).png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (19).png
+
+Original request:
+
+Same girl from reference image, resting her chin on the wooden table while absentmindedly scrolling through her phone, relaxed playful expression, photographed secretly by her boyfriend from across the cafe, close candid shot, amateur snapshot, dreamy film bloom, faded greenish-brown tones, compact CCD camera photo, nostalgic movie aesthetic, memory-like photograph, warm late afternoon cafe lighting.
+
+Prompt used:
+
+Use case: identity-preserve photorealistic candid lifestyle
+Asset type: Facebook post image for Ai_In_Mind
+Input images: Use the two visible reference images only as face identity references. Preserve the same adult East Asian woman's core face identity: oval face shape, eyes, brows, nose, lips, skin tone impression, natural dimples/soft smile impression, and long dark brown hair. Do not copy the reference background, outfit, pose, lighting, or styling.
+
+Create a photorealistic candid cafe snapshot of the same adult woman resting her chin on a wooden table while absentmindedly scrolling through her phone. She has a relaxed playful expression, unaware of the camera. Warm late afternoon cafe lighting comes through windows.
+
+Camera story: secretly photographed by her boyfriend from across the cafe. Close candid shot, amateur compact CCD camera photo, imperfect framing, nostalgic movie aesthetic, dreamy film bloom, faded greenish-brown tones, memory-like photograph.
+
+Character: adult East Asian woman, long dark brown hair, casual modest cafe outfit such as a soft cardigan or simple top, relaxed and playful, natural everyday moment, non-sexual.
+
+Composition: vertical Facebook post, close shot across a wooden cafe table, her chin resting near the tabletop, phone visible in her hand or near her hand, warm window light, shallow depth of field, no text.
+
+Negative:
+low quality, distorted face, face identity drift, extra fingers, bad hands, bad anatomy, text, watermark, anime, cartoon, illustration, plastic skin, overexposed, sexualized pose, lingerie, overly revealing clothing, duplicate person.

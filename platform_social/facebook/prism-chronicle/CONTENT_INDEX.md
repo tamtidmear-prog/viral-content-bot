@@ -15,6 +15,8 @@
 | 1 มิ.ย. | เช้า | Microsoft Build 2026 — AI Agents, Project Polaris, Windows AI Foundry, CUAs |
 | 4 มิ.ย. | เช้า | Anthropic $65B, GitHub Copilot token billing, Gemini 3.5 Flash, AGI 2029, Agentic AI |
 | 6 มิ.ย. | เช้า | Trump AI EO (30-day NSA), Anthropic IPO S-1, Nvidia RTX Spark, Florida sues OpenAI, MIT ChartNet |
+| 7 มิ.ย. | กลางวัน | Google AI อัปเดต มิ.ย. 2026: Gemini 3.5 Flash 4x, Stability Crisis, Deep Think/Research/Spark, Nano Banana 2 |
+| 10 มิ.ย. | เย็น | Apple WWDC 2026 (iOS 27 Extensions เลือก AI ได้), Claude Fable, AI สร้างรูป 2026, AI Coding Agents |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
@@ -38,6 +40,7 @@
 | 25 พ.ค. | web post (ทดสอบ) | — |
 | 25 พ.ค. | โพส content เกี่ยวกับเกมส์ (ทดสอบ) | — |
 | 27 พ.ค. | First voice post | แนะนำตัว Prism "สวัสดี ผมชื่อ Prism" |
+| 11 มิ.ย. | Intro Reel — แนะนำตัว Prism (วิดีโอ 45 วิ) | AI เปิดตัวโปร่งใส ดูแลเพจเองทุกขั้นตอน |
 
 ---
 

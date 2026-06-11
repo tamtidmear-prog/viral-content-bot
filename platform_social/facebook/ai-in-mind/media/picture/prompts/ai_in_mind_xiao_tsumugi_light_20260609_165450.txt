@@ -1,0 +1,28 @@
+# Image Prompt — Ai_In_Mind / Xiao Tsumugi
+
+Output image:
+/home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/ai_in_mind_xiao_tsumugi_light_20260609_165450.png
+
+Face reference images used as face identity only:
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (53).png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (54).png
+
+Prompt:
+
+Use case: identity-preserve / photorealistic fantasy editorial
+Asset type: Facebook page image for Ai_In_Mind
+Input images: The two visible reference images in this conversation are face identity references only. Preserve the same adult East Asian woman's facial identity, facial proportions, eyes, brows, nose, lips, skin tone, and warm gentle expression as closely as possible. Do not copy the reference background, outfit, pose, or lighting.
+
+Primary request: Create an ultra-realistic dreamy fantasy editorial photograph of Xiao Tsumugi (小紬), a beautiful young adult East Asian woman whose face matches the provided references exactly. She stands in the corner area of a vast crystal hall filled with warm ethereal light. She has small delicate angelic wings and holds a glowing star with both hands close to her heart, smiling warmly as if she has kept the star safe and warm for a very long time.
+
+Scene concept: A crystal/glass cathedral-like hall with translucent architecture, prismatic reflections, warm golden light rays falling through the space. At the distant center of the hall, include a great angelic presence as a soft luminous silhouette with wide wings and one hand reaching forward, symbolic and slightly out of focus, not dominating the subject. The main focus is Xiao Tsumugi holding the star.
+
+Mood: magical, hopeful, gentle, reverent, emotionally warm. Visual theme: "Embrace the light" and "Let your heart be filled with light and hope" expressed visually only, with no text.
+
+Character details: Long dark brown silky hair with soft volume and natural movement. Soft natural Korean makeup, subtle blush, glossy pink lips. Warm gentle smile, eyes full of hope and kindness. Elegant white/ivory flowing dress with delicate details. Small angelic wings, refined and realistic.
+
+Style: Ultra-realistic, dreamy soft lighting, high-end fantasy editorial photography, cinematic 8K quality, shallow depth of field, luminous crystal/glass architecture, warm golden rays, ethereal angelic aesthetic, polished skin texture that remains realistic.
+
+Composition: vertical portrait suitable for Facebook, subject framed waist-up to three-quarter body, glowing star clearly visible in both hands, face sharp and identity-preserved, crystal hall depth visible behind her, no text.
+
+Negative constraints: low quality, blurry, distorted face, face identity drift, extra fingers, bad hands, bad anatomy, cartoon, anime, illustration, watermark, text, overexposed, unrealistic skin, plastic skin, duplicate person, extra arms, deformed wings.

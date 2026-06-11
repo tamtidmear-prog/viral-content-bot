@@ -1,0 +1,32 @@
+Video demo concept:
+Forward polished iteration of the original AI IN MIND fragrance editorial prototype. This version keeps the luxury fragrance/editorial mood while improving structure with smoother transitions, stronger title/product cards, short scene labels, and a normalized original audio bed.
+
+Output:
+ai_in_mind_fragrance_editorial_forward.mp4
+
+Format:
+Landscape 16:9, 1920x1080, 30fps, 19.7 seconds, H.264 video + AAC audio.
+
+Structure:
+1. AI IN MIND fragrance editorial intro card
+2. Cheongsam autumn portrait shot with AUTUMN SILK caption
+3. Minimalist living room portrait shot with ROOM LIGHT caption
+4. Urban aviator editorial shot with CITY GLASS caption
+5. Studio top bun portrait set shot with STUDIO SKIN caption
+6. Original product-style concept card: MIND / EAU DE MEMORY
+7. AI IN MIND outro card
+
+Source images:
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/cheongsam_autumn_portrait.png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/minimalist_living_room_portrait.png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/urban_aviator_editorial.png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/studio_top_bun_portrait_set.png
+
+Music:
+Generated locally as an original synthetic editorial rhythm bed using layered sine tones, pulse accents, fades, stereo conversion, and peak limiting.
+Verified loudness:
+- mean_volume: -17.0 dB
+- max_volume: -2.7 dB
+
+Render notes:
+Made with ffmpeg using deterministic graphic cards, portrait scale/crop, vignette, text overlays, xfade transitions, H.264 export, AAC muxing, and final loudness verification.

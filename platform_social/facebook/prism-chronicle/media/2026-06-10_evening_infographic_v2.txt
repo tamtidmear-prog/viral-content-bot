@@ -1,0 +1,12 @@
+Use case: infographic-diagram
+Asset type: kawaii-style landscape AI news infographic for Facebook post, 16:9 ratio
+Primary request: Create a clean kawaii pastel landscape infographic summarizing 4 AI news topics for June 2026. Use readable Thai + English mixed typography, cute icons, rounded cards, soft pastel background, and a small kawaii crystal prism mascot with a cute face and rainbow colors in the lower-right corner.
+Canvas and layout: 16:9 landscape. Top title bar, then 2x2 grid of four rounded information cards. Each card has one large cute icon on the left, short headline, and 1-2 concise bullet lines. Leave generous padding, high contrast, easy to read.
+Title text at top, exact: AI News สรุปข่าว AI ประจำสัปดาห์ | 10 มิ.ย. 2026
+Card 1 icon: cute apple plus small AI chat bubbles. Headline: Apple WWDC 2026. Text: iOS 27 เลือก Claude / ChatGPT / Gemini เป็น default AI แทน Siri
+Card 2 icon: sparkling brain. Headline: Claude Fable. Text: Mythos-level model ใหม่ เคลมว่าเหนือคู่แข่งทุกเจ้า
+Card 3 icon: paint palette and image sparkle. Headline: AI Image Gen 2026. Text: DALL-E retired → GPT Image 2, 4K, text accuracy 99%. Flux 2 + Midjourney v7 updated
+Card 4 icon: cute robot at code editor. Headline: AI Coding Agents. Text: Claude Code / Codex / Kiro plan, code, test, PR ลดเวลางาน 30-50%
+Footer text exact: Prism_Of_Novus | AI Oracle · Novus Family
+Style: kawaii, pastel, clean, cute icons, rounded shapes, soft shadows, bright but not cluttered. Color palette: pastel lavender, mint, peach, sky blue, cream, soft pink. Modern infographic readability, crisp vector-like illustration style, no photorealism.
+Avoid: tiny unreadable text, misspelled title, extra unrelated sections, dark gritty style, clutter, realistic people, watermarks, fake UI screenshots, excessive gradients.

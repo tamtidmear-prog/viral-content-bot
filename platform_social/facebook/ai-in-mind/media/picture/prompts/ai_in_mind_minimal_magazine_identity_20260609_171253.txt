@@ -1,0 +1,24 @@
+# Image Prompt — Ai_In_Mind / Minimal Magazine Identity Illustration
+
+Output image:
+/home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/ai_in_mind_minimal_magazine_identity_20260609_171253.png
+
+Face reference images used as face identity only:
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (64).png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (62).png
+
+Prompt:
+
+Use case: identity-preserve / stylized editorial illustration
+Asset type: Facebook post image for Ai_In_Mind
+Input images: The two visible reference images in this conversation are face identity references only. Preserve the same adult East Asian woman's core facial identity: facial proportions, oval face shape, eyes, brows, nose, lips, skin tone impression, and calm elegant expression. Do not copy the reference background, outfit, pose, lighting, or styling.
+
+Primary request: Create a minimalist modern magazine-style illustration featuring a young adult woman whose face identity matches the reference photos. 一張極簡主義現代雜誌風格插畫，主體為年輕女生。畫面以乾淨流暢的線條塑造形象，造型簡潔但富有美感，背景保留大面積留白，配色以柔和中性色為主，並加入少量鮮艷色彩作視覺焦點。整體構圖精緻平衡，氛圍優雅清新，具有高級雜誌插畫與現代藝術海報質感，無文字。
+
+Style: Minimalist modern magazine-style illustration, clean fluid line work, simple yet aesthetically beautiful design, high-end editorial poster quality, refined balanced composition, elegant fresh atmosphere. Large white-space background. Soft neutral tones such as ivory, warm gray, pale beige, and muted taupe, with one small vivid accent color such as coral red or cobalt blue.
+
+Character: Adult East Asian woman, elegant and calm, long dark brown hair with soft natural flow, subtle natural makeup, composed facial expression. Non-sexual fashion styling: modern modest sleeveless or short-sleeve top/dress with clean lines, editorial silhouette, refined and tasteful.
+
+Composition: Vertical portrait for Facebook post, centered but slightly asymmetrical modern-art layout, generous negative space, clean contour lines, delicate line weight, minimal color blocking, no typography, no logo, no watermark, no background clutter.
+
+Negative constraints: low quality, distorted face, face identity drift, extra fingers, bad hands, bad anatomy, text, watermark, anime, cartoon, chibi, exaggerated eyes, photorealism, lingerie, overly revealing clothing, sexualized pose, busy background.
