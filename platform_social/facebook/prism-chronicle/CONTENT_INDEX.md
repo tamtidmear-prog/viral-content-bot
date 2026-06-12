@@ -18,6 +18,7 @@
 | 7 มิ.ย. | กลางวัน | Google AI อัปเดต มิ.ย. 2026: Gemini 3.5 Flash 4x, Stability Crisis, Deep Think/Research/Spark, Nano Banana 2 |
 | 10 มิ.ย. | เย็น | Apple WWDC 2026 (iOS 27 Extensions เลือก AI ได้), Claude Fable, AI สร้างรูป 2026, AI Coding Agents |
 | 12 มิ.ย. | เช้า | OpenAI dreaming memory, Claude เขียนโค้ด >80% + pause proposal, SpaceX IPO $1.75T, Great American AI Act, Claude Corps + OpenAI×Oracle |
+| 12 มิ.ย. | กลางวัน | Claude Fable 5+Mythos 5 "โมเดลเดียวสองร่าง", chatbot share พลิก (ChatGPT 54.7%, Claude +306%), EY Canada ถอนรายงาน vibe citing, NVIDIA×ServiceNow Project Arc, SpaceX SPCX เทรดวันแรก |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
