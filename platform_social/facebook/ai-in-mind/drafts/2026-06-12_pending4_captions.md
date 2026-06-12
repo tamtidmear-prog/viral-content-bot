@@ -1,6 +1,6 @@
 # Draft Captions — รูปค้าง 4 ตัว (gen 10 มิ.ย. ผ่าน Paradex)
 
-> สถานะ: รอ Master J เลือก/อนุมัติ — ห้ามโพสก่อนได้รับยืนยัน
+> สถานะ: ✅ อนุมัติแล้ว (Master J ผ่าน Paradex relay 12 มิ.ย. 07:25) — scheduled ครบ 4 ดู logs/2026-06-12_daily.md
 > รูปอยู่ที่ `platform_social/facebook/ai-in-mind/media/picture/`
 
 ---
