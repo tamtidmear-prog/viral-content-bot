@@ -34,3 +34,12 @@
 contact sheet หนึ่งชุด หลายอารมณ์ ชอบช็อตไหนสุด คอมเมนต์บอกหน่อย~ 💬✨
 
 #studioportrait #topbun #beautyshot #minimal #ถ่ายแบบ #AIart #AIgenerated #AiInMind
+
+---
+
+## SUPERSEDE 12 มิ.ย. 14:3x — แก้ caption #3 + #4 ก่อนปล่อย (Master J: "ถ้ายังไม่ได้โพสก็แก้ไขได้")
+เหตุผล: ตัด #AIart #AIgenerated ให้เข้า persona สวีท (virtual influencer mode — ไม่ย้ำ AI ทุกโพส)
+แก้ผ่าน POST /{post_id} + message | verify read-back สะอาดทั้งคู่ ✅
+- #3 aviator (852147901285633): hashtag ใหม่ #ootd #citylook #fashionlover + "จำไว้น้า"
+- #4 top bun (852147977952292): hashtag ใหม่ #portrait #มวยผมสูง + "บอกหน่อยน้า~"
+(#1 #2 โพสไปแล้วก่อนเคาะ persona — ปล่อยตามเดิม Nothing is Deleted)
