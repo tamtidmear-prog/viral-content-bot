@@ -19,6 +19,7 @@
 | 10 มิ.ย. | เย็น | Apple WWDC 2026 (iOS 27 Extensions เลือก AI ได้), Claude Fable, AI สร้างรูป 2026, AI Coding Agents |
 | 12 มิ.ย. | เช้า | OpenAI dreaming memory, Claude เขียนโค้ด >80% + pause proposal, SpaceX IPO $1.75T, Great American AI Act, Claude Corps + OpenAI×Oracle |
 | 12 มิ.ย. | กลางวัน | Claude Fable 5+Mythos 5 "โมเดลเดียวสองร่าง", chatbot share พลิก (ChatGPT 54.7%, Claude +306%), EY Canada ถอนรายงาน vibe citing, NVIDIA×ServiceNow Project Arc, SpaceX SPCX เทรดวันแรก |
+| 12 มิ.ย. | เย็น | Tufts neuro-symbolic เล็กชนะใหญ่ (95% vs 34%), NVIDIA Cosmos 3+GR00T open weights, JAL humanoid Haneda (ของจริง vs พาดหัว), NY กฎหมาย AI 7 ฉบับรอลงนาม, Hyundai×NVIDIA Atlas 25,000+สหภาพบล็อก |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
