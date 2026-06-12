@@ -1,0 +1,11 @@
+Use case: identity-preserve
+Asset type: ultra-realistic candid lifestyle photograph
+Input reference: use the visible reference images as the identity reference for the adult East Asian woman's facial structure, eyes, nose, lips, soft jawline, skin tone, and recognizable face. Preserve the same face as closely as possible while creating a new photograph.
+Primary request: A cheerful adult East Asian woman in her mid-20s on an early morning run in a lush city park. She is mid-stride on a tree-lined jogging path, smiling naturally with light genuine sweat on her skin, hair tied in a practical high ponytail, wearing a modest pastel mint athletic t-shirt and black knee-length running leggings, with a small water bottle in one hand.
+Setting: green public park at sunrise, tall trees with morning mist between them, empty jogging path with soft bokeh background, hints of city skyline far behind the trees.
+Composition: candid documentary-style shot as if taken by a friend on a flagship smartphone, subject slightly off-center, three-quarter body framing, eye-level angle, natural motion feel, shallow depth of field.
+Lighting and style: ultra-realistic photography, razor-sharp focus on the face, natural golden-hour sunrise light with soft warm rim light on hair and shoulders, true-to-life natural skin texture with visible pores and light perspiration, realistic fabric wrinkles, no beauty-filter smoothing, photorealistic everyday life moment.
+Color palette: warm golden sunlight, fresh greens of the park, soft mint and black of the outfit, natural skin tones.
+Wardrobe and safety: modest crew-neck athletic t-shirt, knee-length leggings, covered chest, non-lingerie, adult subject, no explicit posing.
+Mood: energetic, fresh, joyful, determined, authentic slice of real life.
+Avoid: minors, teen appearance, nudity, lingerie, exposed midriff, sports bra only, explicit sensuality, sunglasses, hat, cap, anything covering the face, distorted hands, extra fingers, changed facial structure, text, watermark, logo, brand marks, cartoon, anime, illustration, plastic skin, over-smoothed skin, AI glossy look, oversaturated colors
