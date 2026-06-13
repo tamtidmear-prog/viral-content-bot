@@ -1,0 +1,9 @@
+prompt: Ultra-realistic candid photo of a young Thai woman (age 26) browsing a colorful weekend market on a sunny Saturday afternoon. She is wearing a casual light sage green linen co-ord set (crop top + wide-leg pants) with a small woven beige tote bag. Warm afternoon golden light. She is holding a small handmade ceramic item, looking at it with a curious happy smile, slightly tilted head. Busy market stalls with handmade crafts and plants in background, naturally blurred. Shot on Sony A7IV 35mm f/1.8, natural skin texture, sharp focus on face, shallow depth of field, warm tones, candid lifestyle photography, ultra-realistic photorealistic. NOT anime, NOT illustration, NOT AI-glossy.
+---
+file: 2026-06-13_weekend_market.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: 25d24f1bc4f8d5712ebbf40c61c64797bd7d66d42f74b4c08837aa065e654bf1
+ref_images: w12 (24).png, w12 (31).png
+dimensions: 1024x1536
+date: 2026-06-13
