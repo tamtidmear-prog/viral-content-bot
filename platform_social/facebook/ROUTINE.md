@@ -14,8 +14,9 @@
 | เวลาเริ่ม pipeline | เพจ | งาน | หน้าต่างโพส |
 |--------------------|-----|-----|-------------|
 | 06:40 | Prism Chronicle | AI news เช้า (SOP 12 steps, report-direct) | 07:30–08:45 |
+| 08:30 | Ai_In_Mind | โพส lifestyle "สวีท" เช้า — ทุกวัน ≥1 โพส (Master J สั่ง 13 มิ.ย.) | 09:00–10:30 |
 | 11:10 | Prism Chronicle | AI news กลางวัน | 12:00–13:00 |
-| 14:50 | Ai_In_Mind | โพส lifestyle "สวีท" 1 โพส | 15:30–16:30 |
+| 14:50 | Ai_In_Mind | โพส lifestyle "สวีท" บ่าย (optional — ถ้ามีธีมเพิ่ม) | 15:30–16:30 |
 | 17:25 | Prism Chronicle | AI news เย็น | 18:00–19:30 |
 
 ## Pipeline ต่อ slot
