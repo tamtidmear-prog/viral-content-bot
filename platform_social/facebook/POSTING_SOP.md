@@ -53,6 +53,19 @@ notebooklm generate infographic --style kawaii --orientation landscape --detail 
 notebooklm artifact wait <artifact_id> -n <notebook_id> --timeout 600
 notebooklm download infographic "platform_social/facebook/prism-chronicle/media/YYYY-MM-DD_[ช่วงเวลา]_infographic.png" \
   -a <artifact_id> -n <notebook_id>
+
+# verify หลัง download (smart contract — Paradex pattern 2026-06-13)
+IMG="platform_social/facebook/prism-chronicle/media/YYYY-MM-DD_[ช่วงเวลา]_infographic.png"
+python3 -c "
+import struct
+data = open('$IMG','rb').read()
+assert data[:8] == b'\x89PNG\r\n\x1a\n', 'Not PNG'
+assert data[-8:].hex().find('49454e44ae426082') >= 0, 'IEND missing — re-download'
+w = struct.unpack('>I', data[16:20])[0]
+h = struct.unpack('>I', data[20:24])[0]
+assert w > h, f'Not landscape: {w}x{h}'
+print(f'OK: {w}x{h} px, {len(data)} bytes')
+"
 ```
 
 ### STEP 5 — Generate Podcast (parallel กับ STEP 4)
@@ -109,6 +122,10 @@ curl -s -X POST "https://graph.facebook.com/v25.0/${PAGE_ID}/photos" \
 # ย้าย draft ไป posted/
 mv platform_social/facebook/prism-chronicle/drafts/YYYY-MM-DD_[ช่วงเวลา]_ai_news.md \
    platform_social/facebook/prism-chronicle/posted/
+
+# บันทึก prompt record ของ infographic ใน media/prompts/ (ห้ามลืม)
+# format: ดู media/prompts/2026-05-29_morning.md เป็นตัวอย่าง
+# เก็บ: ชื่อไฟล์, notebook_id, artifact_id, sources, หัวข้อ, วันที่
 
 # บันทึก log
 echo "- post_id: xxx | หัวข้อ: xxx | ตัวอักษร: xxx" \

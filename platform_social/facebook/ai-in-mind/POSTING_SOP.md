@@ -87,13 +87,40 @@ print('IEND OK')
 ## STEP 5 — วางไฟล์ (path บังคับ)
 
 ```bash
-# รูป
 OUTPUT="$HOME/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture"
-cp /tmp/chatgpt_image.png "$OUTPUT/YYYY-MM-DD_[ธีม].png"
-
-# prompt → prompts/ subfolder
 mkdir -p "$OUTPUT/prompts"
-cp /tmp/chatgpt-prompt.txt "$OUTPUT/prompts/YYYY-MM-DD_[ธีม].txt"
+
+# verify ก่อน copy (smart contract — Paradex pattern 2026-06-13)
+python3 -c "
+import os, struct, zlib
+data = open('/tmp/chatgpt_image.png','rb').read()
+assert data[-8:].hex().find('49454e44ae426082') >= 0, 'IEND missing'
+assert data[:8] == b'\x89PNG\r\n\x1a\n', 'Not PNG'
+# extract dimensions from IHDR
+w = struct.unpack('>I', data[16:20])[0]
+h = struct.unpack('>I', data[20:24])[0]
+print(f'OK: {w}x{h} px, {len(data)} bytes')
+"
+
+# copy to final path (non-overwrite: เพิ่ม _v2 ถ้ามีไฟล์แล้ว)
+DEST="$OUTPUT/YYYY-MM-DD_[ธีม].png"
+[ -f "$DEST" ] && DEST="${DEST%.png}_v2.png"
+cp /tmp/chatgpt_image.png "$DEST"
+
+# metadata sidecar (Paradex smart contract fields)
+SHA=$(sha256sum "$DEST" | cut -d' ' -f1)
+cat > "$OUTPUT/prompts/YYYY-MM-DD_[ธีม].txt" << SIDECAR
+prompt: $(cat /tmp/chatgpt-prompt.txt)
+---
+file: $(basename $DEST)
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: $SHA
+generated_path: /tmp/chatgpt_image.png
+output_path: $DEST
+ref_images: [ref1.png, ref2.png]
+date: YYYY-MM-DD
+SIDECAR
 ```
 
 ## STEP 6 — โพส
