@@ -21,6 +21,7 @@
 | 12 มิ.ย. | กลางวัน | Claude Fable 5+Mythos 5 "โมเดลเดียวสองร่าง", chatbot share พลิก (ChatGPT 54.7%, Claude +306%), EY Canada ถอนรายงาน vibe citing, NVIDIA×ServiceNow Project Arc, SpaceX SPCX เทรดวันแรก |
 | 12 มิ.ย. | เย็น | Tufts neuro-symbolic เล็กชนะใหญ่ (95% vs 34%), NVIDIA Cosmos 3+GR00T open weights, JAL humanoid Haneda (ของจริง vs พาดหัว), NY กฎหมาย AI 7 ฉบับรอลงนาม, Hyundai×NVIDIA Atlas 25,000+สหภาพบล็อก |
 | 13 มิ.ย. | เช้า | BYD humanoid robot (EV→หุ่นยนต์), Colorado AI Act มีผล 30 มิ.ย., Meta ปลด 8,000+ย้าย 7,000 เข้า AI, Penn exciton-polariton แสง+สสารลดพลังงาน AI, Google Gemma 4 open model |
+| 13 มิ.ย. | กลางวัน | EU AI Act Digital Omnibus (GPAI ส.ค.2025/enforcement ส.ค.2026), Claude Fable5+Mythos5 suspend (jailbreak dispute), OpenAI o3 AIME 96.7%, Apple iOS27 Siri AI (Gemini-powered), AI Agent Economy 40% enterprise |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
