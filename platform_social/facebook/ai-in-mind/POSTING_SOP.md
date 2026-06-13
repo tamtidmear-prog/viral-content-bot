@@ -140,9 +140,14 @@ curl -s -X POST "https://graph.facebook.com/v25.0/${PAGE_ID}/photos" \
 ## STEP 7 — หลังโพส
 
 1. Verify permalink: `GET {post_id}?fields=permalink_url`
-2. Log ใน `prism-chronicle/logs/YYYY-MM-DD_daily.md`
-3. **ให้ลิงก์ Master J เสมอ**
-4. git add + commit + push (submodule → parent)
+2. **ย้ายรูปไป `media/picture/job_done/` ทันที** (Master J สั่ง — scheduled post ขึ้นจริงแล้วค่อยย้าย)
+   ```bash
+   mv "media/picture/YYYY-MM-DD_[ธีม].png" "media/picture/job_done/"
+   # prompt sidecar (.txt) คงไว้ที่ media/picture/prompts/ ไม่ต้องย้าย
+   ```
+3. Log ใน `ai-in-mind/logs/YYYY-MM-DD_daily.md`
+4. **ให้ลิงก์ Master J เสมอ**
+5. git add + commit + push (submodule → parent)
 
 ---
 
