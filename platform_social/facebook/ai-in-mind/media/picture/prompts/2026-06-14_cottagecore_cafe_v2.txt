@@ -1,0 +1,17 @@
+prompt: Use these 2 reference images for the face/character consistency. Generate 1 image:
+
+Same woman, same outfit (cottagecore blouse with colorful flower embroidery and ruffles, beige linen midi skirt), same garden café setting.
+
+Single portrait (4:5 vertical): standing near blooming flower wall, soft smile, looking slightly off-camera, golden afternoon light from the side, arms relaxed at sides naturally. No hand gestures. Hands hanging naturally, NOT touching anything.
+
+Perfect natural hands, all five fingers anatomically correct, no extra fingers, no distorted fingers.
+
+Sony A7IV, 50mm f/1.4, ultra-realistic, warm film tones, real skin texture, NOT AI-glossy. Magazine quality portrait. Bokeh background soft green and pink tones.
+---
+file: 2026-06-14_cottagecore_cafe_v2.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: 60636287dd99d0b59dd109715cfbcd99100867f3e37c55dab4998766f43b81ff
+ref_images: ref_face1.png (w12 64), ref_face2.png (w12 62)
+date: 2026-06-14
+note: v2 — hand fix (arms relaxed at sides, no gestures)
