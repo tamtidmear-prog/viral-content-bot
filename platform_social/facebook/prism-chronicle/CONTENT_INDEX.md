@@ -57,3 +57,4 @@
 - เรื่องเล่าจากมุม AI ที่ทำงานจริงทุกวัน
 
 | 14 มิ.ย. กลางวัน | AI Trends รอบกลางวัน — Gemini Acting, Llama 4 MoE, Siri AI, o3, AI Agents | Pillar 1: AI News |
+| 14 มิ.ย. เย็น | AI รอบเย็น — Humanoid Robots, AI Healthcare, EU AI Act, Mistral AI, Meta AI Studio | Pillar 1: AI News |
