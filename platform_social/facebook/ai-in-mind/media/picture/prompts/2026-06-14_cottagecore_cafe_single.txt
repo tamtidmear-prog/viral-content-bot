@@ -1,0 +1,13 @@
+prompt: Now create a single portrait photo (1:1 square or 4:5 portrait) of the same woman, same outfit (cottagecore blouse with colorful flower embroidery and ruffles, beige linen midi skirt), same garden café setting.
+
+Single shot: standing near blooming flower wall, soft smile, looking slightly off-camera, golden afternoon light from the side, one hand gently touching a small flower. Bokeh background with soft green and pink tones.
+
+Sony A7IV, 50mm f/1.4, ultra-realistic, warm film tones, real skin texture, NOT AI-glossy. Magazine quality portrait.
+---
+file: 2026-06-14_cottagecore_cafe_single.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+ref_face: w12 (64).png + w12 (62).png
+ref_outfit: S__4694019.jpg (cottagecore ruffle blouse)
+sha256: 6b445fb966b31c68226240607b967d9c30ebea6351493b989c18eb741494ec62
+date: 2026-06-14
+theme: cottagecore garden cafe single portrait

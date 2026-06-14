@@ -1,0 +1,37 @@
+prompt: Ultra-realistic editorial contact sheet, 3x3 grid (9 panels), same young Asian woman throughout all panels, using the provided face reference images for exact likeness.
+
+OUTFIT (match exactly from the outfit reference image):
+- Off-white/cream cottagecore blouse with small colorful flower embroidery (tiny red, blue, green, yellow flowers scattered all over)
+- Multiple layered ruffles with white lace trim on collar and front cascade
+- Balloon/puff sleeves with lace cuffs
+- Paired with: beige/camel linen midi skirt (knee to mid-calf length), simple and flowy
+
+SETTING: Charming garden café, afternoon golden hour
+- Blooming flower garden background, pastel colors
+- Wooden café tables, small vases with wildflowers
+- Soft dappled sunlight through trees
+- Warm film photography tones, slight grain
+
+9 PANELS — candid lifestyle moments:
+1. Sitting at garden table, holding a floral teacup, slight smile looking down
+2. Standing near flower wall, light breeze lifting skirt hem slightly
+3. Close-up: hands wrapping around iced drink, blouse ruffles visible
+4. Walking along garden path, candid side profile
+5. Laughing naturally, looking off-camera, bright mood
+6. Picking up small flower from table arrangement, delicate gesture
+7. Leaning against wooden fence, relaxed, golden backlight
+8. Reading a small book at café table, cozy atmosphere
+9. Looking directly at camera, soft natural smile, warm light
+
+PHOTOGRAPHY STYLE: Sony A7IV, 85mm f/1.8, natural light, warm film tones, editorial fashion magazine quality. NOT AI-glossy, NOT studio lighting. Real skin texture, authentic candid feel.
+
+IMPORTANT: All 9 panels must show the SAME woman (same face from reference), same outfit, same location. Contact sheet border between panels.
+---
+file: 2026-06-14_cottagecore_cafe_3x3.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: 97f242336f1fbde2d32dc97fa0acac139c2f8be9df9eda021f4a089c56d39a94
+ref_face: w12 (64).png + w12 (62).png
+ref_outfit: S__4694019.jpg (cottagecore ruffle blouse)
+date: 2026-06-14
+theme: cottagecore garden café 3x3 contact sheet
