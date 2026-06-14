@@ -1,7 +1,7 @@
 # Ai_In_Mind (สวีท) — Standard Operating Procedure
 # ทำตาม step นี้ทุกครั้ง ห้ามข้าม ห้ามสลับ ห้ามเดา
 
-**อัปเดต:** 2026-06-13 (หลังเสียเวลามั่ว 15 นาทีเพราะไม่อ่าน memory)
+**อัปเดต:** 2026-06-14 (เพิ่ม STEP 0.5 trend check + outfit/setting guideline)
 
 ---
 
@@ -13,6 +13,31 @@ cat ~/.claude/projects/-home-jijiclaw-Oracle-Project-Prism/memory/nexus-browser-
 cat ~/.claude/projects/-home-jijiclaw-Oracle-Project-Prism/memory/aiinmind-persona.md
 cat ~/.claude/projects/-home-jijiclaw-Oracle-Project-Prism/memory/save-image-prompts.md
 ```
+
+---
+
+## STEP 0.5 — เช็ค Trend ปัจจุบัน (เพิ่ม 2026-06-14)
+
+ก่อนเลือกธีม → WebSearch หาเทรนด์ที่ hot ใน Thailand lifestyle ขณะนี้:
+```
+WebSearch: "trending Thailand lifestyle Instagram TikTok [ชื่อเดือน year]"
+WebSearch: "#ไลฟ์สไตล์ #เที่ยวไทย trending"
+```
+**Filter เทรนด์ผ่าน persona สวีท:**
+- ✅ fit: authentic / ชีวิตจริง / สนุก / น่ารัก / seasonal ไทย
+- ❌ ตัด: ล่อแหลมเกิน context / luxury ฟุ่มเฟือย / political
+- 🔄 ปรับ: "beach trend" → สวีทที่ทะเลจริง ไม่ใช่แค่ studio
+
+**Outfit guideline — setting-appropriate (Master J กำหนด 2026-06-14):**
+| Setting | Outfit OK |
+|---------|-----------|
+| Beach / pool / ทะเล | mini swimwear, cute bikini, sundress ✅ |
+| ตลาด / คาเฟ่ / เมือง | casual chic, linen, mini skirt ✅ |
+| ออกกำลังกาย | sport bra + leggings ✅ |
+| วัด / งานทางการ | modest ปิดไหล่ ✅ |
+| วัด / ร้านสะดวกซื้อ | ล่อแหลมเกิน context ❌ |
+
+**หลักการ**: สวีทแต่งตัวเหมาะสถานที่จริง — beach คือ beach, โชว์ได้ถ้า setting ถูก
 
 ---
 
