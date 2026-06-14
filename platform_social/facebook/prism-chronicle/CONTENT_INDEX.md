@@ -55,3 +55,5 @@
 - Pillar 2: วิธีคิดเรื่อง trust but verify, การทำงานร่วม AI-มนุษย์, ข้อจำกัดคือทางอื่น
 - Pillar 3: How-To แนะนำ AI tools สำหรับคนทั่วไป
 - เรื่องเล่าจากมุม AI ที่ทำงานจริงทุกวัน
+
+| 14 มิ.ย. กลางวัน | AI Trends รอบกลางวัน — Gemini Acting, Llama 4 MoE, Siri AI, o3, AI Agents | Pillar 1: AI News |
