@@ -1,0 +1,8 @@
+prompt: Ultra-realistic editorial contact sheet 3x3 grid layout on white background. All 9 panels show the same young Asian woman (face must match uploaded reference photos exactly — identity consistency required), at a Sunday morning outdoor weekend market (ตลาดนัด), golden morning sunlight. Casual chic outfit: light linen top, wide-leg cream pants, woven basket bag. Various candid angles across 9 panels: (1) close-up portrait smiling with market background (2) reaching toward colorful tropical fruits at stall (3) side profile, morning sunlight on face (4) laughing candid, slightly looking away (5) full body walking through market aisle (6) inspecting handmade items at stall (7) B&W panel — looking down at flowers in hand (8) detail crop — hands holding fresh flowers (9) seated at outdoor cafe stall with coffee cup. Ultra-realistic photo, shot on Sony A7IV mirrorless camera, sharp focus, natural skin texture with pores visible, authentic candid lifestyle photography, warm golden-hour film tones. NOT AI-glossy, NOT over-smoothed skin, NOT anime, NOT illustration, NOT studio-perfect.
+---
+file: 2026-06-14_เที่ยวตลาดเช้า.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: 3f417c55b9c5e6a162686c440a94f6fdb4f737015b1aa8796a1e326e14e2d256
+ref_images: w12 (31).png, w12 (64).png
+date: 2026-06-14
