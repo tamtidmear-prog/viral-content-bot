@@ -1,0 +1,8 @@
+prompt: Create an ultra-realistic photograph of a young Thai woman sitting at a cozy minimalist cafe. She is wearing a flowy sage-colored linen midi dress with thin straps, paired with simple gold hoop earrings and a delicate necklace. She is holding a latte art coffee cup with both hands, looking slightly to the side with a gentle natural smile. The cafe has warm wood tones, green plants, soft natural window light. Shot on Fujifilm X-T5, 56mm f/1.2, shallow depth of field, natural warm color grading. Full body from waist up visible, well-proportioned framing — do not crop awkwardly through arms or hands. Natural skin texture, candid lifestyle photography feel, not AI-glossy. The woman's face must exactly match the uploaded reference photos — same facial features, bone structure, and natural beauty.
+---
+file: 2026-06-15_cafe_afternoon_ootd.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: 03cd89376525c30df43cfa39fbe14ac8086949d4cbe3a2d8c09c9d4cb76b32bd
+ref_images: [w12 (31).png, w12 (24).png]
+date: 2026-06-15
