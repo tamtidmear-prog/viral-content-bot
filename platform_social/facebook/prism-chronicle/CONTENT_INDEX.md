@@ -60,3 +60,4 @@
 | 14 มิ.ย. เย็น | AI รอบเย็น — Humanoid Robots, AI Healthcare, EU AI Act, Mistral AI, Meta AI Studio | Pillar 1: AI News |
 | 15 มิ.ย. เช้า | Figure AI BotQ (1 robot/hr), AI Stroop Test (PNAS Nexus), OpenAI $122B, Orion-100B, Claude Opus 4.8 | Pillar 1: AI News |
 | 15 มิ.ย. กลางวัน | OpenAI Sora discontinued, Meta×Nebius $27B Vera Rubin, HHS AERO Medicaid ChatGPT, Novo Nordisk×OpenAI drug discovery, Gemini 3.5 Pro 2M token | Pillar 1: AI News |
+| 15 มิ.ย. เย็น | Fable 5 jailbreak (120K prompt GitHub), OpenAI Partner Network $150M, Grok 4.20 multi-agent, NIST Safe Step fire evacuation, UN AI environmental cost | Pillar 1: AI News |
