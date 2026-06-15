@@ -1,0 +1,10 @@
+prompt: Create an ultra-realistic photograph of a young Thai woman doing morning yoga in a lush green public park. She is in a gentle warrior pose on a yoga mat, wearing a comfortable sage green sports bra and matching high-waisted leggings. Early morning golden hour sunlight filters through the trees, creating soft dappled light on her skin. Natural skin texture, no retouching. Candid moment — she has a peaceful serene smile with eyes gently closed. Background shows mature tropical trees, fresh green grass, and soft morning mist. Shot on Sony A7IV, 85mm f/1.4, shallow depth of field. The woman's face must exactly match the uploaded reference photos — same facial features, bone structure, and natural beauty. No AI-glossy look, authentic natural photography feel.
+---
+file: 2026-06-15_sunday_morning_yoga.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: fa0878f82290aa879cee98cce259236135bc758fa50388049bae2c8f337b4e35
+generated_path: /tmp/chatgpt_image.png
+output_path: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/2026-06-15_sunday_morning_yoga.png
+ref_images: [w12 (66).png, w12 (80).png]
+date: 2026-06-15
