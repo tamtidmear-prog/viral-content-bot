@@ -1,0 +1,25 @@
+prompt: Create an editorial contact sheet style image (3x3 grid, 9 frames) of the woman in the reference photos. She is visiting a Thai morning market on a Tuesday morning.
+
+Setting: Authentic Thai morning fresh market (ตลาดเช้า), early morning golden light, colorful fresh fruits and vegetables stalls, local vendors, warm atmosphere.
+
+Outfit: Casual chic — soft linen blouse, comfortable loose pants, woven tote bag, minimal jewelry. Setting-appropriate for a market visit.
+
+Grid layout (9 frames):
+1. Walking through market aisle, natural stride, looking at stalls — medium shot
+2. Close-up portrait, warm smile, soft morning light on face
+3. Picking fresh fruits (mangoes or dragon fruit) from a colorful stall
+4. Candid laughing with a friendly market vendor
+5. Black and white frame — profile shot holding a cup of traditional Thai coffee
+6. Full body shot standing in front of a vibrant flower stall
+7. Detail crop — hands holding a woven bag full of fresh produce
+8. Looking over shoulder, natural expression, market bokeh background
+9. Sitting at a small market-side table, sipping coffee, relaxed morning vibe
+
+Style: Ultra-realistic photo, sharp focus, natural skin texture, candid lifestyle photography, shot on Fujifilm X-T5, natural lighting, film grain, everyday life moment. NOT AI-glossy, NOT over-smoothed. The face must clearly match the reference photos in every frame — same person, consistent identity across all 9 frames.
+---
+file: 2026-06-16_morning-market.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: c891f60838e19e0d8602c2bd90d738ae4b1de6cd9c10ea07d1e9eda78bcd2419
+ref_images: [w12 (64).png, w12 (6).png]
+date: 2026-06-16
