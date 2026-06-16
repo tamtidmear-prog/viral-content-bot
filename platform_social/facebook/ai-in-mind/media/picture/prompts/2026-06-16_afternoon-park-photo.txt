@@ -1,0 +1,25 @@
+prompt: Create an editorial contact sheet style image (3x3 grid, 9 frames) of the woman in the reference photos. She is spending a relaxing Tuesday afternoon doing casual photography at a lush green public park.
+
+Setting: Beautiful Thai public park, late afternoon golden hour light, big trees, walking paths, warm sunlight filtering through leaves.
+
+Outfit: Casual relaxed — oversized soft cream t-shirt, denim shorts, white sneakers, crossbody bag with a small camera. Setting-appropriate for a park afternoon.
+
+Grid layout (9 frames):
+1. Walking along a shaded tree-lined path, holding camera up to eye, shooting something ahead — medium shot
+2. Close-up portrait, gentle smile, golden hour light on face, hair catching warm light
+3. Crouching down photographing a flower or interesting leaf on the ground
+4. Candid laughing while reviewing photos on camera screen
+5. Black and white frame — sitting on a park bench, looking up at the sky through tree canopy
+6. Full body shot leaning against a big tree trunk, relaxed pose, camera hanging from neck
+7. Detail crop — hands holding camera, finger on shutter button, soft bokeh background
+8. Looking over shoulder with a playful expression, sunlight creating rim lighting on hair
+9. Sitting cross-legged on grass, camera beside her, sipping from a water bottle, peaceful afternoon vibe
+
+Style: Ultra-realistic photo, sharp focus, natural skin texture, candid lifestyle photography, shot on Sony A7IV, golden hour natural lighting, film grain, everyday life moment. NOT AI-glossy, NOT over-smoothed. The face must clearly match the reference photos in every frame — same person, consistent identity across all 9 frames.
+---
+file: 2026-06-16_afternoon-park-photo.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: 0962e5a86375f8d0ac1bae1bb948283094a9b29d4912c2d21f059ad7f548a8ac
+ref_images: [w12 (20).png, w12 (24).png]
+date: 2026-06-16
