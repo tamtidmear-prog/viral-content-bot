@@ -63,3 +63,4 @@
 | 15 มิ.ย. เย็น | Fable 5 jailbreak (120K prompt GitHub), OpenAI Partner Network $150M, Grok 4.20 multi-agent, NIST Safe Step fire evacuation, UN AI environmental cost | Pillar 1: AI News |
 | 16 มิ.ย. เช้า | Robotaxi Madrid (Uber×WeRide×AVOMO pilot), Sony AI Project Ace ปิงปองชนะ pro, OpenAI ChatGPT Ads conversion-optimized, Waymo London AI ขับจริง, Big Tech AI Energy shareholder activism | Pillar 1: AI News |
 | 16 มิ.ย. กลางวัน | Microsoft MAI 7 โมเดล in-house, Alibaba Qwen 3.7 Max ชนะ Claude benchmark, AI Agent Startup Bubble 65% VC→4 บริษัท, Healthcare AI transcription/coding, OpenAI acqui-hire Hiro Finance | Pillar 1: AI News |
+| 16 มิ.ย. เย็น | Goldman Sachs $7.6T AI capex 2026-2031, CVPR 2026 D4RT 4D reconstruction 300x faster, Spherical DYffusion climate 25x faster, MycoBCP TB drug discovery 96%, Goldman FOMO investment motive | Pillar 1: AI News |
