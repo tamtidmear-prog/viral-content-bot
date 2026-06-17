@@ -85,6 +85,7 @@ curl -s -X POST http://localhost:3456/api/send \
 ### STEP 7 — แก้ Draft ตาม Fact-Check
 - แก้ทุกจุดที่ Nexus/Codex ระบุ
 - verify เองด้วยถ้าไม่แน่ใจ (trust but verify)
+- **Self fact-check ต้อง exact** (บทเรียน S29): ตัวเลขต้องตรง source (72→48hrs), คำเปรียบเทียบห้ามเกินจริง ("drinking water ทั้งโลก" vs "bottled water"), คำศัพท์เฉพาะต้องถูก definition — ห้ามปัดเศษหรือใช้คำกว้างกว่า source
 - อัปเดตไฟล์ draft
 
 ### STEP 8 — ส่ง Final Audit ให้ Nexus

@@ -1,7 +1,7 @@
 # Ai_In_Mind (สวีท) — Standard Operating Procedure
 # ทำตาม step นี้ทุกครั้ง ห้ามข้าม ห้ามสลับ ห้ามเดา
 
-**อัปเดต:** 2026-06-14 (เพิ่ม STEP 0.5 trend check + outfit/setting guideline)
+**อัปเดต:** 2026-06-17 (เพิ่ม S29-30 learnings: caption-image match, date verify, framing QC, format variety)
 
 ---
 
@@ -46,9 +46,17 @@ WebSearch: "#ไลฟ์สไตล์ #เที่ยวไทย trending"
 - หมุน 6 pillars: ออกกำลังกาย / เที่ยว / ถ่ายรูป / แฟชั่น / ลองของใหม่ / activity
 - อิงจังหวะวันจริงของ Prism (เช้า=กาแฟ, ข่าวหนัก=พัก, เสาร์=ชิล)
 - เช็คโพสล่าสุดไม่ให้ซ้ำ pillar ติดกัน
+- **สลับ image format หลากหลาย** — single / 2×2 / 3×3 / asymmetric / filmstrip / art layout (ห้าม 3×3 ตลอด — Master J สั่ง S30)
 
 ## STEP 2 — เขียน Caption
 
+- **เช็ควันก่อน**: `TZ=Asia/Bangkok date '+%A %d %B %Y'` — ห้ามเดาชื่อวัน (บทเรียน S29: เดาอาทิตย์ทั้งที่เป็นจันทร์)
+- **ดูภาพก่อนเขียน** — caption ต้องสอดคล้องกับภาพ เช็ค 5 อย่าง (บทเรียน S30):
+  1. แสง — กลางวัน/เย็น/กลางคืน
+  2. สถานที่ — คาเฟ่/บ้าน/สวน/ตลาด
+  3. เครื่องดื่ม/อาหาร — กาแฟเย็น ≠ ก่อนนอน
+  4. อารมณ์ — playful/serious/chill
+  5. ของในมือ/รอบตัว — ปากกา หนังสือ โทรศัพท์
 - เสียง: สวีท ผู้หญิง 26 คุยกับเพื่อน (ค่ะ/นะคะ)
 - ไม่มี AI disclaimer (virtual influencer mode)
 - emoji น่ารักๆ
@@ -71,7 +79,7 @@ for f in "${REFS[@]}"; do cp "$f" /mnt/c/Users/mamip/Downloads/; done
 
 # 3.3 เขียน prompt
 cat > /tmp/chatgpt-prompt.txt << 'PROMPT'
-[prompt ภาษาอังกฤษ — ultra-realistic, candid, face ref, ตามธีม]
+[prompt ภาษาอังกฤษ — ultra-realistic, candid, face ref, ตามธีม, ALL LIMBS VISIBLE IN FRAME]
 PROMPT
 
 # 3.4 เปิด ChatGPT
@@ -105,7 +113,8 @@ print('IEND OK')
 | หน้าตรง ref (คนเดียวกัน) | ✅ ไปต่อ | ❌ gen ใหม่ |
 | ไม่ AI-glossy | ✅ ไปต่อ | ❌ gen ใหม่ |
 | มือ/นิ้วปกติ | ✅ ไปต่อ | ❌ gen ใหม่ |
-| ชุด modest | ✅ ไปต่อ | ❌ gen ใหม่ |
+| ชุดเหมาะสถานที่ (ดู outfit guideline) | ✅ ไปต่อ | ❌ gen ใหม่ |
+| **Framing ครบ — ไม่ตัดแขน/ขา/นิ้วกลางภาพ** | ✅ ไปต่อ | ❌ gen ใหม่ (บทเรียน S29) |
 
 **ไม่ผ่าน 2 รอบ = ข้าม slot** (ROUTINE.md กฎข้อ 2)
 
