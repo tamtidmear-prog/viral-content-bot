@@ -64,3 +64,4 @@
 | 16 มิ.ย. เช้า | Robotaxi Madrid (Uber×WeRide×AVOMO pilot), Sony AI Project Ace ปิงปองชนะ pro, OpenAI ChatGPT Ads conversion-optimized, Waymo London AI ขับจริง, Big Tech AI Energy shareholder activism | Pillar 1: AI News |
 | 16 มิ.ย. กลางวัน | Microsoft MAI 7 โมเดล in-house, Alibaba Qwen 3.7 Max ชนะ Claude benchmark, AI Agent Startup Bubble 65% VC→4 บริษัท, Healthcare AI transcription/coding, OpenAI acqui-hire Hiro Finance | Pillar 1: AI News |
 | 16 มิ.ย. เย็น | Goldman Sachs $7.6T AI capex 2026-2031, CVPR 2026 D4RT 4D reconstruction 300x faster, Spherical DYffusion climate 25x faster, MycoBCP TB drug discovery 96%, Goldman FOMO investment motive | Pillar 1: AI News |
+| 17 มิ.ย. กลางวัน | Apple Siri AI next-gen (WWDC 2026), GPT-5.5 autonomous agents (Apr 23), EU AI Act Digital Omnibus provisional 7 พ.ค., AlphaFold 3 + Isomorphic Labs $3B (Eli Lilly+Novartis), Claude Opus 4.8 28 พ.ค. | Pillar 1: AI News |
