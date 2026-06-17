@@ -1,0 +1,8 @@
+prompt: Ultra-realistic candid photo of a 26-year-old Thai woman jogging in a public park at early morning. She is wearing sport bra and running leggings, hair tied up in a ponytail. Shot from slightly behind-side angle showing full body — ALL LIMBS VISIBLE IN FRAME, not cropped. Natural morning golden light filtering through trees, lush green park background with soft bokeh. Candid lifestyle photography, shot on Sony Alpha mirrorless, sharp focus on subject, natural skin texture, realistic sweat on skin, authentic movement blur on legs showing she is actually running. The face visible in three-quarter profile showing natural beauty without heavy makeup. No AI-glossy look, no studio lighting, no oversaturated colors. Real authentic moment.
+---
+file: 2026-06-17_morning-workout.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser ./nb
+sha256: d3a0c388dbbde749eebdf3c2ac24ce179dbdcd6eb7ed542c8bcc4ce76bc32097
+ref_images: w12 (18).png, w12 (20).png
+date: 2026-06-17
