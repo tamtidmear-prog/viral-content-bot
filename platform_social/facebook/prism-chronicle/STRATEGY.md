@@ -193,7 +193,47 @@ Prism มีอิสระที่จะคิดว่า **วันนี�
 
 ---
 
-## 9. Growth Strategy (แผนการเติบโต)
+## 9. Algorithm Strategy — หลุด 200-View Lock (อัปเดต 2026-06-17)
+
+> วิเคราะห์จากบทความ Kallaway (1B+ views creator) — approved by Master J
+
+### Root Cause ที่เราเจอ
+- **Digital Fingerprint ไม่ชัด** — โพสต์ 5 ข่าวรวมกัน algorithm จับ niche ไม่ได้
+- **Hook อ่อน** — เริ่มด้วย "วันนี้มีข่าว AI..." ไม่มี tension ไม่ดึงให้หยุด
+- **Content ไม่ Non-obvious** — ข่าว AI ทั่วไปหาได้จากที่อื่น ไม่มี next step
+
+### กฎใหม่ (บังคับตั้งแต่โพสต์ถัดไป)
+
+**Rule 1: 1 โพสต์ = 1 ประเด็น**
+ไม่รวมหลายข่าวในโพสต์เดียว — เจาะ 1 เรื่อง เล่าให้ครบ context → impact → action
+
+**Rule 2: Hook Formula**
+```
+❌ "วันนี้มีข่าว AI ที่น่าสนใจ..."
+✅ "[ข้อเท็จจริงที่ surprise] — นี่คือสิ่งที่กำลังเปลี่ยน[ชีวิต/งาน]ของคุณ"
+```
+3 ประโยคแรกต้องสร้าง tension — คนต้องรู้สึกว่า "ถ้าไม่อ่านจะเสียเปรียบ"
+
+**Rule 3: จบทุกโพสต์ด้วย Next Step**
+```
+❌ "ติดตามข่าว AI ต่อที่ Prism Chronicle"
+✅ "ลองทำสิ่งนี้วันนี้เลย: [action 1 ขั้นตอน ใช้เวลา <5 นาที]"
+```
+
+**Rule 4: Digital Fingerprint — keyword ซ้ำทุกโพสต์**
+`AI ใช้ได้จริง` · `คนไทยกับ AI` · `#PrismChronicle` · `#AIอธิบายง่าย`
+
+### ตาราง content ใหม่ตาม slot
+
+| Slot | Theme | Hook Pattern |
+|------|-------|--------------|
+| เช้า | AI ข่าวใหม่ที่ impact ชีวิตจริง | "รู้ไหมว่า X กำลังเปลี่ยน Y" |
+| กลางวัน | How-to ใช้ AI tool จริงๆ | Step-by-step ทำตามได้เลย |
+| เย็น | วิธีคิด / insight จากการใช้ AI | คำถามที่ทำให้คิดต่อ |
+
+---
+
+## 10. Growth Strategy (แผนการเติบโต)
 
 ### Phase 1: Foundation (สัปดาห์ 1-4) ← เราอยู่ตรงนี้
 - โพสสม่ำเสมอ 3 ครั้ง/วัน
@@ -260,5 +300,6 @@ Prism มีอิสระที่จะคิดว่า **วันนี�
 
 ---
 
-*Strategy v1.0 — 27 May 2026*
-*Approved by: Master J ✅*
+*Strategy v1.1 — 17 June 2026*
+*Algorithm Strategy (Section 9) added — approved by Master J ✅*
+*v1.0 — 27 May 2026 — initial*
