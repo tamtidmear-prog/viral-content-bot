@@ -16,6 +16,12 @@
 
 ---
 
+## PROPORTION LINE (บังคับเมื่อมี full body — ใส่หลัง scene)
+
+```
+Natural anatomical proportions: head-to-body ratio approximately 1:7, realistic human scale, no oversized head.
+```
+
 ## QUALITY LINE (บังคับ — ใส่ท้ายทุก prompt)
 
 ```
