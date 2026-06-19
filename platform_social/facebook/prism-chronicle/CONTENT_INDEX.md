@@ -67,3 +67,5 @@
 | 17 มิ.ย. กลางวัน | Apple Siri AI next-gen (WWDC 2026), GPT-5.5 autonomous agents (Apr 23), EU AI Act Digital Omnibus provisional 7 พ.ค., AlphaFold 3 + Isomorphic Labs $3B (Eli Lilly+Novartis), Claude Opus 4.8 28 พ.ค. | Pillar 1: AI News |
 | 18 มิ.ย. เช้า | กติกา AI ของโลก — UNIDIR AISE26 Geneva (18-19 มิ.ย.), White House EO AI Innovation+Security (2 มิ.ย.), EU Digital Omnibus ผ่าน 423-57 (16 มิ.ย.), China CAC AI Anthropomorphic (15 ก.ค.), 3 มหาอำนาจ 3 แนวคิด | Pillar 1: AI News (1 ประเด็นเจาะลึก) |
 | 18 มิ.ย. กลางวัน | AI Agents — agentic AI autonomous workflow automation, Deutsche Telekom MINDR, Reddit Agentforce 8.9→1.4 นาที, Fountain HR -98% screening, Nuance DAX 5-7 นาที/visit, มนุษย์ Doer→Orchestrator | Pillar 1: AI News (1 ประเด็นเจาะลึก) |
+
+| 2026-06-18 เย็น | AI กับอนาคตของงาน — ตัวเลขล่าสุดจากรายงานโลก | IMF AIPI, งาน SW dev ลด, 47% skill premium | `1184469221407318_122108018691337114` |
