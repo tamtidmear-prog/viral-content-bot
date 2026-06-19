@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Mali','Noto Sans Thai',sans-serif; }
+  body { width:1280px; height:720px; overflow:hidden;
+    background:linear-gradient(135deg,#ffeef5 0%,#eef4ff 45%,#f0fff4 100%); }
+  .wrap { padding:34px 44px; height:100%; display:flex; flex-direction:column; }
+  .header { display:flex; align-items:center; gap:18px; margin-bottom:20px; }
+  .prism { width:62px; height:62px; flex-shrink:0;
+    background:linear-gradient(135deg,#ff7ec4 0%,#ffd97e 28%,#86f0a8 52%,#7ec8ff 76%,#c490ff 100%);
+    clip-path:polygon(50% 4%, 92% 96%, 8% 96%); border-radius:6px;
+    box-shadow:0 5px 14px rgba(180,140,255,.45); position:relative; }
+  .prism:after { content:''; position:absolute; top:34%; left:50%; transform:translateX(-50%);
+    width:20px; height:20px; background:rgba(255,255,255,.55); border-radius:50%; filter:blur(3px); }
+  .title { font-size:38px; font-weight:700; color:#5b4b8a;
+    text-shadow:1px 1px 0 #fff, 2px 2px 4px rgba(180,140,255,.25); line-height:1.15; }
+  .subtitle { font-size:19px; color:#8a7bb0; margin-top:3px; font-weight:600; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; flex:1; }
+  .card { background:rgba(255,255,255,.72); border-radius:24px; padding:22px 26px;
+    box-shadow:0 6px 20px rgba(150,130,200,.18); border:3px solid rgba(255,255,255,.9); }
+  .card h2 { font-size:23px; color:#6b5aa0; margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+  .card p, .card li { font-size:17.5px; color:#5a5470; line-height:1.65; }
+  .card ul { list-style:none; }
+  .card li { margin-bottom:7px; padding-left:26px; position:relative; }
+  .card li:before { content:'✦'; position:absolute; left:0; color:#c9a8ff; font-size:16px; }
+  .steps { display:flex; flex-direction:column; gap:9px; }
+  .step { display:flex; align-items:center; gap:12px; }
+  .num { min-width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,#ffb3d9,#b3c7ff);
+    color:#fff; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 3px 6px rgba(180,140,255,.35); }
+  .badge { display:inline-block; background:linear-gradient(135deg,#a8f0c0,#a8e0ff); color:#2d6a4f;
+    font-size:15px; font-weight:700; padding:4px 14px; border-radius:14px; margin-top:4px; }
+  .pills span { display:inline-block; background:#fff3fa; color:#9a6db0; font-size:15px; font-weight:600;
+    padding:5px 13px; border-radius:13px; margin:3px 4px 0 0; border:2px solid #ffe0f0; }
+  .footer { text-align:center; font-size:15px; color:#9a8bc0; margin-top:14px; font-weight:600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="prism">🔮</div>
+    <div>
+      <div class="title">NotebookLM — ผู้ช่วยวิจัย AI ที่ "ไม่มั่ว"</div>
+      <div class="subtitle">เพราะตอบจากเอกสารของคุณเท่านั้น · ขับเคลื่อนด้วย Gemini ของ Google</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h2>💡 ต่างจาก ChatGPT ยังไง?</h2>
+      <ul>
+        <li><b>ChatGPT</b> = ตอบจากความรู้ทั้งโลก (เสี่ยงมั่ว)</li>
+        <li><b>NotebookLM</b> = ตอบจากเอกสารที่คุณอัปโหลดเท่านั้น</li>
+        <li>บอกแหล่งอ้างอิงได้ ว่าคำตอบมาจากหน้าไหน ✓</li>
+      </ul>
+      <div class="badge">ฟรี! · อัปโหลดได้ 50 แหล่ง/notebook</div>
+    </div>
+    <div class="card">
+      <h2>✨ Studio — กดปุ่มเดียว แปลงเป็นสื่อ</h2>
+      <div class="pills">
+        <span>🎧 Podcast</span><span>🎬 วิดีโอ</span><span>🧠 Mind Map</span>
+        <span>📊 Infographic</span><span>📝 Quiz</span><span>🃏 Flashcards</span><span>📑 Slide</span>
+      </div>
+      <p style="margin-top:10px;">เอาชีตเรียน เอกสารงาน งานวิจัย ใส่เข้าไป<br>แล้วให้มันสรุป·ติวสอบ·ทำพอดแคสต์ให้</p>
+    </div>
+    <div class="card">
+      <h2>📝 ใช้ยังไง? 4 ขั้นตอน</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div>เข้า <b>notebooklm.google.com</b> ล็อกอิน Google</div></div>
+        <div class="step"><div class="num">2</div><div>อัปโหลด PDF · Google Docs · เว็บ · YouTube</div></div>
+        <div class="step"><div class="num">3</div><div>ถามคำถาม — ได้คำตอบพร้อมอ้างอิง</div></div>
+        <div class="step"><div class="num">4</div><div>กด Studio เลือกสร้างสื่อที่อยากได้</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>🎯 ใช้ทำอะไรได้จริง?</h2>
+      <ul>
+        <li>📚 นักเรียน — เอาชีตทั้งเทอมมาทำ Quiz ติวสอบ</li>
+        <li>💼 คนทำงาน — สรุปเอกสารประชุมยาวๆ เป็นย่อ</li>
+        <li>🌏 อ่าน paper อังกฤษ — ถามเป็นภาษาไทยได้</li>
+        <li>🏠 คู่มือ·สัญญา — ให้อธิบายเป็นภาษาง่าย</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">🌉 ความจริงที่ตรวจสอบได้ = สะพานที่ทำให้มนุษย์กับ AI ทำงานร่วมกันได้ · Prism Chronicle</div>
+</div>
+</body>
+</html>
