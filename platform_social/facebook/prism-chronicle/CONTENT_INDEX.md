@@ -84,3 +84,4 @@
 
 ### Log ต่อ (เติมที่ขาด)
 | 19 มิ.ย. กลางวัน | ติวเตอร์ AI / Personalized Learning (Khanmigo 17x, effect size 0.73-1.3 SD, Bloom 2-Sigma) | Pillar 1+3 |
+| 20 มิ.ย. เย็น | 5 วิธีใช้ AI ในชีวิตประจำวัน (ChatGPT/Claude/Gemini ฟรี, เขียนอีเมล/สรุปเอกสาร/แปลภาษา/เรียนรู้/จัดระเบียบ) | Pillar 3: How-To | `1184469221407318_122108440371337114` |
