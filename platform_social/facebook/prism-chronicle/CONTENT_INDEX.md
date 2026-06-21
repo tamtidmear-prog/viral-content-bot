@@ -24,6 +24,7 @@
 | 13 มิ.ย. | กลางวัน | EU AI Act Digital Omnibus (GPAI ส.ค.2025/enforcement ส.ค.2026), Claude Fable5+Mythos5 suspend (jailbreak dispute), OpenAI o3 AIME 96.7%, Apple iOS27 Siri AI (Gemini-powered), AI Agent Economy 40% enterprise |
 | 13 มิ.ย. | เย็น | Veo 3.1, Grok 3→4, OpenAI Realtime Voice, AI Coding Agents, EU AI Act |
 | 14 มิ.ย. | เช้า | MiniMax M3 (Sparse Attention 1M token), Anthropic IPO S-1 ($965B), Google TurboQuant (KV Cache 6x), NVIDIA×Cadence sim-to-real robotics, Colorado AI Act SB 26-189 repeal+reenact |
+| 21 มิ.ย. | เย็น | SpaceX×Cursor $60B, ChatGPT <50%, Fable 5 trial, Penn light-matter |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
