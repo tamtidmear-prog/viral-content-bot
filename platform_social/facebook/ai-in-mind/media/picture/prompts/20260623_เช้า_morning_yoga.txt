@@ -1,0 +1,20 @@
+prompt: Use the uploaded photos as face reference — the generated person must be clearly recognizable as the same individual, but do NOT copy-paste the face directly. Instead, recreate the face naturally so it looks like the same person photographed on a different day with different lighting. Natural facial variations are expected and desired.
+
+A young Thai woman in her mid-20s doing a yoga warrior II pose on a yoga mat in her modern minimalist living room in the early morning. She wears a matching sage green sport bra and high-waisted leggings. Her long dark hair is tied in a high ponytail. She is focused and serene, looking slightly to the side with a calm expression. Barefoot on a light gray yoga mat. Full body visible, ALL LIMBS VISIBLE IN FRAME.
+
+CRITICAL PROPORTION RULE: The head must be realistically small relative to the body. Strict 1:7.5 head-to-body ratio. The head should be roughly 1/8 of total visible height. Do NOT enlarge the head. Realistic adult human proportions — NOT stylized, NOT doll-like, NOT anime proportions. If in doubt, make the head slightly smaller rather than larger.
+
+Background: A bright, airy modern apartment living room with large windows letting in soft warm morning sunlight, indoor plants (monstera, snake plant) in the corner, minimal decor, light wood floor. Warm golden hour morning light creates gentle shadows. Mood: peaceful, mindful, fresh start to the day.
+
+Masterpiece, Ultra Photorealistic Portrait Photography, Hyper Realistic, 8K Ultra HD, RAW Photo, Ultra detailed skin texture, realistic pores, natural facial details, realistic eyes, natural hair strands, authentic smartphone photography, low-light realism, cinematic shadows, natural ambient lighting, shallow depth of field, realistic fabric texture, true-to-life colors, photorealistic human, natural imperfections, no CGI, no cartoon, no anime, no illustration, no plastic skin, no over-retouching, no artificial rendering.
+
+Photo quality: 4K ultra-high resolution, shot on professional DSLR camera (Canon EOS R5 or Sony A7R V Mark II), f/2.8 aperture, 1/500s shutter speed, ISO 200, commercial fashion model photography, tack-sharp focus throughout, true-to-life skin texture and hair detail, professional studio-grade natural lighting, editorial quality comparable to Vogue or Harper's Bazaar fashion shoots. Photorealistic, not AI-generated looking. No text, no logos, no brand names.
+---
+file: 20260623_เช้า_morning_yoga.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser
+sha256: f23b9a0232c7ce19c164ce11c01ac869ccb5f9d3895d97934eecb8ec816f3138
+generated_path: /tmp/chatgpt_image.png
+output_path: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/20260623_เช้า_morning_yoga.png
+ref_images: w12(19).png, w12(24).png
+date: 2026-06-23

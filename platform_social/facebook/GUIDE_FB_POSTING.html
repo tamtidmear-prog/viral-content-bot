@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คู่มือโพส Facebook ผ่าน API — ทำเองได้ไม่ต้องง้อใคร 🚀</title>
+<style>
+  :root {
+    --bg: #fafbff;
+    --card: #ffffff;
+    --accent: #6366f1;
+    --accent-light: #eef2ff;
+    --green: #10b981;
+    --green-light: #ecfdf5;
+    --yellow: #f59e0b;
+    --yellow-light: #fffbeb;
+    --red: #ef4444;
+    --red-light: #fef2f2;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --code-bg: #1e293b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    padding: 2rem 1.5rem;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .hero {
+    text-align: center;
+    padding: 2rem 0 2.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--accent), #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  .hero p { color: var(--muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+
+  h2 {
+    font-size: 1.35rem;
+    color: var(--accent);
+    margin: 2.5rem 0 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  h2 .emoji { font-size: 1.5rem; }
+  h3 { font-size: 1.05rem; color: var(--text); margin: 1.5rem 0 0.5rem; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .step {
+    display: flex;
+    gap: 1rem;
+    margin: 1.2rem 0;
+    padding: 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .step-body { flex: 1; }
+  .step-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.3rem; }
+
+  pre {
+    background: var(--code-bg);
+    color: #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin: 0.7rem 0;
+  }
+  code {
+    font-family: 'Cascadia Code', 'Fira Code', monospace;
+  }
+  p code, li code {
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 0.15rem 0.45rem;
+    border-radius: 5px;
+    font-size: 0.88rem;
+  }
+  .cm { color: #6b7280; }
+  .str { color: #86efac; }
+  .kw { color: #c4b5fd; }
+  .ph { color: #fbbf24; }
+
+  .tip {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    font-size: 0.93rem;
+  }
+  .tip strong { color: var(--green); }
+
+  .warn {
+    background: var(--yellow-light);
+    border-left: 4px solid var(--yellow);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    font-size: 0.93rem;
+  }
+  .warn strong { color: var(--yellow); }
+
+  .danger {
+    background: var(--red-light);
+    border-left: 4px solid var(--red);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    font-size: 0.93rem;
+  }
+  .danger strong { color: var(--red); }
+
+  .flow {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    justify-content: center;
+  }
+  .flow-box {
+    background: var(--accent-light);
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .flow-box.highlight { background: var(--green-light); border-color: #a7f3d0; }
+  .flow-arrow { color: var(--accent); font-size: 1.2rem; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+  th {
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--border); }
+
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    columns: 2;
+    column-gap: 2rem;
+  }
+  .toc a {
+    color: var(--accent);
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    font-size: 0.92rem;
+    break-inside: avoid;
+  }
+  .toc a:hover { text-decoration: underline; }
+  .toc-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+
+  ul, ol { padding-left: 1.3rem; margin: 0.5rem 0; }
+  li { margin: 0.3rem 0; }
+
+  .tag {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .tag-g { background: #dcfce7; color: #166534; }
+  .tag-y { background: #fef9c3; color: #854d0e; }
+  .tag-r { background: #fee2e2; color: #991b1b; }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1rem; }
+    .toc { columns: 1; }
+    .hero h1 { font-size: 1.5rem; }
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🔮 คู่มือโพส Facebook ผ่าน API</h1>
+  <p>ตั้งแต่สร้าง App จนโพสได้จริง — อ่านจบทำตามได้เลย ไม่ต้องเขียนโค้ดเป็นก็ทำได้!</p>
+</div>
+
+<div class="toc">
+  <div class="toc-label">🔧 Setup (ทำครั้งเดียว)</div>
+  <a href="#s1">1. สร้าง Facebook App</a>
+  <a href="#s2">2. ขอ Permissions</a>
+  <a href="#s3">3. เปิด Live Mode</a>
+  <a href="#s4">4. สร้าง Token</a>
+  <a href="#s5">5. เก็บ Token ให้ปลอดภัย</a>
+  <div class="toc-label">📝 ใช้งาน (ทุกวัน)</div>
+  <a href="#s6">6. โพสข้อความ</a>
+  <a href="#s7">7. โพสรูป</a>
+  <a href="#s8">8. โพสหลายรูป</a>
+  <a href="#s9">9. แก้ไขโพส</a>
+  <a href="#s10">10. ลบโพส</a>
+  <a href="#s11">11. ดูข้อมูลโพส</a>
+  <div class="toc-label">🔄 ดูแลระบบ</div>
+  <a href="#s12">12. ต่ออายุ Token</a>
+  <a href="#s13">13. เพิ่มเพจใหม่</a>
+  <a href="#s14">14. แก้ปัญหาที่เจอบ่อย</a>
+</div>
+
+<!-- ==================== PHASE 1 ==================== -->
+
+<h2><span class="emoji">🏗️</span> Phase 1: Setup — ทำครั้งเดียวจบ</h2>
+
+<p>ขั้นตอนนี้ทำแค่ครั้งแรก หลังจากนั้นใช้งานได้เลย (ยกเว้นต่ออายุ token ทุก 60 วัน)</p>
+
+<h2 id="s1"><span class="emoji">📦</span> 1. สร้าง Facebook App</h2>
+
+<p>Facebook App = บัตรผ่านของเราบน API — ทุกครั้งที่เรียก API ต้องบอก Facebook ว่า "เราคือ App นี้" ผ่าน Token ที่ผูกกับ App</p>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-body">
+    <div class="step-title">เปิด Facebook Developer Console</div>
+    <p>ไปที่ <code>developers.facebook.com/apps/</code> แล้ว login ด้วย Facebook account ที่เป็น <strong>admin ของเพจ</strong>ที่อยากจัดการ</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-body">
+    <div class="step-title">กด "Create App"</div>
+    <ul>
+      <li>Use case → เลือก <strong>"Other"</strong></li>
+      <li>App type → เลือก <strong>"Business"</strong></li>
+      <li>ตั้งชื่ออะไรก็ได้ที่จำง่าย เช่น "MyPageBot"</li>
+    </ul>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-body">
+    <div class="step-title">จดค่า 2 อย่างนี้ไว้ให้ดี</div>
+    <p>หลังสร้างเสร็จ ไปที่ <strong>Settings → Basic</strong> จะเจอ:</p>
+    <ul>
+      <li><strong>App ID</strong> — เลขประจำตัว App (ไม่ลับ แชร์ได้)</li>
+      <li><strong>App Secret</strong> — รหัสลับ <strong>(ห้ามแชร์!)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div class="danger">
+  <strong>App Secret สำคัญมาก!</strong> ใครได้ไป = ทำอะไรก็ได้ในนาม App เรา<br>
+  เก็บไว้ที่ปลอดภัย ห้ามวางไว้ในโค้ด ห้ามอัพขึ้น GitHub
+</div>
+
+<h2 id="s2"><span class="emoji">🔑</span> 2. ขอ Permissions</h2>
+
+<p>บอก Facebook ว่า App เราจะทำอะไรบ้าง — ต้องขอก่อนถึงจะใช้ได้</p>
+
+<div class="card">
+  <p>ไปที่ App Dashboard → <strong>App Review → Permissions and Features</strong> → Request:</p>
+  <table>
+    <tr><th>Permission</th><th>ทำอะไรได้</th><th>จำเป็น?</th></tr>
+    <tr><td><code>pages_show_list</code></td><td>ดูรายชื่อเพจที่เราจัดการ</td><td>✅ ต้องมี</td></tr>
+    <tr><td><code>pages_read_engagement</code></td><td>อ่านยอด like, comment</td><td>✅ ต้องมี</td></tr>
+    <tr><td><code>pages_manage_posts</code></td><td>สร้าง / แก้ / ลบโพส</td><td>✅ ต้องมี</td></tr>
+    <tr><td><code>pages_manage_engagement</code></td><td>ตอบ comment, กดไลค์</td><td>ถ้าต้องการ</td></tr>
+  </table>
+</div>
+
+<div class="tip">
+  <strong>เคล็ดลับ:</strong> ตอน Generate Token ใน Graph API Explorer (ขั้นตอนถัดไป) จะเลือก permissions ได้อีกที — ไม่ต้องจำว่าขอครบหรือยัง
+</div>
+
+<h2 id="s3"><span class="emoji">🟢</span> 3. เปิด Live Mode</h2>
+
+<p>ตอนสร้าง App ใหม่ มันจะอยู่ใน <strong>"Development Mode"</strong> ซึ่ง:</p>
+
+<div class="card">
+  <table>
+    <tr><th></th><th>Development 🔴</th><th>Live 🟢</th></tr>
+    <tr><td>คนทั่วไปเห็นโพส</td><td>❌ เห็นแค่ admin ของ App</td><td>✅ ทุกคนเห็น</td></tr>
+    <tr><td>เหมาะกับ</td><td>ทดสอบ</td><td>ใช้งานจริง</td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-body">
+    <div class="step-title">ไปที่ Settings → Basic</div>
+    <p>กรอก <strong>Privacy Policy URL</strong> (จำเป็น) — ถ้าไม่มีเว็บตัวเอง ใช้ Google Docs สร้างหน้า privacy policy ง่ายๆ แล้วเอา link มาใส่ได้</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-body">
+    <div class="step-title">เปลี่ยน Toggle เป็น "Live"</div>
+    <p>ด้านบนของ Dashboard จะมีปุ่ม toggle — กดสลับจาก "In development" → <strong>"Live"</strong></p>
+  </div>
+</div>
+
+<div class="warn">
+  <strong>ถ้าโพสแล้วคนอื่นไม่เห็น</strong> — เช็คตรงนี้ก่อนเลย 90% คือ App ยังเป็น Development Mode อยู่
+</div>
+
+<h2 id="s4"><span class="emoji">🎫</span> 4. สร้าง Token</h2>
+
+<p>Token = "ตั๋วผ่าน" ที่บอก Facebook ว่าเราเป็นใครและมีสิทธิ์ทำอะไร — มี 4 ประเภท:</p>
+
+<div class="card">
+  <table>
+    <tr><th>ประเภท</th><th>อายุ</th><th>ใช้ทำอะไร</th></tr>
+    <tr><td>User Token (สั้น) <span class="tag tag-r">1-2 ชม.</span></td><td>1-2 ชั่วโมง</td><td>แลกเป็นแบบยาว</td></tr>
+    <tr><td>User Token (ยาว) <span class="tag tag-y">60 วัน</span></td><td>60 วัน</td><td>ดึง Page Token</td></tr>
+    <tr><td>Page Token (ชั่วคราว)</td><td>1-2 ชั่วโมง</td><td>ทดสอบ</td></tr>
+    <tr><td>Page Token (ถาวร) <span class="tag tag-g">ไม่หมดอายุ</span></td><td>ไม่หมด!</td><td><strong>ใช้โพสจริง ✨</strong></td></tr>
+  </table>
+</div>
+
+<p>เป้าหมายของเรา = ได้ <strong>Page Token แบบถาวร</strong> ซึ่งต้องทำ 3 ขั้นตอน:</p>
+
+<div class="flow">
+  <div class="flow-box">ขั้น 1<br><small>ได้ User Token สั้น</small></div>
+  <span class="flow-arrow">→</span>
+  <div class="flow-box">ขั้น 2<br><small>แลกเป็น User Token ยาว</small></div>
+  <span class="flow-arrow">→</span>
+  <div class="flow-box highlight">ขั้น 3<br><small>ดึง Page Token ถาวร ✨</small></div>
+</div>
+
+<h3>ขั้น 1: ได้ User Token สั้น</h3>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-body">
+    <div class="step-title">เปิด Graph API Explorer</div>
+    <p>ไปที่ <code>developers.facebook.com/tools/explorer/</code></p>
+    <ul>
+      <li>ด้านขวาบน เลือก App ของเรา</li>
+      <li>กด <strong>"Add a Permission"</strong> → เลือก <code>pages_manage_posts</code>, <code>pages_read_engagement</code>, <code>pages_show_list</code></li>
+      <li>กด <strong>"Generate Access Token"</strong></li>
+      <li>จะมี popup ขอสิทธิ์ → กด <strong>"ดำเนินการต่อ"</strong> → เลือกเพจทั้งหมดที่อยากจัดการ</li>
+    </ul>
+    <p>ตอนนี้จะได้ <strong>User Token สั้น</strong> (อายุ 1-2 ชม.) — copy ไว้</p>
+  </div>
+</div>
+
+<h3>ขั้น 2: แลกเป็น User Token ยาว (60 วัน)</h3>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-body">
+    <div class="step-title">เรียก Exchange API</div>
+    <p>เปิด Terminal แล้วรันคำสั่งนี้ (เปลี่ยนค่า 3 จุดที่ highlight):</p>
+    <pre><code>curl "https://graph.facebook.com/v25.0/oauth/access_token\
+  ?grant_type=fb_exchange_token\
+  &client_id=<span class="ph">ใส่_APP_ID_ตรงนี้</span>\
+  &client_secret=<span class="ph">ใส่_APP_SECRET_ตรงนี้</span>\
+  &fb_exchange_token=<span class="ph">ใส่_SHORT_TOKEN_ตรงนี้</span>"</code></pre>
+    <p>จะได้ response กลับมาแบบนี้:</p>
+    <pre><code>{
+  "access_token": "<span class="str">EAAb...token-ยาวมากกก...</span>",
+  "token_type": "bearer",
+  "expires_in": 5184000   <span class="cm">← 60 วัน (เป็นวินาที)</span>
+}</code></pre>
+    <p>Copy <code>access_token</code> ไว้ — นี่คือ User Token ยาว</p>
+  </div>
+</div>
+
+<h3>ขั้น 3: ดึง Page Token ถาวร 🎉</h3>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-body">
+    <div class="step-title">ดึง Page Token จาก User Token ยาว</div>
+    <pre><code><span class="cm"># ดึงทุกเพจที่มีสิทธิ์จัดการ</span>
+curl "https://graph.facebook.com/v25.0/me/accounts\
+  ?fields=name,id,access_token\
+  &access_token=<span class="ph">ใส่_LONG_USER_TOKEN_ตรงนี้</span>"</code></pre>
+    <p>Response จะแสดงเพจทั้งหมดพร้อม token:</p>
+    <pre><code>{
+  "data": [
+    {
+      "name": "<span class="str">ชื่อเพจของเรา</span>",
+      "id": "<span class="str">1234567890</span>",
+      "access_token": "<span class="str">EAAb...page-token...</span>"
+      <span class="cm">// ← เก็บ token นี้ไว้! มันไม่หมดอายุ 🎉</span>
+    }
+  ]
+}</code></pre>
+  </div>
+</div>
+
+<div class="tip">
+  <strong>ถ้า <code>me/accounts</code> ไม่แสดงเพจบางอัน</strong> — ดึงตรงจาก Page ID ได้:
+  <pre><code>curl "https://graph.facebook.com/v25.0/<span class="ph">PAGE_ID</span>?fields=name,id,access_token&access_token=<span class="ph">LONG_TOKEN</span>"</code></pre>
+</div>
+
+<h2 id="s5"><span class="emoji">🔒</span> 5. เก็บ Token ให้ปลอดภัย</h2>
+
+<p>ได้ Token มาแล้ว — เก็บยังไงให้ปลอดภัย?</p>
+
+<div class="card">
+  <h3 style="margin-top: 0;">✅ วิธีที่ดี</h3>
+  <ul>
+    <li>เก็บในไฟล์ config ที่ <strong>อยู่ใน .gitignore</strong></li>
+    <li>ใช้ password manager (เช่น <code>pass</code>, 1Password, Bitwarden)</li>
+    <li>ใช้ environment variable</li>
+  </ul>
+
+  <h3>❌ ห้ามทำ</h3>
+  <ul>
+    <li>ห้ามใส่ในโค้ดที่ push ขึ้น GitHub</li>
+    <li>ห้ามส่งผ่านข้อความสาธารณะ</li>
+    <li>ห้ามใส่ใน caption / content ที่จะโพส</li>
+  </ul>
+</div>
+
+<p>ตัวอย่างไฟล์ config แบบง่ายๆ:</p>
+
+<pre><code><span class="cm">// config/my-pages.json (ต้องอยู่ใน .gitignore!)</span>
+{
+  "pages": {
+    "my_page": {
+      "id": "<span class="ph">ใส่ Page ID</span>",
+      "name": "<span class="ph">ชื่อเพจ</span>",
+      "token": "<span class="ph">ใส่ Permanent Page Token</span>"
+    }
+  }
+}</code></pre>
+
+<!-- ==================== PHASE 2 ==================== -->
+
+<h2><span class="emoji">📝</span> Phase 2: ใช้งาน — โพส / แก้ / ลบ</h2>
+
+<p>พร้อมแล้ว! ทุกคำสั่งรันใน Terminal ได้เลย (Mac/Linux/WSL)</p>
+
+<h2 id="s6"><span class="emoji">💬</span> 6. โพสข้อความ</h2>
+
+<pre><code>curl -s -X POST "https://graph.facebook.com/v25.0/<span class="ph">PAGE_ID</span>/feed" \
+  -d "message=<span class="str">สวัสดีครับ! โพสนี้มาจาก API 🚀</span>" \
+  -d "access_token=<span class="ph">PAGE_TOKEN</span>"
+
+<span class="cm"># สำเร็จจะได้:</span>
+{ "id": "<span class="str">PAGE_ID_POST_ID</span>" }   <span class="cm">← เก็บ post_id ไว้ใช้แก้ไข/ลบทีหลัง</span></code></pre>
+
+<h2 id="s7"><span class="emoji">📸</span> 7. โพสรูป (ใช้บ่อยสุด!)</h2>
+
+<pre><code>curl -s -X POST "https://graph.facebook.com/v25.0/<span class="ph">PAGE_ID</span>/photos" \
+  -F "message=<span class="str">วันนี้ถ่ายรูปสวยมาฝาก 📸✨</span>" \
+  -F "source=<span class="str">@/path/to/image.png</span>" \
+  -F "access_token=<span class="ph">PAGE_TOKEN</span>"
+
+<span class="cm"># สำเร็จจะได้:</span>
+{
+  "id": "<span class="str">PHOTO_ID</span>",
+  "post_id": "<span class="str">PAGE_ID_POST_ID</span>"   <span class="cm">← ใช้อันนี้แก้ไข/ลบ</span>
+}</code></pre>
+
+<div class="tip">
+  <strong>สังเกต:</strong> โพสข้อความใช้ <code>-d</code> แต่โพสรูปใช้ <code>-F</code> (เพราะส่งไฟล์) — อย่าสลับกัน!<br>
+  <code>source=@...</code> ต้องมีเครื่องหมาย @ นำหน้า path ของไฟล์
+</div>
+
+<h2 id="s8"><span class="emoji">🖼️</span> 8. โพสหลายรูป</h2>
+
+<p>ต้องทำ 2 ขั้นตอน: upload รูปทีละใบ (ยังไม่โพส) → รวมเป็นโพสเดียว</p>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-body">
+    <div class="step-title">Upload รูปแบบไม่ publish</div>
+    <pre><code><span class="cm"># รูปที่ 1</span>
+curl -s -X POST "https://graph.facebook.com/v25.0/<span class="ph">PAGE_ID</span>/photos" \
+  -F "source=@<span class="str">image1.png</span>" \
+  -F "published=<span class="kw">false</span>" \
+  -F "access_token=<span class="ph">PAGE_TOKEN</span>"
+<span class="cm"># จดไว้ → {"id": "PHOTO_1_ID"}</span>
+
+<span class="cm"># รูปที่ 2</span>
+curl -s -X POST "https://graph.facebook.com/v25.0/<span class="ph">PAGE_ID</span>/photos" \
+  -F "source=@<span class="str">image2.png</span>" \
+  -F "published=<span class="kw">false</span>" \
+  -F "access_token=<span class="ph">PAGE_TOKEN</span>"
+<span class="cm"># จดไว้ → {"id": "PHOTO_2_ID"}</span></code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-body">
+    <div class="step-title">รวมรูปเป็นโพสเดียว</div>
+    <pre><code>curl -s -X POST "https://graph.facebook.com/v25.0/<span class="ph">PAGE_ID</span>/feed" \
+  -d "message=<span class="str">ภาพถ่ายหลายมุม 📸</span>" \
+  -d 'attached_media=[{"media_fbid":"<span class="ph">PHOTO_1_ID</span>"},{"media_fbid":"<span class="ph">PHOTO_2_ID</span>"}]' \
+  -d "access_token=<span class="ph">PAGE_TOKEN</span>"</code></pre>
+  </div>
+</div>
+
+<h2 id="s9"><span class="emoji">✏️</span> 9. แก้ไขโพสที่โพสแล้ว</h2>
+
+<pre><code><span class="cm"># ใช้ POST /{post_id} — ไม่ใช่ photo_id!</span>
+curl -s -X POST "https://graph.facebook.com/v25.0/<span class="ph">POST_ID</span>" \
+  -d "message=<span class="str">caption ที่แก้แล้ว ✨</span>" \
+  -d "access_token=<span class="ph">PAGE_TOKEN</span>"
+
+<span class="cm"># สำเร็จ: {"success": true}</span></code></pre>
+
+<div class="warn">
+  <strong>แก้ได้:</strong> caption / ข้อความ<br>
+  <strong>แก้ไม่ได้:</strong> รูปภาพ — ถ้าอยากเปลี่ยนรูป ต้องลบโพสเก่าแล้วโพสใหม่
+</div>
+
+<h2 id="s10"><span class="emoji">🗑️</span> 10. ลบโพส</h2>
+
+<pre><code>curl -s -X DELETE "https://graph.facebook.com/v25.0/<span class="ph">POST_ID</span>\
+  ?access_token=<span class="ph">PAGE_TOKEN</span>"
+
+<span class="cm"># สำเร็จ: {"success": true}</span></code></pre>
+
+<div class="danger">
+  <strong>ลบแล้วลบเลย!</strong> กู้คืนไม่ได้ — คิดดีๆ ก่อนลบ
+</div>
+
+<h2 id="s11"><span class="emoji">🔍</span> 11. ดูข้อมูลโพส</h2>
+
+<pre><code><span class="cm"># ดูข้อมูลโพส + permalink</span>
+curl -s "https://graph.facebook.com/v25.0/<span class="ph">POST_ID</span>\
+  ?fields=permalink_url,message,created_time\
+  &access_token=<span class="ph">PAGE_TOKEN</span>"
+
+<span class="cm"># ดู comments</span>
+curl -s "https://graph.facebook.com/v25.0/<span class="ph">POST_ID</span>/comments\
+  ?access_token=<span class="ph">PAGE_TOKEN</span>"
+
+<span class="cm"># ดูยอด reach / engagement</span>
+curl -s "https://graph.facebook.com/v25.0/<span class="ph">POST_ID</span>/insights\
+  ?metric=post_impressions,post_engaged_users\
+  &access_token=<span class="ph">PAGE_TOKEN</span>"</code></pre>
+
+<!-- ==================== PHASE 3 ==================== -->
+
+<h2><span class="emoji">🔄</span> Phase 3: ดูแลระบบ</h2>
+
+<h2 id="s12"><span class="emoji">⏰</span> 12. ต่ออายุ Token (ทุก 60 วัน)</h2>
+
+<p><strong>Page Token ถาวรไม่หมดอายุ</strong> — แต่ถ้าต้องดึง token ใหม่ (เช่น เพิ่มเพจ) จะต้อง renew User Token เพราะมันหมดอายุทุก 60 วัน</p>
+
+<div class="card">
+  <h3 style="margin-top: 0;">📋 Checklist ต่ออายุ</h3>
+  <ol>
+    <li>ไป Graph API Explorer → เลือก App → <strong>Generate Access Token</strong></li>
+    <li>ได้ Short Token → <strong>Exchange เป็น Long Token</strong> (ขั้น 2 ในหัวข้อ 4)</li>
+    <li>ดึง Page Token ใหม่ (ถ้าจำเป็น)</li>
+    <li>อัพเดตไฟล์ config</li>
+  </ol>
+</div>
+
+<div class="tip">
+  <strong>แนะนำ:</strong> ตั้งปฏิทินเตือนล่วงหน้า 5 วันก่อน token หมดอายุ — จะได้ไม่ลืมแล้วโพสไม่ได้กะทันหัน
+</div>
+
+<h2 id="s13"><span class="emoji">➕</span> 13. เพิ่มเพจใหม่</h2>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-body">
+    <div class="step-title">สร้างเพจที่ Facebook</div>
+    <p>ไปที่ <code>facebook.com/pages/create</code> — API สร้างเพจไม่ได้ ต้องสร้างเองผ่านเว็บ</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-body">
+    <div class="step-title">Generate Token ใหม่ที่มีเพจใหม่ด้วย</div>
+    <p>ไป Graph API Explorer → Generate Token → <strong>เลือกเพจใหม่ด้วย</strong></p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-body">
+    <div class="step-title">ดึง Page Token + เพิ่มใน config</div>
+    <p>ทำเหมือนขั้นตอนที่ 4 — exchange → ดึง page token → เก็บใน config</p>
+  </div>
+</div>
+
+<h2 id="s14"><span class="emoji">🛠️</span> 14. แก้ปัญหาที่เจอบ่อย</h2>
+
+<div class="card">
+  <table>
+    <tr><th>อาการ</th><th>สาเหตุ</th><th>วิธีแก้</th></tr>
+    <tr>
+      <td><code>Session has expired</code></td>
+      <td>Token หมดอายุ</td>
+      <td>Generate + exchange token ใหม่</td>
+    </tr>
+    <tr>
+      <td><code>Requires extended permission</code></td>
+      <td>ไม่ได้ขอ permission</td>
+      <td>Generate token ใหม่ เลือก permissions ให้ครบ</td>
+    </tr>
+    <tr>
+      <td>โพสแล้วคนอื่นไม่เห็น</td>
+      <td>App ยังเป็น Dev Mode</td>
+      <td>เปลี่ยนเป็น Live Mode (หัวข้อ 3)</td>
+    </tr>
+    <tr>
+      <td><code>Invalid parameter</code></td>
+      <td>Format ผิด</td>
+      <td>เช็คว่าโพสรูปใช้ <code>-F</code> ไม่ใช่ <code>-d</code></td>
+    </tr>
+    <tr>
+      <td><code>Error validating access token</code></td>
+      <td>Token ไม่ตรงกับ App</td>
+      <td>เช็คว่าใช้ token ของ App ที่ถูกตัว</td>
+    </tr>
+    <tr>
+      <td><code>me/accounts</code> ไม่แสดงเพจ</td>
+      <td>บางเพจไม่ขึ้น</td>
+      <td>ดึงตรงจาก Page ID:<br><code>GET /{PAGE_ID}?fields=access_token</code></td>
+    </tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3 style="margin-top: 0;">💡 เคล็ดลับจากประสบการณ์จริง</h3>
+  <ul>
+    <li>ใช้ <code>/photos</code> แทน <code>/feed</code> เสมอ — โพสที่มีรูป reach ดีกว่าโพสข้อความเฉยๆ มาก</li>
+    <li>เก็บ <code>post_id</code> ไว้ทุกครั้งที่โพส — จะได้แก้ไข/ลบได้ทีหลัง</li>
+    <li>ทดสอบกับ App ใน Dev Mode ก่อน — พอมั่นใจแล้วค่อยเปลี่ยนเป็น Live</li>
+    <li>Graph API version (เช่น v25.0) อัพเดตทุกปี — เช็ค docs เป็นระยะ</li>
+  </ul>
+</div>
+
+<div class="card" style="text-align: center; background: var(--accent-light);">
+  <h3 style="margin-top: 0; color: var(--accent);">📚 อ่านเพิ่มเติม</h3>
+  <p>Facebook Graph API Docs:<br>
+  <code>developers.facebook.com/docs/graph-api/</code></p>
+  <p>Graph API Explorer (ทดสอบ API ได้เลย):<br>
+  <code>developers.facebook.com/tools/explorer/</code></p>
+</div>
+
+<footer>
+  🔮 สร้างจากประสบการณ์จัดการเพจ Facebook ผ่าน Graph API จริงทุกวัน<br>
+  อัปเดตล่าสุด: มิถุนายน 2026
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+prompt: Use the uploaded photos as face reference — the generated person must be clearly recognizable as the same individual, but do NOT copy-paste the face directly. Instead, recreate the face naturally so it looks like the same person photographed on a different day with different lighting. Natural facial variations are expected and desired.
+
+A young Thai woman in her mid-20s standing in front of a large full-length mirror in her bright modern bedroom, styling a colorful floral silk scarf. She is tying the silk scarf as a headband in her hair, looking at herself in the mirror with a happy smile. She wears a simple white fitted t-shirt tucked into high-waisted light beige linen wide-leg pants. Her long dark hair flows naturally past her shoulders. Barefoot on light wood floor. The mirror reflects her styling the scarf. Candid getting-ready moment, afternoon light.
+
+CRITICAL PROPORTION RULE: The head must be realistically small relative to the body. Strict 1:7.5 head-to-body ratio. The head should be roughly 1/8 of total visible height. Do NOT enlarge the head. Realistic adult human proportions — NOT stylized, NOT doll-like, NOT anime proportions. If in doubt, make the head slightly smaller rather than larger.
+
+Background: A bright, airy modern bedroom with large windows letting in warm afternoon sunlight, a clothing rack with a few items visible, a small vanity table with accessories. Minimal, clean aesthetic with warm natural tones. Soft golden afternoon light streaming in from the side.
+
+Masterpiece, Ultra Photorealistic Portrait Photography, Hyper Realistic, 8K Ultra HD, RAW Photo, Ultra detailed skin texture, realistic pores, natural facial details, realistic eyes, natural hair strands, authentic smartphone photography, low-light realism, cinematic shadows, natural ambient lighting, shallow depth of field, realistic fabric texture, true-to-life colors, photorealistic human, natural imperfections, no CGI, no cartoon, no anime, no illustration, no plastic skin, no over-retouching, no artificial rendering.
+
+Photo quality: 4K ultra-high resolution, shot on professional DSLR camera (Canon EOS R5 or Sony A7R V Mark II), f/2.8 aperture, 1/500s shutter speed, ISO 200, commercial fashion model photography, tack-sharp focus throughout, true-to-life skin texture and hair detail, professional studio-grade natural lighting, editorial quality comparable to Vogue or Harper's Bazaar fashion shoots. Photorealistic, not AI-generated looking. No text, no logos, no brand names.
+---
+file: 20260623_บ่าย_silk_scarf.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+sha256: f108441462d3141f987881d1c63ee93a6989e1a4a23b5e4dd6d9719c7c01bec5
+ref_images: w12(20).png, w12(53).png
+date: 2026-06-23

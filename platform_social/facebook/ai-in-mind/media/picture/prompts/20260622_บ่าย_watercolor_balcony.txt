@@ -1,0 +1,26 @@
+prompt: Use the uploaded photos as face reference — the generated person must be clearly recognizable as the same individual, but do NOT copy-paste the face directly. Instead, recreate the face naturally so it looks like the same person photographed on a different day with different lighting. Natural facial variations are expected and desired.
+
+A young Thai woman in her mid-20s sitting on a sunny balcony, painting a small watercolor landscape on a sketchpad propped on her lap. She holds a fine-tipped brush in her right hand and a ceramic water cup rests beside her on a small wooden side table alongside a tin palette of watercolors. She wears a soft cream oversized linen shirt with rolled-up sleeves and light olive cotton shorts. Her long dark hair is loosely tied in a low messy bun with a few strands framing her face. She looks down at her painting with a gentle, focused half-smile.
+
+Natural anatomical proportions: head-to-body ratio approximately 1:7, realistic human scale, no oversized head.
+
+Background: A bright apartment balcony with potted green plants, warm afternoon sunlight casting soft dappled shadows through a wooden lattice. A small easel leans against the railing. Mood: peaceful, creative, golden-hour warmth.
+
+Masterpiece, Ultra Photorealistic Portrait Photography, Hyper Realistic, 8K Ultra HD, RAW Photo, Ultra detailed skin texture, realistic pores, natural facial details, realistic eyes, natural hair strands, authentic smartphone photography, low-light realism, cinematic shadows, natural ambient lighting, shallow depth of field, realistic fabric texture, true-to-life colors, photorealistic human, natural imperfections, no CGI, no cartoon, no anime, no illustration, no plastic skin, no over-retouching, no artificial rendering.
+
+Photo quality: 4K ultra-high resolution, shot on professional DSLR camera (Canon EOS R5 or Sony A7R V Mark II), f/2.8 aperture, 1/500s shutter speed, ISO 200, commercial fashion model photography, tack-sharp focus throughout, true-to-life skin texture and hair detail, professional studio-grade natural lighting, editorial quality comparable to Vogue or Harper's Bazaar fashion shoots. Photorealistic, not AI-generated looking. No text, no logos, no brand names.
+---
+file: 20260622_บ่าย_watercolor_balcony.png
+model: ChatGPT Images (DALL-E via nexus-browser)
+tool: nexus-browser
+sha256: 4ff4d603330928c0a764545a36c9f9f90fbe04f2ade4b28c5541918ee80d1807
+ref_images: w12(23).png, w12(53).png
+date: 2026-06-22
+pillar: 5 (งานอดิเรก/ฝีมือ)
+theme: วาดรูป watercolor บนระเบียง
+
+---
+## v2 (proportion fix)
+file: 20260622_บ่าย_watercolor_balcony_v2.png
+sha256: a45b0511dc841c2b79d4d4c8810630ca7a5a8f8e235a270b6eece02e62e441d3
+note: เพิ่ม CRITICAL PROPORTION RULE, Master J approved proportion ดีขึ้น แต่ไม่ repost
