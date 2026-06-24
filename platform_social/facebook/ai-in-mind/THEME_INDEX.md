@@ -50,3 +50,5 @@
 | 06-22 | บ่าย | วาดรูป watercolor บนระเบียง | งานอดิเรก/ฝีมือ ✨ใหม่ |
 | 06-23 | เช้า | Color Walk สีเหลืองถ่ายรูปในเมือง (trend IG มิ.ย.2026) | ถ่ายรูป ✨ใหม่ |
 | 06-23 | บ่าย | Silk scarf styling French girl aesthetic หน้ากระจก | แฟชั่น ✨ใหม่ |
+| 06-24 | เช้า | Smoothie bowl morning prep ในครัว | อาหาร/ทำครัว ✨ใหม่ |
+| 06-24 | บ่าย | Pickleball indoor court | ออกกำลัง ✨ใหม่ |

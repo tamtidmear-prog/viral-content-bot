@@ -89,3 +89,6 @@
 | 20 มิ.ย. เย็น | 5 วิธีใช้ AI ในชีวิตประจำวัน (ChatGPT/Claude/Gemini ฟรี, เขียนอีเมล/สรุปเอกสาร/แปลภาษา/เรียนรู้/จัดระเบียบ) | Pillar 3: How-To | `1184469221407318_122108440371337114` |
 | 22 มิ.ย. เย็น | สงครามตัวคน AI (Jumper Nobel→Anthropic, Shazeer→OpenAI), AlphaEvolve genomics/quantum/math, NVIDIA Cosmos 3 omnimodel Physical AI | Pillar 1: AI News | `1184469221407318_122108787399337114` |
 | 2026-06-23 | เย็น | Gemini 3.5 Pro 2M / Anthropic $965B IPO / SpaceX+Cursor $60B | 1184469221407318_122108985333337114 |
+| 2026-06-24 | เช้า | GPT-5.6 launch window (Pachocki meaningful improvement, 1.5M context) / China $295B AI sovereign grid (NDRC, 80% domestic chips) / Google AI Mode 1B users (Gemini 3.5 Flash default) | 1184469221407318_122109076503337114 |
+| 2026-06-24 | กลางวัน | SpaceX×Reflection AI $6.3B Colossus 2 GB300 / Qualcomm×Modular $4B AI chip / OpenAI GPT-5.5-Cyber Patch the Planet 64PRs | 1184469221407318_122109100281337114 |
+| 2026-06-24 | เย็น | Nadella AI monopoly warning (WSJ 21 มิ.ย.) / RSI Recursive Self-Improvement (ICLR เม.ย. + Davos ม.ค.) / SRT-H หุ่นยนต์ผ่าตัด (JHU 2025 milestone) | 1184469221407318_122109177975337114 |
