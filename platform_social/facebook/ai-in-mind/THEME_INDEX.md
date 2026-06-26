@@ -55,3 +55,4 @@
 | 06-25 | เช้า | WFH desk setup เช้าวันพฤหัส (cream knit sweater, MacBook, notebook) | lifestyle/งานอดิเรก ✨ใหม่ |
 | 06-25 | บ่าย | Y2K Korean girl editorial 3x3 collage (studio, strawberry pink tops, props: lollipop/cotton candy/plush/camera/bubbles/ice cream) | แฟชั่น ✨ใหม่ |
 | 06-26 | เช้า | จัดดอกไม้สดเช้าวันศุกร์ (flower arrangement, sage apron, peonies) | บ้าน/ต้นไม้ ✨ใหม่ |
+| 06-26 | บ่าย | เดินเที่ยว craft market ดูเซรามิก (cream blazer, rattan bag, jeans) | เที่ยว/ธรรมชาติ ✨ใหม่ |
