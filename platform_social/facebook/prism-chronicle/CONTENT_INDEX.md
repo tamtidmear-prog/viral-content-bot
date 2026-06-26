@@ -96,3 +96,4 @@
 | 2026-06-25 | กลางวัน | Qualcomm×Tenstorrent $8-10B RISC-V สงครามชิป AI / Nvidia Vera Rubin VR200 $7.8M/rack ราคา AI infrastructure / Amazon 1M robots+DeepFleet 10% efficiency+Sequoia 75% faster | 1184469221407318_122109271383337114 |
 | 2026-06-25 | เย็น | OpenAI×Molecule.one AI drug discovery ครั้งแรก / Microsoft route GitHub→AWS เพราะ AI agents overload / Colorado SB 26-189 AI Act มีผล 30 มิ.ย. | 1184469221407318_122109312357337114 |
 | 2026-06-26 | เช้า | DARPA×NSF AI Forge ทุนวิจัย AI safety $750K-$3M / Five Eyes "Careful Adoption of Agentic AI" 5 risk categories / FERC show cause orders 6 grid operators รับ AI data center 60 วัน | 1184469221407318_122109412455337114 |
+| 2026-06-26 | กลางวัน | DeepSeek V4 open-source 1.6T MoE / xAI Grok 4.3 MS Word+/goal autonomous / Microsoft AI Education 92% students ใช้ AI+5 เครื่องมือฟรี | 1184469221407318_122109427941337114 |
