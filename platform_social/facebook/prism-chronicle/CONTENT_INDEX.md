@@ -97,3 +97,4 @@
 | 2026-06-25 | เย็น | OpenAI×Molecule.one AI drug discovery ครั้งแรก / Microsoft route GitHub→AWS เพราะ AI agents overload / Colorado SB 26-189 AI Act มีผล 30 มิ.ย. | 1184469221407318_122109312357337114 |
 | 2026-06-26 | เช้า | DARPA×NSF AI Forge ทุนวิจัย AI safety $750K-$3M / Five Eyes "Careful Adoption of Agentic AI" 5 risk categories / FERC show cause orders 6 grid operators รับ AI data center 60 วัน | 1184469221407318_122109412455337114 |
 | 2026-06-26 | กลางวัน | DeepSeek V4 open-source 1.6T MoE / xAI Grok 4.3 MS Word+/goal autonomous / Microsoft AI Education 92% students ใช้ AI+5 เครื่องมือฟรี | 1184469221407318_122109427941337114 |
+| 2026-06-26 | เย็น | NAVER×NVIDIA Sovereign AI Factory Korea 55MW→1GW / NYC DOE AI bias+equity review ~900K students / Ames Lab AI rare-earth-free magnets roadmap Genesis Mission | 1184469221407318_122109448035337114 |
