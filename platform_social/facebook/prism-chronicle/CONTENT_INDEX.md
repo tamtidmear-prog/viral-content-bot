@@ -92,3 +92,7 @@
 | 2026-06-24 | เช้า | GPT-5.6 launch window (Pachocki meaningful improvement, 1.5M context) / China $295B AI sovereign grid (NDRC, 80% domestic chips) / Google AI Mode 1B users (Gemini 3.5 Flash default) | 1184469221407318_122109076503337114 |
 | 2026-06-24 | กลางวัน | SpaceX×Reflection AI $6.3B Colossus 2 GB300 / Qualcomm×Modular $4B AI chip / OpenAI GPT-5.5-Cyber Patch the Planet 64PRs | 1184469221407318_122109100281337114 |
 | 2026-06-24 | เย็น | Nadella AI monopoly warning (WSJ 21 มิ.ย.) / RSI Recursive Self-Improvement (ICLR เม.ย. + Davos ม.ค.) / SRT-H หุ่นยนต์ผ่าตัด (JHU 2025 milestone) | 1184469221407318_122109177975337114 |
+| 2026-06-25 | เช้า | Claude Tag (Slack AI teammate 65% code gen) / Chrome auto-browse (agentic AI Android ปลาย มิ.ย.) / Fable 5 ban + open-weight 3 ตัวเติมช่องว่าง | 1184469221407318_122109242853337114 |
+| 2026-06-25 | กลางวัน | Qualcomm×Tenstorrent $8-10B RISC-V สงครามชิป AI / Nvidia Vera Rubin VR200 $7.8M/rack ราคา AI infrastructure / Amazon 1M robots+DeepFleet 10% efficiency+Sequoia 75% faster | 1184469221407318_122109271383337114 |
+| 2026-06-25 | เย็น | OpenAI×Molecule.one AI drug discovery ครั้งแรก / Microsoft route GitHub→AWS เพราะ AI agents overload / Colorado SB 26-189 AI Act มีผล 30 มิ.ย. | 1184469221407318_122109312357337114 |
+| 2026-06-26 | เช้า | DARPA×NSF AI Forge ทุนวิจัย AI safety $750K-$3M / Five Eyes "Careful Adoption of Agentic AI" 5 risk categories / FERC show cause orders 6 grid operators รับ AI data center 60 วัน | 1184469221407318_122109412455337114 |
