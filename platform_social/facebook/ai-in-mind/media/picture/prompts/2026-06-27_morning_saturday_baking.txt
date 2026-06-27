@@ -1,0 +1,4 @@
+Source: Paradex imagegen skill (GPT-5.5) via maw send-text paradex:0
+Face ref: w12 (19).png + w12 (23).png
+Prompt: [Image Request] Use face reference images at .../Ref_create_picture/ — use w12 (19).png and w12 (23).png as face reference. Generate a photorealistic lifestyle photo of this young Thai woman mid-20s baking croissants in a cozy kitchen. Cream linen apron over white t-shirt, long dark hair in messy bun, flour on cheek. Warm morning golden light from kitchen window. 85mm f/2.0 shallow depth of field.
+Note: v2 — with face ref path specified. Master J approved.
