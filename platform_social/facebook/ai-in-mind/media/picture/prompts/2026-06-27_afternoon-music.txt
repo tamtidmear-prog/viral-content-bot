@@ -1,0 +1,9 @@
+prompt: Editorial lifestyle photography, half-body portrait of a young Thai woman in her mid-20s. Vertical 9:16, framed from head to upper thighs. FASHION: Oversized cream knit cardigan over white camisole, comfortable loose fit. Simple gold stud earrings, wireless over-ear headphones in matte white. MAKEUP: Minimal clean girl look. HAIR: Long dark hair loose and natural, slightly messy weekend style. POSE: Sitting cross-legged on soft cream couch, eyes gently closed, one hand on headphones, other holding warm cup of tea. EXPRESSION: Peaceful content smile eyes closed. LIGHTING: Warm afternoon golden hour through sheer curtains from left. BACKGROUND: Cozy minimalist living room corner — cream couch, throw blanket, side table, candle, book, monstera. CAMERA: 85mm f/2.0, ultra realistic, 8K.
+---
+file: 2026-06-27_afternoon-music.png
+model: Paradex (Codex CLI / GPT-5.5)
+tool: maw send-text paradex:0
+ref_images: [w12 (20).png, w12 (53).png]
+date: 2026-06-27
+theme: ฟังเพลงชิลเสาร์บ่าย
+pillar: งานอดิเรก/ฝีมือ

@@ -100,3 +100,5 @@
 | 2026-06-26 | เย็น | NAVER×NVIDIA Sovereign AI Factory Korea 55MW→1GW / NYC DOE AI bias+equity review ~900K students / Ames Lab AI rare-earth-free magnets roadmap Genesis Mission | 1184469221407318_122109448035337114 |
 | 2026-06-27 | กลางวัน | OpenAI Jalapeño chip (Broadcom, 50% ถูกกว่า NVIDIA, inference ASIC) / Agentjacking MCP injection (Tenet Security, 2388 orgs, Sentry) / A24×DeepMind $75M equity AI filmmaking (storyboard gen) | 1184469221407318_122109577407337114 |
 | 2026-06-27 | เย็น | สงครามแชทบอท 2026 — ChatGPT 900M users market share 46.4% (Sensor Tower) / Gemini 27.7% / Claude 10.3% / เปรียบเทียบ 3 ตัว How-To ใช้ตัวไหนทำอะไร | 1184469221407318_122109587703337114 |
+| 2026-06-28 | กลางวัน | 3 เรื่อง AI เปลี่ยนชีวิต — Siri AI WWDC 2026 / Yahoo AI Agent Network 23 partners / Roche×NVIDIA 3500 GPU AI Healthcare | Pillar 1+3: AI News + How-To | 1184469221407318_122109739773337114 |
+| 2026-06-28 | เย็น | 3 เรื่อง AI คนไทยควรรู้ — AI for Teachers ครูไทย 160,000 / Anthropic vs Alibaba distillation 25K accounts / Colorado SB 189 เลื่อนเป็น ม.ค. 2027 | Pillar 1: AI News | 1184469221407318_122109794349337114 |

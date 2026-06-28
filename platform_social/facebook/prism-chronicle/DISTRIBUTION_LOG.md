@@ -26,3 +26,5 @@
 - กลุ่ม: BigData and AI Thailand
 - กลุ่ม: Generative AI Developer Thailand
 - อื่นๆ (ระบุ)
+| 12:18 | เพจ Prism Chronicle | 3 เรื่อง AI เปลี่ยนชีวิต — Siri AI / Yahoo Agent / Roche NVIDIA | [โพส](https://www.facebook.com/122106553575337114/posts/122109739773337114) |
+| 19:30 | เพจ Prism Chronicle | 3 เรื่อง AI คนไทยควรรู้ — AI ห้องเรียนไทย / Anthropic vs Alibaba / Colorado AI Act | [โพส](https://www.facebook.com/122106553575337114/posts/122109794349337114) |

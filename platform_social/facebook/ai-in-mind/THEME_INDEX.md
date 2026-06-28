@@ -57,3 +57,5 @@
 | 06-26 | เช้า | จัดดอกไม้สดเช้าวันศุกร์ (flower arrangement, sage apron, peonies) | บ้าน/ต้นไม้ ✨ใหม่ |
 | 06-26 | บ่าย | เดินเที่ยว craft market ดูเซรามิก (cream blazer, rattan bag, jeans) | เที่ยว/ธรรมชาติ ✨ใหม่ |
 | 06-27 | เช้า | ทำครัวซองต์เช้าวันเสาร์ (cream apron, white tee, messy bun, cozy kitchen) | อาหาร/ทำครัว ✨ใหม่ |
+| 06-27 | บ่าย | ฟังเพลงชิลเสาร์บ่าย (cream cardigan, white headphones, cozy couch) | งานอดิเรก/ฟังเพลง ✨ใหม่ |
+| 06-28 | เช้า | วิ่งเช้าวันอาทิตย์ในสวนสาธารณะ (lavender tank, black leggings, asymmetric 4-panel grid) | ออกกำลัง/wellness ✨ใหม่ format: asymmetric grid ✨ |
