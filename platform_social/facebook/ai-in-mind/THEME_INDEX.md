@@ -59,3 +59,6 @@
 | 06-27 | เช้า | ทำครัวซองต์เช้าวันเสาร์ (cream apron, white tee, messy bun, cozy kitchen) | อาหาร/ทำครัว ✨ใหม่ |
 | 06-27 | บ่าย | ฟังเพลงชิลเสาร์บ่าย (cream cardigan, white headphones, cozy couch) | งานอดิเรก/ฟังเพลง ✨ใหม่ |
 | 06-28 | เช้า | วิ่งเช้าวันอาทิตย์ในสวนสาธารณะ (lavender tank, black leggings, asymmetric 4-panel grid) | ออกกำลัง/wellness ✨ใหม่ format: asymmetric grid ✨ |
+| 06-29 | บ่าย | Monday OOTD smart casual เปิดสัปดาห์ (cream blazer, white tee, light jeans, brown crossbody bag, white sneakers) | แฟชั่น/OOTD ✨ใหม่ |
+| 06-30 | เช้า | เดินเที่ยวย่านเก่ากรุงเทพ ตะลาดน้อย (white eyelet blouse, khaki wide-leg, brown sandals, rattan bag, turquoise door) | เที่ยว/ธรรมชาติ ✨ใหม่ |
+| 06-30 | บ่าย | จัดมุมชงชาบ่ายที่บ้าน (cream waffle sweater, dusty rose shorts, sage teapot, mochi, monstera) | บ้าน/ต้นไม้ ✨ใหม่ |
