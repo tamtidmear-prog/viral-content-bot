@@ -80,7 +80,7 @@
 |--------|-----------|-------|
 | 1. AI News | 1 ก.ค. กลางวัน (Copilot billing/Gemini delay/Alphabet raise) | 🔴 ใช้หนักเกือบทุกวัน — พักได้ |
 | 2. วิธีคิด | 29 มิ.ย. เย็น (ถามคำถามเป็น=ใช้ AI เก่ง) | ✅ กลับมาแล้ว |
-| 3. How-To | 20 มิ.ย. เย็น (5 วิธีใช้ AI) | ✅ กลับมาแล้ว |
+| 3. How-To | 1 ก.ค. เย็น (AI Scam/Deepfake ป้องกันตัว) | ✅ ใช้ล่าสุด |
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
 
@@ -105,3 +105,4 @@
 | 2026-06-29 | เย็น | ถามคำถามเป็น = ใช้ AI เก่งกว่าคนอื่น — Anthropic r=0.925 / สูตร CRAFT / ตลาด PE $1.49B / 3 tips เริ่มวันนี้ | Pillar 2: วิธีคิด | 1184469221407318_122109935451337114 |
 | 2026-06-30 | กลางวัน | 3 ข่าว AI เปลี่ยนเกม — Colorado AI Act reset (xAI ฟ้อง→SB 26-189 เลื่อน ม.ค.2027) / Anthropic×Microsoft Maia 200 Azure 3nm / GPT-5.6 Sol/Terra/Luna 3-tier naming | Pillar 1: AI News | 1184469221407318_122110054977337114 |
 | 2026-07-01 | กลางวัน | 3 เรื่อง AI ที่กระทบกระเป๋าเงินและอนาคต — GitHub Copilot AI Credits บิลช็อก (flex-cliff Biz/Ent 1 ก.ย.) / Gemini 3.5 Pro เลื่อนเปิดตัว ก.ค. (รายงาน ไม่ทางการ, talent exodus, หุ้นร่วง 6.7%) / Alphabet $84.75B equity raise ใหญ่สุดในประวัติศาสตร์เทค | Pillar 1: AI News | 1184469221407318_122110227693337114 |
+| 2026-07-01 | เย็น | AI Scam/Deepfake 2026 — FBI IC3 $20.877B losses +26%, multi-step fraud 10%→28% YoY, voice clone 85% จาก 3 วินาที, เคส Arup ($25.6M)/Ferrari (รอด), 4 เทคนิคป้องกันตัว | Pillar 3: How-To | 1184469221407318_122110274841337114 |
