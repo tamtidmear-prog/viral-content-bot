@@ -63,3 +63,4 @@
 | 06-30 | เช้า | เดินเที่ยวย่านเก่ากรุงเทพ ตะลาดน้อย (white eyelet blouse, khaki wide-leg, brown sandals, rattan bag, turquoise door) | เที่ยว/ธรรมชาติ ✨ใหม่ |
 | 06-30 | บ่าย | จัดมุมชงชาบ่ายที่บ้าน (cream waffle sweater, dusty rose shorts, sage teapot, mochi, monstera) | บ้าน/ต้นไม้ ✨ใหม่ |
 | 07-01 | เช้า | ทำสลัดเช้า healthy ในครัว (white linen shirt, sage apron, wooden salad bowl, morning light) | อาหาร/ทำครัว ✨ใหม่ |
+| 07-02 | เช้า | โยคะเช้าในบ้าน (sage sport bra+leggings, seated meditation lotus pose, lavender mat, monstera, morning window light) | ออกกำลัง/wellness ✨ใหม่ (indoor yoga) |
