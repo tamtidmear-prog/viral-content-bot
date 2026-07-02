@@ -1,0 +1,21 @@
+Use case: photorealistic-natural
+Asset type: Facebook Ai in Mind social media image, vertical portrait 9:16
+Input images: the two visible reference photos are face references. Recreate the same young Thai woman naturally, clearly recognizable as the same individual, but do not copy-paste the face. She should look like the same person photographed on a different afternoon with different indoor lighting.
+
+Primary request: Lifestyle fashion editorial photography, ultra realistic half-body portrait of a young Thai woman in her mid-20s doing pottery at home.
+
+Scene/backdrop: cozy home craft corner with a pottery wheel, warm natural wood floor, wooden shelf with a few finished ceramic pieces, small potted plant, warm terracotta tones. Warm afternoon sunlight streams through a nearby side window, soft diffused natural light, visible natural shadow across the workbench, not overexposed.
+
+Subject: young Thai woman matching the face references, natural facial structure, true-to-life skin texture, natural facial details, realistic pores, natural imperfections. Hair tied back in a low messy bun with a few loose strands framing the face. Minimal fresh no-makeup look, light dewy skin, natural brows.
+
+Fashion: cream linen apron over a simple sage green t-shirt and denim shorts, sleeves pushed up. Hands and forearms lightly dusted with wet clay. Realistic linen, cotton, denim, and wet clay texture.
+
+Pose/action: seated at a pottery wheel, both hands gently shaping a clay bowl mid-spin, leaning slightly forward with focused engagement. Eyes looking down at the clay, relaxed and absorbed in the craft. Soft concentrated smile.
+
+Composition/framing: vertical 9:16, framed from head to upper thighs. Include the face, apron, both forearms, both hands, clay bowl, and pottery wheel clearly in frame. Natural editorial half-body crop, no cropped head, no cut-off hands. Head must be about 1/8 of total visible body height, strict realistic 1:7.5 head-to-body ratio, not stylized, not doll-like; if uncertain, make the head slightly smaller.
+
+Camera/quality: 85mm lens look, f/2.0, natural lighting, editorial lifestyle photography style, ultra photorealistic, RAW photo feel, 8K Ultra HD, sharp focus on subject and clay work, photorealistic skin texture, realistic hair strands, cinematic shadows, shallow depth of field, true-to-life colors.
+
+Constraints: one person only, realistic human anatomy and proportions, both hands visible shaping clay, natural lighting, no text, no logo, no watermark, no signature.
+
+Avoid: low quality, blurry, out of focus, bad anatomy, malformed hands, extra fingers, extra arms, extra legs, duplicated limbs, asymmetrical eyes, crossed eyes, distorted face, deformed body, unrealistic proportions, oversized head, plastic skin, over-retouching, CGI, cartoon, anime, illustration, artificial rendering, cropped head, cut-off hands, cut-off feet, floating jewelry, missing jewelry, duplicate person, multiple people, watermark, text, logo, signature.
