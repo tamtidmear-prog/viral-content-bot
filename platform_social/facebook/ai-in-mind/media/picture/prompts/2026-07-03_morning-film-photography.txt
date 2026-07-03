@@ -1,0 +1,9 @@
+prompt: Ultra-realistic photorealistic candid lifestyle photo of a 26-year-old Thai woman (face must match attached reference images exactly — same identity, natural facial features), walking through an old Bangkok shophouse street on a Friday morning, holding a vintage film camera up to take a photo, warm golden morning sunlight casting natural shadows, cream linen button-up shirt tied loosely at the waist over a white tank top, wide-leg light denim pants, tan woven crossbody bag, canvas sneakers, candid mid-motion pose looking slightly off-camera through the camera viewfinder, natural skin texture, sharp focus, shot on mirrorless camera, realistic lighting, everyday life moment, old colorful shophouse facades and street details in soft-focus background, ALL LIMBS VISIBLE IN FRAME, no cropped hands or feet.
+---
+file: 2026-07-03_morning-film-photography.png
+model: gpt-image (Paradex imagegen workflow)
+tool: Paradex (codex:0) — local fallback, nexus-browser profile3 ยังไม่ล็อกอิน ChatGPT
+sha256: 62d32cfdd964cf9a447c49ec5da864c929fc5752751736b73fddc6ebcdfffad9
+ref_images: [w12 (19).png, w12 (53).png]
+date: 2026-07-03
+generated_by: Paradex, requested via tmux poke-1783042308

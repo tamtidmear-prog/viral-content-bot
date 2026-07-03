@@ -65,3 +65,4 @@
 | 07-01 | เช้า | ทำสลัดเช้า healthy ในครัว (white linen shirt, sage apron, wooden salad bowl, morning light) | อาหาร/ทำครัว ✨ใหม่ |
 | 07-02 | เช้า | โยคะเช้าในบ้าน (sage sport bra+leggings, seated meditation lotus pose, lavender mat, monstera, morning window light) | ออกกำลัง/wellness ✨ใหม่ (indoor yoga) |
 | 07-02 | บ่าย | ปั้นดินเผาที่บ้านบ่ายนี้ (cream apron, sage tee, denim shorts, pottery wheel, clay hands, home craft corner shelf) | งานอดิเรก/ฝีมือ ✨ใหม่ (pottery) |
+| 07-03 | เช้า | เดินถ่ายรูปฟิล์มวินเทจย่านเก่ากรุงเทพเช้าวันศุกร์ (cream linen shirt tied waist+white tank, wide-leg denim, straw crossbody bag, vintage film camera, old shophouse street) | ถ่ายรูป ✨ใหม่ (film photography) |
