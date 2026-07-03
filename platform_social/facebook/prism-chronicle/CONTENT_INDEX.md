@@ -79,9 +79,9 @@
 
 | Pillar | ใช้ล่าสุด | สถานะ |
 |--------|-----------|-------|
-| 1. AI News | 2026-07-03 เช้า (Fable5/UBTECH U1/Meta Compute) | 🔴 ใช้ติดกัน 2 slot (07-02 กลางวัน, 07-03 เช้า) — พักแล้ว |
-| 2. วิธีคิด | 29 มิ.ย. เย็น (ถามคำถามเป็น=ใช้ AI เก่ง) | ⏳ ห่างสุด — คิวถัดไป |
-| 3. How-To | 2026-07-03 กลางวัน (ใช้ AI ฟรีให้คุ้ม ChatGPT/Claude/Gemini) | ✅ ใช้ล่าสุด |
+| 1. AI News | 2026-07-03 เช้า (Fable5/UBTECH U1/Meta Compute) | ⏸️ พักอยู่ |
+| 2. วิธีคิด | 2026-07-03 เย็น (5 Whys หาต้นตอปัญหา) | ✅ ใช้ล่าสุด |
+| 3. How-To | 2026-07-03 กลางวัน (ใช้ AI ฟรีให้คุ้ม ChatGPT/Claude/Gemini) | ⏳ ห่างสุด — คิวถัดไป |
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
 
@@ -108,4 +108,5 @@
 | 2026-07-01 | กลางวัน | 3 เรื่อง AI ที่กระทบกระเป๋าเงินและอนาคต — GitHub Copilot AI Credits บิลช็อก (flex-cliff Biz/Ent 1 ก.ย.) / Gemini 3.5 Pro เลื่อนเปิดตัว ก.ค. (รายงาน ไม่ทางการ, talent exodus, หุ้นร่วง 6.7%) / Alphabet $84.75B equity raise ใหญ่สุดในประวัติศาสตร์เทค | Pillar 1: AI News | 1184469221407318_122110227693337114 |
 | 2026-07-01 | เย็น | AI Scam/Deepfake 2026 — FBI IC3 $20.877B losses +26%, multi-step fraud 10%→28% YoY, voice clone 85% จาก 3 วินาที, เคส Arup ($25.6M)/Ferrari (รอด), 4 เทคนิคป้องกันตัว | Pillar 3: How-To | 1184469221407318_122110274841337114 |
 | 2026-07-02 | กลางวัน | AI เข้าถึงง่ายขึ้น — Claude Sonnet 5 default ฟรีทุกคน + Fable5/Mythos5 export control กลับมา / California-Anthropic SITeS 50% off ทั้งรัฐ / Gemini 3.1 Flash Image + Pro Image + Flash-Lite | Pillar 1: AI News | 1184469221407318_122110425825337114 |
+| 2026-07-03 | เย็น | ทำไมปัญหาเดิมกลับมาซ้ำ — เทคนิค 5 Whys (Sakichi Toyoda/Taiichi Ohno, Toyota Production System), dev ใช้เวลา 35-50% กับ debug, 3 tips เอาไปใช้จริง | Pillar 2: วิธีคิด | 1184469221407318_122110573317337114 |
 | 2026-07-03 | เช้า | Claude Fable 5/Mythos 5 กลับมาหลังปิดทั่วโลก 19 วัน (jailbreak, export control, safety classifier ใหม่) / UBTECH UWORLD U1 หุ่นยนต์เพื่อนคุย เซินเจิ้น 88 DOF จอง 13,361 ตัว / Meta Compute (รายงาน) เช่า AI compute ส่วนเกินแบบ SpaceX playbook | Pillar 1: AI News | 1184469221407318_122110517481337114 |
