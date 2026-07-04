@@ -79,8 +79,8 @@
 
 | Pillar | ใช้ล่าสุด | สถานะ |
 |--------|-----------|-------|
-| 1. AI News | 2026-07-03 เช้า (Fable5/UBTECH U1/Meta Compute) | ⏸️ พักอยู่ |
-| 2. วิธีคิด | 2026-07-03 เย็น (5 Whys หาต้นตอปัญหา) | ✅ ใช้ล่าสุด |
+| 1. AI News | 2026-07-04 กลางวัน (OpenAI 5% equity / Microsoft Frontier Company / UN AI Commission) | ✅ ใช้ล่าสุด |
+| 2. วิธีคิด | 2026-07-03 เย็น (5 Whys หาต้นตอปัญหา) | ⏸️ พักอยู่ |
 | 3. How-To | 2026-07-03 กลางวัน (ใช้ AI ฟรีให้คุ้ม ChatGPT/Claude/Gemini) | ⏳ ห่างสุด — คิวถัดไป |
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
@@ -110,3 +110,4 @@
 | 2026-07-02 | กลางวัน | AI เข้าถึงง่ายขึ้น — Claude Sonnet 5 default ฟรีทุกคน + Fable5/Mythos5 export control กลับมา / California-Anthropic SITeS 50% off ทั้งรัฐ / Gemini 3.1 Flash Image + Pro Image + Flash-Lite | Pillar 1: AI News | 1184469221407318_122110425825337114 |
 | 2026-07-03 | เย็น | ทำไมปัญหาเดิมกลับมาซ้ำ — เทคนิค 5 Whys (Sakichi Toyoda/Taiichi Ohno, Toyota Production System), dev ใช้เวลา 35-50% กับ debug, 3 tips เอาไปใช้จริง | Pillar 2: วิธีคิด | 1184469221407318_122110573317337114 |
 | 2026-07-03 | เช้า | Claude Fable 5/Mythos 5 กลับมาหลังปิดทั่วโลก 19 วัน (jailbreak, export control, safety classifier ใหม่) / UBTECH UWORLD U1 หุ่นยนต์เพื่อนคุย เซินเจิ้น 88 DOF จอง 13,361 ตัว / Meta Compute (รายงาน) เช่า AI compute ส่วนเกินแบบ SpaceX playbook | Pillar 1: AI News | 1184469221407318_122110517481337114 |
+| 2026-07-04 | กลางวัน | AI เจอโต๊ะเจรจาระดับโลก — OpenAI เสนอหุ้น 5% ให้รัฐบาลสหรัฐฯ ($42.6B) / Microsoft ทุ่ม $2.5B ตั้ง Frontier Company (6,000 วิศวกรฝังตัว, MIT 95% AI projects ไม่กำไร) / UN ตั้ง AI for Good Global Commission (Benioff+Kagame, เจนีวา 7-10 ก.ค.) | Pillar 1: AI News | 1184469221407318_122110687599337114 |
