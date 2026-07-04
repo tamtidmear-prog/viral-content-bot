@@ -1,0 +1,10 @@
+prompt: ultra-realistic candid photo, 26yo Thai woman, natural morning light, DSLR 4K quality, shot on Canon EOS R5, shallow depth of field, ALL LIMBS FULLY VISIBLE IN FRAME (no cropped arms/legs/hands), riding vintage cream bicycle along riverside promenade, warm golden hour morning light, genuine candid smile, sage green cropped tank top, white bike shorts, natural makeup, wind in hair, tropical trees background, photorealistic skin texture, no AI-glossy look.
+---
+file: 2026-07-04_saturday-morning-cycling-riverside.png
+model: gpt-5.5 (Paradex/Codex image gen)
+tool: Paradex (codex:0, local tmux, ChatGPT pipeline fallback)
+sha256: 318e896ef903106afbea85a59506d50b00e9bbc5167a977f46c3823fe2585ffd
+output_path: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/2026-07-04_saturday-morning-cycling-riverside.png
+ref_images: [w12 (19).png, w12 (53).png]
+date: 2026-07-04
+poke_id: poke-1783125679
