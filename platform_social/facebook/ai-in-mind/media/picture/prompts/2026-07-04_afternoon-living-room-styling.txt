@@ -1,0 +1,9 @@
+prompt: ultra-realistic candid photo, 26yo Thai woman, cozy living room, seated on cream sofa arranging a throw pillow, cream knit sweater, beige shorts, warm string lights + shelf decor background, monstera plant, soft natural window light, DSLR 4K quality, ALL LIMBS FULLY VISIBLE IN FRAME (no cropped feet/hands), genuine relaxed smile, photorealistic skin texture, no AI-glossy look. (retry after first gen had a cropped foot at frame edge — widened framing to seated/kneeling full-body)
+---
+file: 2026-07-04_afternoon-living-room-styling.png
+model: gpt-5.5 (Paradex/Codex image gen)
+tool: Paradex (codex:0, local tmux, ChatGPT pipeline fallback — nexus-browser not tried this slot per routine order)
+sha256: 46151bca605f78598bc65bf671f67f568950d89c424cd4930ba9c1d31a1e766a
+output_path: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/2026-07-04_afternoon-living-room-styling.png
+date: 2026-07-04
+poke_id: poke-1783151482
