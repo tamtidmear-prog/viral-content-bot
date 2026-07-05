@@ -68,3 +68,6 @@
 | 07-02 | บ่าย | ปั้นดินเผาที่บ้านบ่ายนี้ (cream apron, sage tee, denim shorts, pottery wheel, clay hands, home craft corner shelf) | งานอดิเรก/ฝีมือ ✨ใหม่ (pottery) |
 | 07-03 | เช้า | เดินถ่ายรูปฟิล์มวินเทจย่านเก่ากรุงเทพเช้าวันศุกร์ (cream linen shirt tied waist+white tank, wide-leg denim, straw crossbody bag, vintage film camera, old shophouse street) | ถ่ายรูป ✨ใหม่ (film photography) |
 | 07-03 | บ่าย | แต่งตัวออกไปดินเนอร์ศุกร์เย็น rooftop restaurant กลางเมือง (silky terracotta slip midi dress, gold jewelry, city skyline dusk, string lights) — **โลเคชั่น: rooftop restaurant terrace** | แฟชั่น/OOTD ✨ใหม่ (rooftop dinner) |
+| 07-04 | เช้า | ปั่นจักรยานวินเทจริมแม่น้ำเช้าวันเสาร์ (sage tank top, white bike shorts, golden hour) | ออกกำลัง/เที่ยว ✨ใหม่ (cycling) — backfilled 07-05 |
+| 07-04 | บ่าย | จัดมุมโซฟาบ่ายนี้ที่บ้าน (cream knit sweater, beige shorts, string lights, monstera) | บ้าน/ต้นไม้ ✨ใหม่ (living room styling) — backfilled 07-05 |
+| 07-05 | เช้า | ทำแพนเค้กเช้าวันอาทิตย์ในครัว ราดน้ำเชื่อม (butter-yellow knit sweater, cream apron, denim shorts, berries) | อาหาร/ทำครัว ✨ใหม่ (v2 — v1 มี mid-air artifact ไม่ผ่าน QC) |

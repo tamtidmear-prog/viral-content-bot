@@ -1,0 +1,11 @@
+prompt: Use the uploaded photos as face reference — the generated person must be clearly recognizable as the same individual, but do NOT copy-paste the face directly; recreate it naturally as if photographed on a different day with different lighting. Lifestyle editorial photograph of a 26-year-old Thai woman, vertical 9:16, full body from head to feet, ALL LIMBS FULLY VISIBLE IN FRAME, strict 1:7.5 head-to-body ratio. Full-frame DSLR 35mm lens f/2.2, ISO 400, subtle natural film grain. Sunday 8am, low golden light from east window, soft directional shadows on wooden counter. She stands at the counter drizzling maple syrup onto a stack of pancakes already plated (NO airborne/thrown food, feet firmly on floor, static plate on counter), warm genuine smile looking down at the plate. Outfit: oversized butter-yellow knit sweater sleeves pushed up, cream linen apron tied loosely, light-wash denim shorts, bare feet, messy bun with flyaway strands. Kitchen details: light flour dusting on counter, small apron smudge, crumpled tea towel by stove, fresh berries beside pancake stack, potted herb on windowsill, NO floating objects, NO strings/wires. True-to-life skin with visible pores, no airbrushed look, 4K photorealistic. NEGATIVE: low quality, blurry, bad anatomy, malformed hands, extra fingers, extra limbs, cropped head, cut-off hands, cut-off feet, floating objects, visible strings or wires, doll-like head, plastic skin, duplicate person, watermark, text, logo.
+---
+file: 2026-07-05_sunday-morning-pancakes-v2.png
+model: gpt-5.5 (Paradex/Codex image_gen tool)
+tool: Paradex (codex:0, local tmux, imagegen skill) — round 2, fixed after v1 mid-air pancake string artifact (v1 rejected, not posted)
+sha256: 3675582a555abc31b87c1c5c751621531e83c85fb3af830586c1532be229a000
+output_path: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/2026-07-05_sunday-morning-pancakes-v2.png
+ref_images: [w12 (20).png, w12 (23).png]
+date: 2026-07-05
+poke_id: poke-1783219669
+status: QC PASSED — proceeding to caption+post
