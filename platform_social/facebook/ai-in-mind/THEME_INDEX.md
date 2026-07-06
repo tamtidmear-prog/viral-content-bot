@@ -72,3 +72,4 @@
 | 07-04 | บ่าย | จัดมุมโซฟาบ่ายนี้ที่บ้าน (cream knit sweater, beige shorts, string lights, monstera) | บ้าน/ต้นไม้ ✨ใหม่ (living room styling) — backfilled 07-05 |
 | 07-05 | เช้า | ทำแพนเค้กเช้าวันอาทิตย์ในครัว ราดน้ำเชื่อม (butter-yellow knit sweater, cream apron, denim shorts, berries) | อาหาร/ทำครัว ✨ใหม่ (v2 — v1 มี mid-air artifact ไม่ผ่าน QC) |
 | 07-05 | บ่าย | ทำเทียนหอม DIY บ่ายวันอาทิตย์ (cream linen apron, sage tee, denim shorts, soy wax pouring into jar, dried lavender bundle, home craft corner by window) | งานอดิเรก/ฝีมือ ✨ใหม่ (candle making — distinct จาก pottery 07-02) |
+| 07-06 | บ่าย | เดินดูนิทรรศการศิลปะบ่ายวันจันทร์ (cream linen blazer, white ribbed tank, ivory wide-leg trousers, gold jewelry, tan tote bag, art gallery abstract paintings) | แฟชั่น/OOTD ✨ใหม่ (art gallery — ref w12(20)+w12(53), gen ผ่าน Paradex) |
