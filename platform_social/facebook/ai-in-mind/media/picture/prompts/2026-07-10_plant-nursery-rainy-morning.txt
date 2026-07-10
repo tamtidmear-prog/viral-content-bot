@@ -1,0 +1,27 @@
+Use case: photorealistic-natural
+Asset type: vertical 4:5 Facebook morning lifestyle photograph
+
+Primary request: Create an ultra-realistic candid full-body photograph of the same adult Thai woman shown in both reference images, age 26, browsing potted plants inside a lush greenhouse plant nursery on a rainy morning.
+
+Input images:
+- Image 1, w12 (43).png: primary facial identity reference, especially her natural smile, facial proportions, eyes, brows, nose, lips, and long dark-brown hair.
+- Image 2, w12 (80).png: supporting facial identity reference, especially the centered front view, eye shape, jawline, and overall recognizable identity.
+- Use both images only to preserve one consistent facial identity. Do not copy their clothing, background, glamour retouching, or decorative styling.
+
+Identity invariants: Her face must remain clearly recognizable as the same person in the two references. Preserve her facial proportions and Thai appearance closely. Keep natural adult features and realistic skin; do not substitute a generic model or change ethnicity.
+
+Scene/backdrop: A real greenhouse plant nursery during a gentle rainy morning. Rain droplets cling to large glass wall and roof panels. Rows of healthy tropical plants, small potted plants, and hanging ferns surround her. A transparent clear umbrella covered with realistic raindrops leans against a nearby weathered wooden plant table. The greenhouse is damp and believable, with subtle wet surfaces and no theatrical fog.
+
+Subject/action: She holds one small terracotta pot containing a young monstera with both hands, supporting it naturally and securely. She smiles softly while looking toward the nearby plants, caught in an unposed everyday moment; she is not looking at the camera.
+
+Wardrobe: White linen shirt loosely tucked into a sage-green midi skirt, comfortable simple flat sandals appropriate for walking through a nursery. Real linen weave, natural folds, practical styling, no logos.
+
+Composition/framing: Vertical 4:5 candid environmental portrait, eye-level 35mm perspective. Full body from the top of her hair to the soles of both sandals entirely inside the frame with breathing room. Both arms, both hands, all ten fingers, both legs, and both feet must be visible and anatomically correct. No limb, hand, finger, ankle, sandal, or top of head may be cropped or hidden behind plants, furniture, the pot, or the frame edge. Her face remains large and clear enough for identity recognition while still showing the entire body.
+
+Lighting/mood: Soft cool overcast daylight diffused through the rainy glass roof, gentle natural shadows, quiet fresh morning mood, realistic color response and exposure.
+
+Camera/style: Ultra-realistic candid mirrorless-camera photograph, 35mm lens, sharp subject focus with moderate natural depth of field. Real pores, fine facial hairs, subtle under-eye texture, realistic hair strands, natural hands and nails, believable fabric and wet-glass texture. Editorial quality but unmistakably a real everyday photograph.
+
+Constraints: Exactly one woman. Exactly one small potted monstera in her hands. Clear umbrella leaning against the wooden table. Complete natural hands and fingers. Complete visible limbs. No text, caption, logo, signature, border, or watermark.
+
+Avoid: AI-glossy skin, plastic skin, beauty-filter smoothing, exaggerated makeup, glamour pose, anime, illustration, CGI, 3D-render appearance, uncanny face, generic face, altered ethnicity, duplicate person, extra limbs, missing limbs, fused arms, malformed hands, extra or missing fingers, hidden feet, cropped body, floating objects, distorted pot, oversized monstera, impossible reflections, fake studio lighting, oversaturated greens, artificial bokeh, text, watermark.
