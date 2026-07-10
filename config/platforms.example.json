@@ -12,7 +12,7 @@
         "access_token": "PAGE_ACCESS_TOKEN_HERE"
       }
     },
-    "_comment": "Copy this file to platforms.json and fill in your tokens. See SETUP.md for details."
+    "_comment": "Copy this file to platforms.json and fill in your tokens. Get tokens from Graph API Explorer (developers.facebook.com/tools/explorer) → exchange short-lived user token for long-lived, then fetch page access_token (does not expire). See SETUP.md for details."
   },
   "x": {
     "enabled": false,
@@ -20,11 +20,37 @@
     "api_secret": "",
     "access_token": "",
     "access_secret": "",
-    "_comment": "Phase 2 — X (Twitter) API v2"
+    "_comment": "developer.x.com → Project/App → Keys and tokens. Needs OAuth 1.0a user context (api_key/api_secret = Consumer Keys, access_token/access_secret = Access Token and Secret with Read+Write permission). Free tier = 500 posts/month."
   },
   "line": {
     "enabled": false,
     "channel_access_token": "",
-    "_comment": "Phase 2 — LINE OA Messaging API"
+    "_comment": "LINE Developers Console (developers.line.biz) → your Provider → Messaging API channel → Messaging API tab → issue a long-lived Channel access token."
+  },
+  "discord": {
+    "enabled": false,
+    "webhook_url": "",
+    "_comment": "Discord channel → Edit Channel → Integrations → Webhooks → New Webhook → Copy Webhook URL (looks like https://discord.com/api/webhooks/...)."
+  },
+  "instagram": {
+    "enabled": false,
+    "ig_user_id": "",
+    "access_token": "",
+    "api_version": "v25.0",
+    "_comment": "Requires an Instagram Business/Creator account linked to a Facebook Page. Get ig_user_id via GET /{page_id}?fields=instagram_business_account using the FB page token. access_token can reuse the FB page access_token above as long as it has the instagram_content_publish permission."
+  },
+  "tiktok": {
+    "enabled": false,
+    "client_key": "",
+    "client_secret": "",
+    "access_token": "",
+    "_comment": "Phase 3 stub — not yet implemented. TikTok Content Posting API requires app audit approval from developers.tiktok.com before it can publish outside sandbox/private testers."
+  },
+  "youtube": {
+    "enabled": false,
+    "client_id": "",
+    "client_secret": "",
+    "refresh_token": "",
+    "_comment": "Phase 3 stub — not yet implemented. YouTube Data API v3 via Google Cloud Console OAuth2 client (console.cloud.google.com) — needs client_id/client_secret from an OAuth client + a refresh_token obtained via the OAuth consent flow with youtube.upload scope."
   }
 }
