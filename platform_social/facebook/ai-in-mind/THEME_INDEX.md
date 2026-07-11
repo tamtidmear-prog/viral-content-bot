@@ -74,3 +74,4 @@
 | 07-05 | บ่าย | ทำเทียนหอม DIY บ่ายวันอาทิตย์ (cream linen apron, sage tee, denim shorts, soy wax pouring into jar, dried lavender bundle, home craft corner by window) | งานอดิเรก/ฝีมือ ✨ใหม่ (candle making — distinct จาก pottery 07-02) |
 | 07-06 | บ่าย | เดินดูนิทรรศการศิลปะบ่ายวันจันทร์ (cream linen blazer, white ribbed tank, ivory wide-leg trousers, gold jewelry, tan tote bag, art gallery abstract paintings) | แฟชั่น/OOTD ✨ใหม่ (art gallery — ref w12(20)+w12(53), gen ผ่าน Paradex) |
 | 07-10 | เช้า | เดินเลือกต้นไม้ greenhouse plant nursery เช้าหน้าฝน ถือกระถาง monstera ร่มใส (white linen shirt, sage midi skirt) | เที่ยว/ธรรมชาติ ✨ใหม่ (plant nursery — gen ผ่าน Paradex, ref w12(43)+w12(80)) |
+| 07-11 | บ่าย | home yoga stretch บ่ายวันเสาร์ (sage athleisure set, lavender mat, living room monstera, golden window light) | ออกกำลัง/wellness ✨ใหม่ (home yoga — ยังไม่เคยทำ, gen ผ่าน Paradex, ref w12(19)+w12(20)) |

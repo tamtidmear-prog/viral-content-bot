@@ -1,0 +1,25 @@
+Use case: identity-preserve
+Asset type: Ai_In_Mind lifestyle social-media portrait
+
+Primary request: Create one ultra-photorealistic candid photograph of a 26-year-old Thai-Asian woman doing a gentle home yoga stretch on a quiet Saturday afternoon. Preserve her identity precisely from both face-reference images: match the same facial structure, eye shape, nose, lips, cheek contours, smile, and overall recognizable appearance.
+
+Input images:
+- Image 1: primary face identity reference.
+- Image 2: supporting face identity reference.
+Use both only to preserve the same woman's identity; do not copy their clothing or backgrounds.
+
+Scene/backdrop: Cozy lived-in living room with warm wood flooring, soft golden afternoon sunlight streaming through a large window, a healthy monstera plant in one corner, and a folded blanket resting on a reading chair nearby. The setting should feel natural, calm, and genuinely inhabited, not staged like a showroom.
+
+Subject and action: She is on a lavender yoga mat in a comfortable seated forward stretch, captured mid-movement in a relaxed candid moment. She is not looking directly at the camera. Her expression is peaceful and natural with a slight smile. Show the complete yoga pose, including both arms, hands, legs, and feet clearly and naturally.
+
+Wardrobe and grooming: Modest sage-green athleisure set consisting of a cropped athletic tank and high-waist leggings. Hair tied in a loose low bun with a few natural wisps. Minimal delicate jewelry.
+
+Composition/framing: A single vertical portrait photograph, not a collage and not a multi-panel layout. Medium-wide environmental portrait showing her full pose and enough room context. Rule-of-thirds framing, natural photographer's viewpoint, 85mm portrait-lens character with moderately shallow depth of field so the room remains recognizable.
+
+Lighting/mood: Natural soft window light with a warm golden-hour tone and gentle dimensional shadows. Balanced exposure with realistic highlight roll-off; no blown highlights, flat lighting, artificial rim light, or studio-gloss look.
+
+Materials/textures: Realistic natural skin texture with fine pores and subtle imperfections, believable fabric weave and stretch, natural hair strands, detailed wood grain, and soft textile texture.
+
+Quality: Premium DSLR lifestyle photography, 4K-level detail, physically plausible perspective, modest and tasteful.
+
+Constraints: Identity must match the two references clearly. Anatomically correct natural proportions. Exactly two arms, two hands, two legs, and two feet; five distinct fingers on each visible hand; no fused, duplicated, missing, or distorted limbs or digits. Keep the body pose physically achievable. No text, logos, watermark, frame, collage, CGI, illustration, anime, beauty-filter skin, plastic skin, excessive retouching, AI-gloss, or uncanny facial features.
