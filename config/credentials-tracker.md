@@ -7,7 +7,7 @@
 
 | Item | Value/Location | Created | Expires | Status |
 |------|---------------|---------|---------|--------|
-| User Token (long-lived) | `platforms.json → user_access_token` | 2026-05-25 | 2026-07-24 (~60 วัน) | ✅ Active |
+| User Token (long-lived) | `platforms.json → user_access_token` | 2026-05-26 | 2026-07-25 (60 วัน) | ✅ Active |
 | Page Token: Prism Chronicle | `platforms.json → access_token` | 2026-05-25 | **ไม่หมดอายุ** | ✅ Active |
 | Page Token: Ai_In_Mind | `platforms.json → pages.ai_in_mind` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
 | Page Token: Forex EAI Expert | `platforms.json → pages.forex_eai` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
@@ -60,7 +60,7 @@
 
 | Date | Action | Priority |
 |------|--------|----------|
-| **2026-07-20** | ⚠️ Renew Facebook User Token (long-lived หมด ~07-24) | 🔴 HIGH |
+| **2026-07-20** | ⚠️ Renew Facebook User Token (long-lived หมด 07-25) | 🔴 HIGH |
 | ทุก 55 วัน | Exchange user token ใหม่ก่อนหมดอายุ | 🔴 HIGH |
 | — | หา image gen provider ใหม่ (Gemini ใช้ไม่ได้) | 🟡 MEDIUM |
 
