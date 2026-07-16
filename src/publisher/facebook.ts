@@ -7,6 +7,7 @@
 
 import { readFileSync } from "fs";
 import { join } from "path";
+import { isDryRun, dryRunResult } from "./types";
 
 // ============================
 // ส่วนที่ 1: โหลด Facebook config
@@ -68,6 +69,11 @@ export async function postToFacebook(
 
   // --- รวม caption + hashtags ---
   const fullCaption = `${caption}\n\n${hashtags.join(" ")}`;
+
+  // --- DRY_RUN: validate + payload เสร็จแล้ว หยุดก่อนยิง API จริง ---
+  if (isDryRun()) {
+    return dryRunResult("facebook", fullCaption.slice(0, 80));
+  }
 
   const baseUrl = `https://graph.facebook.com/${config.api_version}/${config.page_id}`;
 

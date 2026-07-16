@@ -1,16 +1,39 @@
 // ============================
-// publisher/index.ts — ตัวเลือก platform
-// หน้าที่: รับชื่อ platform → เรียก publisher ตัวที่ถูกต้อง
-// ถ้า platform ยัง enable ไม่ได้ → บอกว่ายังไม่พร้อม
-// เพิ่ม platform ใหม่ → เพิ่ม case ที่นี่ + สร้างไฟล์ใหม่ใน publisher/
+// publisher/index.ts — registry + ตัวเลือก platform
+// หน้าที่: อ่าน config ว่า platform ไหน enabled → เรียก publisher ตัวที่ถูกต้อง
+// เพิ่ม platform ใหม่ → สร้างไฟล์ใน publisher/ ตาม PublisherFn + เพิ่มใน PUBLISHERS ด้านล่าง
 // ============================
 
-import { postToFacebook, type PostResult } from "./facebook";
+import { postToFacebook } from "./facebook";
+import { postToX } from "./x";
+import { postToLine } from "./line";
+import { postToDiscord } from "./discord";
+import { postToInstagram } from "./instagram";
+import { postToTikTok } from "./tiktok";
+import { postToYouTube } from "./youtube";
+import type { PostResult, PublisherFn } from "./types";
 import { readFileSync } from "fs";
 import { join } from "path";
 
+export type { PostResult } from "./types";
+
 // ============================
-// ส่วนที่ 1: โหลด platforms config
+// ส่วนที่ 1: Publisher Registry
+// ชื่อ platform ใน config/platforms.json → ฟังก์ชันโพส
+// ============================
+
+const PUBLISHERS: Record<string, PublisherFn> = {
+  facebook: postToFacebook,
+  x: postToX,
+  line: postToLine,
+  discord: postToDiscord,
+  instagram: postToInstagram,
+  tiktok: postToTikTok,
+  youtube: postToYouTube,
+};
+
+// ============================
+// ส่วนที่ 2: โหลด platforms config
 // อ่านว่า platform ไหน enabled บ้าง
 // ============================
 
@@ -26,9 +49,9 @@ function loadPlatforms(): Record<string, { enabled: boolean }> {
 }
 
 // ============================
-// ส่วนที่ 2: โพสไปทุก platform ที่ enabled
-// วน loop ทุก platform → ถ้า enabled → เรียก publisher ของตัวนั้น
-// return ผลลัพธ์ทุก platform รวมกัน
+// ส่วนที่ 3: โพสไปทุก platform ที่ enabled
+// วน registry → ถ้า enabled → เรียก publisher ของตัวนั้น
+// platform ล้มตัวหนึ่งไม่ทำให้ตัวอื่นหยุด — เก็บ error ลงผลลัพธ์แทน
 // ============================
 
 export interface PublishResults {
@@ -43,27 +66,40 @@ export async function publishToAll(
   const platforms = loadPlatforms();
   const results: PublishResults = {};
 
-  // --- Facebook ---
-  if (platforms.facebook?.enabled) {
-    console.log("[Publish] กำลังโพส Facebook...");
-    results.facebook = await postToFacebook(caption, hashtags, imagePath);
-    if (results.facebook.success) {
-      console.log(`[Publish] Facebook สำเร็จ → ${results.facebook.postUrl}`);
+  for (const [name, publish] of Object.entries(PUBLISHERS)) {
+    if (!platforms[name]?.enabled) continue;
+
+    console.log(`[Publish] กำลังโพส ${name}...`);
+    try {
+      results[name] = await publish(caption, hashtags, imagePath);
+    } catch (err: any) {
+      // --- publisher โยน exception = bug ใน publisher — ห้ามล้มทั้ง pipeline ---
+      results[name] = {
+        success: false,
+        postId: "",
+        postUrl: "",
+        error: `Unexpected error: ${err.message}`,
+      };
+    }
+
+    if (results[name].success) {
+      console.log(`[Publish] ${name} สำเร็จ → ${results[name].postUrl || results[name].postId}`);
     } else {
-      console.warn(`[Publish] Facebook ล้มเหลว: ${results.facebook.error}`);
+      console.warn(`[Publish] ${name} ล้มเหลว: ${results[name].error}`);
     }
   }
 
-  // --- X (Twitter) — Phase 2 ---
-  if (platforms.x?.enabled) {
-    console.log("[Publish] X (Twitter) — ยังไม่ได้ implement (Phase 2)");
-    results.x = { success: false, postId: "", postUrl: "", error: "Phase 2 — ยังไม่ได้ implement" };
-  }
-
-  // --- LINE OA — Phase 2 ---
-  if (platforms.line?.enabled) {
-    console.log("[Publish] LINE OA — ยังไม่ได้ implement (Phase 2)");
-    results.line = { success: false, postId: "", postUrl: "", error: "Phase 2 — ยังไม่ได้ implement" };
+  // --- platform ที่ enabled ใน config แต่ไม่มีใน registry ---
+  for (const name of Object.keys(platforms)) {
+    if ((platforms[name] as any)?.enabled && !PUBLISHERS[name]) {
+      results[name] = {
+        success: false,
+        postId: "",
+        postUrl: "",
+        error: `ไม่รู้จัก platform "${name}" — ดูรายชื่อที่รองรับใน src/publisher/index.ts`,
+      };
+      console.warn(`[Publish] ${name} ล้มเหลว: ${results[name].error}`);
+    }
   }
 
   // --- ไม่มี platform ไหน enabled เลย ---
