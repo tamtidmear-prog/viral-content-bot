@@ -41,7 +41,10 @@
 3. แจ้ง Nexus ผ่าน fleet send + cc Master J + **ให้ลิงก์ Master J เสมอ**
 4. git commit + push (submodule → parent)
 
-## กลไก scheduling
-- Cron in-session ตั้งทุกเช้าที่ session เริ่ม (CronCreate ไม่ persist ข้าม restart — quirk ที่รู้แล้ว)
-- ไฟล์นี้ = source of truth — ทุก session ใหม่อ่านแล้วตั้ง cron ของวันที่เหลือเอง
-- เช็คเวลาปัจจุบันก่อนตั้ง: slot ที่เลยแล้ว = ข้าม (กฎข้อ 2)
+## กลไก scheduling (headless autonomy — แทน CronCreate in-session ตั้งแต่ 2026-07-16)
+- **OS crontab** (Prism-owned, persist ข้าม session/reboot) → `tools/autonomy/slot-runner.sh` tick ทุก 10 นาที ชม. 6–20 → spawn headless SOP run สำหรับ slot ที่ actionable — ไม่ต้องมีคนเปิด session
+- slot ที่เปิด autonomy ดูที่ `tools/slot-config.json` field `"autonomy"` (rollout เป็นเฟส ดู `tools/autonomy/README.md`)
+- **Lock convention (บังคับทุก session):** ก่อนเริ่ม slot pipeline — interactive หรือ headless — ต้อง `mkdir ψ/active/slot-locks/YYYY-MM-DD_<slot_key>` ก่อน; mkdir fail = slot มีเจ้าของแล้ว ห้ามทำซ้อน
+- slot ที่ autonomy ยังปิด: session interactive ทำเองตามตารางนี้เหมือนเดิม (claim lock ก่อนเสมอ)
+- เช็คเวลาปัจจุบันก่อนเริ่ม: slot ที่เลยแล้ว = ข้าม (กฎข้อ 2) — runner บังคับกฎนี้เองผ่าน launch window
+- Disarm ฉุกเฉิน: `touch ~/.prism-autonomy-off`
