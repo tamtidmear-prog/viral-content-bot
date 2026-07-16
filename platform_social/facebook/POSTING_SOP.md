@@ -17,6 +17,14 @@
 
 ## STEP-BY-STEP FLOW (ทำตามลำดับเสมอ)
 
+### STEP 0 — Review insights โพสก่อนหน้า (เพิ่ม 2026-07-16, Phase C2)
+```bash
+# ดู metrics ล่าสุด (สร้างโดย tools/insights-pull.py — cron รายวัน)
+ls -t prism-chronicle/logs/metrics/*.json | head -1 | xargs cat | python3 -m json.tool | head -40
+```
+- ดูว่า pillar/format/หัวข้อแบบไหน engagement ดีสุดช่วงหลัง → ใช้ประกอบการเลือกหัวข้อ+รูปแบบวันนี้
+- ไม่มีไฟล์ metrics = ข้าม step นี้ได้ (อย่าเสียเวลา) แต่จดใน log ว่าไม่มี
+
 ### STEP 1 — สร้าง Notebook
 ```bash
 notebooklm create "Prism AI News — [ช่วงเวลา] YYYY-MM-DD" --json
@@ -131,6 +139,11 @@ mv platform_social/facebook/prism-chronicle/drafts/YYYY-MM-DD_[ช่วงเ�
 # บันทึก log
 echo "- post_id: xxx | หัวข้อ: xxx | ตัวอักษร: xxx" \
   >> platform_social/facebook/prism-chronicle/logs/YYYY-MM-DD_daily.md
+
+# archive fact-check + FINAL OK ของโพสนี้ (เพิ่ม 2026-07-16 Phase C3 — เดิมกระจายใน maw หาไม่เจอ)
+cp ψ/inbox/from-nexus/YYYY-MM-DD_*factcheck*.md ψ/inbox/from-nexus/YYYY-MM-DD_*final-ok*.md \
+   platform_social/facebook/prism-chronicle/fact-checks/ 2>/dev/null || true
+# ถ้า fact-check มาทาง maw ข้อความ (ไม่ใช่ไฟล์) → เขียนสรุป verdict ลงไฟล์ใหม่ใน fact-checks/ เอง
 ```
 
 ### STEP 12 — Notify Nexus + cc Master J
