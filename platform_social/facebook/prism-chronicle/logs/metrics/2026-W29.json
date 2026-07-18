@@ -1,10 +1,20 @@
 {
- "generatedAt": "2026-07-16T22:14:28.573042+07:00",
+ "generatedAt": "2026-07-17T21:30:01.884143+07:00",
  "sinceDays": 14,
  "pages": {
   "prism_chronicle": {
    "followers": 4,
    "posts": [
+    {
+     "id": "1184469221407318_122112776025337114",
+     "created": "2026-07-17T10:47:03+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122112776025337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
     {
      "id": "1184469221407318_122111986335337114",
      "created": "2026-07-12T03:46:46+0000",
@@ -89,16 +99,6 @@
      "id": "1184469221407318_122110517481337114",
      "created": "2026-07-03T00:35:39+0000",
      "permalink": "https://www.facebook.com/122106553575337114/posts/122110517481337114",
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
-    },
-    {
-     "id": "1184469221407318_122110425825337114",
-     "created": "2026-07-02T10:59:34+0000",
-     "permalink": "https://www.facebook.com/122106553575337114/posts/122110425825337114",
      "likes": 0,
      "comments": 0,
      "shares": 0,
@@ -196,26 +196,6 @@
      "permalink": "https://www.facebook.com/844030372097386/posts/869570452876711",
      "likes": 0,
      "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
-    },
-    {
-     "id": "108423905655889_869016829598740",
-     "created": "2026-07-02T10:34:07+0000",
-     "permalink": "https://www.facebook.com/844030372097386/posts/869016829598740",
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
-    },
-    {
-     "id": "108423905655889_868724839627939",
-     "created": "2026-07-02T01:41:17+0000",
-     "permalink": "https://www.facebook.com/844030372097386/posts/868724839627939",
-     "likes": 0,
-     "comments": 1,
      "shares": 0,
      "reach": null,
      "engagementPct": null
