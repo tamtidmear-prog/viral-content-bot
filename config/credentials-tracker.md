@@ -7,13 +7,15 @@
 
 | Item | Value/Location | Created | Expires | Status |
 |------|---------------|---------|---------|--------|
-| User Token (long-lived) | `platforms.json → user_access_token` | 2026-05-26 | 2026-07-25 (60 วัน) | ✅ Active |
+| User Token (long-lived) | `platforms.json → user_access_token` | 2026-07-22 | **ไม่หมดอายุ** (exchanged via app2) | ✅ Active |
 | Page Token: Prism Chronicle | `platforms.json → access_token` | 2026-05-25 | **ไม่หมดอายุ** | ✅ Active |
 | Page Token: Ai_In_Mind | `platforms.json → pages.ai_in_mind` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
 | Page Token: Forex EAI Expert | `platforms.json → pages.forex_eai` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
 | Page Token: Cakekhunaoy | `platforms.json → pages.cakekhunaoy` | 2026-05-26 | **ไม่หมดอายุ** | ✅ Active |
 | App ID (Mamipogo) | `222493084481502` | — | ไม่หมดอายุ | ✅ Fixed |
-| App Secret | `pass prism/facebook-app-secret` | 2026-05-25 | ไม่หมดอายุ | ✅ Stored (GPG) |
+| App ID (App2 — token exchange) | `1934309713951680` | — | ไม่หมดอายุ | ✅ Fixed |
+| App Secret (Mamipogo) | `pass prism/facebook-app-secret` | 2026-05-25 | ไม่หมดอายุ | ✅ Stored (GPG) |
+| App Secret (App2) | `pass prism/facebook-app2-secret` | — | ไม่หมดอายุ | ✅ Stored (GPG) |
 
 ## Facebook Accounts (เจ้าของเพจ)
 
@@ -60,8 +62,8 @@
 
 | Date | Action | Priority |
 |------|--------|----------|
-| **2026-07-20** | ⚠️ Renew Facebook User Token (long-lived หมด 07-25) | 🔴 HIGH |
-| ทุก 55 วัน | Exchange user token ใหม่ก่อนหมดอายุ | 🔴 HIGH |
+| ~~2026-07-20~~ | ✅ Renewed 2026-07-22 — token ไม่หมดอายุแล้ว (app2 exchange) | ✅ DONE |
+| ~~ทุก 55 วัน~~ | ไม่ต้องแล้ว — token ใหม่ expires=never | ✅ RESOLVED |
 | — | หา image gen provider ใหม่ (Gemini ใช้ไม่ได้) | 🟡 MEDIUM |
 
 ## วิธี Renew Token (ทำก่อนหมดอายุ)
@@ -71,13 +73,15 @@
 #    (ต้องใช้ Playwright login + 2FA)
 
 # 2. Exchange เป็น long-lived
-SHORT_TOKEN="..." 
-APP_SECRET=$(pass prism/facebook-app-secret)
+# ใช้ app2 (1934309713951680) — token ปัจจุบันผูกกับ app นี้
+# Mamipogo (222493084481502) และ PrismOracle (918491154577144) ใช้ไม่ได้
+CURRENT_TOKEN="<จาก platforms.json → user_access_token>"
+APP_SECRET=$(pass prism/facebook-app2-secret)
 curl -s "https://graph.facebook.com/v25.0/oauth/access_token?\
 grant_type=fb_exchange_token&\
-client_id=222493084481502&\
+client_id=1934309713951680&\
 client_secret=$APP_SECRET&\
-fb_exchange_token=$SHORT_TOKEN"
+fb_exchange_token=$CURRENT_TOKEN"
 
 # 3. ดึง page token (จะไม่หมดอายุ)
 LONG_TOKEN="..."
@@ -89,4 +93,4 @@ fields=id,name,access_token&access_token=$LONG_TOKEN"
 ```
 
 ---
-*Last updated: 2026-05-25 by Prism_Of_Novus*
+*Last updated: 2026-07-22 by Nexus_Of_Novus (token exchange via app2)*
