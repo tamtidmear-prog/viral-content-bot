@@ -84,10 +84,13 @@ notebooklm generate audio --format deep-dive --json
 
 ### STEP 6 — Codex Fact-Check (ผ่าน Nexus)
 ```bash
-curl -s -X POST http://localhost:3456/api/send \
-  -H 'Content-Type: application/json' \
-  -d '{"target": "nexus", "text": "[prism→nexus] ขอ Codex fact-check\nFacts:\n1. ...\n2. ..."}'
-# รอ reply จาก Nexus ใน maw หรือ Discord
+# [แก้ 2026-07-25] curl localhost:3456/api/send ไม่มีจริง (http=000 ไม่มี listener + /api/send 404)
+# ของเดิมเงียบไม่ error → fact-check request ไม่เคยถึง Nexus โดยไม่มีใครรู้
+maw hey nexus_discord:0 "[prism→nexus] ขอ Codex fact-check
+Facts:
+1. ...
+2. ..."
+maw peek nexus_discord:0        # verify ว่าถึงจริง ห้ามข้าม
 ```
 
 ### STEP 7 — แก้ Draft ตาม Fact-Check
@@ -101,9 +104,9 @@ curl -s -X POST http://localhost:3456/api/send \
 cp platform_social/facebook/prism-chronicle/drafts/YYYY-MM-DD_[ช่วงเวลา]_ai_news.md \
    ψ/inbox/from-prism/YYYY-MM-DD_[ช่วงเวลา]_draft_vN.md
 
-curl -s -X POST http://localhost:3456/api/send \
-  -H 'Content-Type: application/json' \
-  -d '{"target": "nexus", "text": "[prism→nexus] Draft vN แก้ครบแล้ว ส่ง final review\nอยู่ที่: ψ/inbox/from-prism/..."}'
+maw hey nexus_discord:0 "[prism→nexus] Draft vN แก้ครบแล้ว ส่ง final review
+อยู่ที่: ψ/inbox/from-prism/..."
+maw peek nexus_discord:0        # verify ว่าถึงจริง
 # รอ "FINAL OK" จาก Nexus
 ```
 
@@ -148,9 +151,9 @@ cp ψ/inbox/from-nexus/YYYY-MM-DD_*factcheck*.md ψ/inbox/from-nexus/YYYY-MM-DD_
 
 ### STEP 12 — Notify Nexus + cc Master J
 ```bash
-curl -s -X POST http://localhost:3456/api/send \
-  -H 'Content-Type: application/json' \
-  -d '{"target": "nexus", "text": "[prism→nexus] โพส[ช่วงเวลา] สำเร็จ ✅\npost_id: ...\ncc Master J"}'
+maw hey nexus_discord:0 "[prism→nexus] โพส[ช่วงเวลา] สำเร็จ ✅
+post_id: ...
+cc Master J"
 ```
 
 ---
