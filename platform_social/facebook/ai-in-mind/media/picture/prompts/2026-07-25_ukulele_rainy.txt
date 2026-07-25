@@ -1,0 +1,33 @@
+prompt: Use the uploaded photos as face reference — the generated person must be clearly recognizable as the same individual, but do NOT copy-paste the face directly. Instead, recreate the face naturally so it looks like the same person photographed on a different day with different lighting. Natural facial variations are expected and desired.
+
+Lifestyle editorial photography, TWO-PANEL DIPTYCH composition (side by side, thin white gutter between panels), overall canvas vertical 4:5.
+
+LEFT PANEL (larger, full-body): A young Thai woman in her mid-20s sitting cross-legged on a soft oatmeal floor cushion on a warm wooden floor beside a tall floor-to-ceiling window, playing a wooden soprano ukulele. ALL LIMBS VISIBLE IN FRAME, full body from head to feet.
+👗 FASHION: oversized dusty-blue linen button-up shirt worn loose over a white ribbed tank top, soft white cotton shorts, bare feet, small gold hoop earrings, thin gold ring.
+💄 MAKEUP: minimal clean girl look — light base, natural brows, soft brown eyeshadow, glossy nude-pink lips.
+💇 HAIR: long dark brown hair in a loose low bun with a few soft strands falling by the cheeks.
+🧍 POSE: sitting cross-legged, ukulele resting on her lap, left hand forming a chord on the neck, right hand mid-strum, head tilted slightly down toward the strings.
+😊 EXPRESSION: soft relaxed half-smile, absorbed in the music, eyes on the strings — candid, not posing for camera.
+💡 LIGHTING: soft diffused overcast afternoon light from the window on the left, cool-neutral tone with gentle warm bounce from the wooden floor, no hard shadows, natural rainy-day mood.
+🏝️ BACKGROUND: rainy afternoon outside the window — visible raindrops and running water streaks on the glass, blurred green foliage beyond. Inside: a low wooden shelf with a small monstera plant, a stack of books, a woven basket, a knitted throw blanket on the floor.
+CRITICAL PROPORTION RULE: Head must be 1/8 of total visible height. Strict 1:7.5 head-to-body ratio. NOT stylized, NOT doll-like. If in doubt, make head slightly smaller.
+
+RIGHT PANEL (narrower, detail close-up — NO FACE): tight close-up of the same hands and the same wooden ukulele — left fingers pressing the fretboard, right hand fingertips brushing the nylon strings, shallow depth of field, blurred rain-streaked window and green foliage bokeh in the background, same soft overcast light and same color palette as the left panel.
+
+🎥 CAMERA: 85mm lens, f/2.8 left panel, f/2.0 right panel, sharp focus, natural available light, lifestyle editorial, commercial campaign quality, ultra realistic, 8K, true-to-life skin texture and hair detail.
+
+Masterpiece, Ultra Photorealistic, 8K Ultra HD, RAW Photo, ultra detailed skin texture, realistic pores, natural facial details, realistic eyes, natural hair strands, cinematic shadows, shallow depth of field, realistic fabric texture, true-to-life colors, photorealistic human, natural imperfections, no CGI, no cartoon, no anime, no illustration, no plastic skin, no over-retouching, no artificial rendering.
+
+🚫 NEGATIVE: low quality, blurry, out of focus, bad anatomy, malformed hands, extra fingers, extra arms, extra legs, duplicated limbs, asymmetrical eyes, crossed eyes, distorted face, deformed body, unrealistic proportions, plastic skin, cropped head, cut-off hands, cut-off feet, floating jewelry, missing jewelry, duplicate person, multiple people, watermark, text, logo, signature, wrong number of ukulele strings, extra ukulele.
+---
+file: 2026-07-25_ukulele_rainy.png
+model: Paradex imagegen (GPT-5.6 luna) — fallback จาก nexus-browser (Chrome ไม่มี --remote-debugging-port)
+tool: maw send-text paradex:0
+sha256: 68ec33aff312f47e3a84904a5436fbde249ff01f6e0426b836fedd9694c3e5be
+output_path: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/2026-07-25_ukulele_rainy.png
+dimensions: 1003x1568
+ref_images: [w12 (23).png, w12 (24).png]
+theme: เล่นอูคูเลเล่ข้างหน้าต่างบ่ายวันเสาร์ฝนพรำ (diptych 2-panel)
+pillar: งานอดิเรก/ดนตรี (ใหม่ — fable-scan receipt 0 matches)
+date: 2026-07-25
+slot: aim_afternoon
