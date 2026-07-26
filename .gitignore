@@ -1,6 +1,10 @@
 node_modules/
 output/
 config/platforms.json
+# [2026-07-27] ครอบ backup ทุกรูปแบบ — เจอ platforms.json.bak-20260722 (มี access_token 4 ตัว)
+# หลุด pattern *.bak เพราะมี -YYYYMMDD ต่อท้าย = git add . ครั้งเดียว token เข้า history
+config/platforms.json.*
+config/platforms.json*.bak*
 config/credentials-tracker.md
 .env
 *.log
