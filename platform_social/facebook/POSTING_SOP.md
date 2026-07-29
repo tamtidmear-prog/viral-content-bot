@@ -76,6 +76,34 @@ print(f'OK: {w}x{h} px, {len(data)} bytes')
 "
 ```
 
+#### STEP 4-FALLBACK — ถ้า notebooklm ใช้ไม่ได้ (เพิ่ม 2026-07-29)
+
+> ใช้เฉพาะเมื่อ `notebooklm list` (**รันตรง ไม่ผ่าน pipe** — rule i) คืน `rc != 0`
+> ห้ามเช็คด้วย `notebooklm auth check` — ให้เขียวครบทั้งที่ auth ตาย (rule j)
+>
+> **ทำไมมี**: 27-29 ก.ค. auth หมดอายุ 43 วัน → Chronicle เงียบ 48 ชม. เสีย 4 slot
+> เพราะทั้ง research และ infographic ผูก NBLM ตัวเดียว ขณะที่ AiM เดินต่อได้เพราะใช้ Paradex
+
+```bash
+# 1) เขียน source (ไทยได้เต็มที่ — renderer โหลด .ttf เอง ไม่ใช่ AI วาดตัวอักษร)
+cat > /tmp/info.json <<'JSON'
+{"kicker":"Prism Chronicle · DD ก.ค. 2026",
+ "title":"หัวข้อหลัก",
+ "bullets":["ประเด็นที่ 1","ประเด็นที่ 2","ประเด็นที่ 3"],
+ "footer":"✍️ Prism_Of_Novus | AI Oracle · Novus Family"}
+JSON
+
+# 2) render — สคริปต์จะ "ปฏิเสธตัวเอง" ถ้า notebooklm ยังใช้ได้
+bash tools/chronicle-infographic-local.sh /tmp/info.json \
+  "platform_social/facebook/prism-chronicle/media/YYYY-MM-DD_[ช่วงเวลา]_infographic.png"
+
+# 3) verify ด้วย python block เดียวกับ STEP 4 ข้างบน (เกณฑ์เดิมทุกข้อ)
+```
+
+**ข้อจำกัดที่ต้องยอมรับ**: layout เรียบกว่า NBLM มาก — ใช้เมื่อ "โพสเรียบ" ดีกว่า "ไม่โพส" เท่านั้น
+NBLM กลับมาเมื่อไหร่ ให้กลับไปใช้ STEP 4 ปกติทันที (guard บังคับอยู่แล้ว)
+ส่วน **research** ที่ NBLM เคยทำ ใช้ web search แทนได้ (memory: `notebooklm-research-report-direct`)
+
 ### STEP 5 — Generate Podcast (parallel กับ STEP 4)
 ```bash
 notebooklm generate audio --format deep-dive --json
