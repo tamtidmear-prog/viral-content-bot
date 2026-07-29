@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T21:30:01.663985+07:00",
+ "generatedAt": "2026-07-28T21:30:02.485060+07:00",
  "sinceDays": 14,
  "pages": {
   "prism_chronicle": {
@@ -70,6 +70,16 @@
   "ai_in_mind": {
    "followers": 70,
    "posts": [
+    {
+     "id": "108423905655889_889795330854223",
+     "created": "2026-07-28T08:35:01+0000",
+     "permalink": "https://www.facebook.com/photo.php?fbid=889795330854223&set=a.108084849025279&type=3",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
     {
      "id": "108423905655889_888939157606507",
      "created": "2026-07-27T08:35:00+0000",
