@@ -16,11 +16,14 @@
 
 ---
 
-## FACE REF LINE (บังคับ — ใส่บนสุดทุก prompt)
+## FACE REF LINE (บังคับ — ใส่บนสุดทุก prompt · v6.2 หลัง Master J ทัก 30 ก.ค. "หน้าไม่ค่อยเหมือน")
 
 ```
-Use the uploaded photos as face reference — the generated person must be clearly recognizable as the same individual, but do NOT copy-paste the face directly. Instead, recreate the face naturally so it looks like the same person photographed on a different day with different lighting. Natural facial variations are expected and desired.
+Use the uploaded reference photos to LEARN this specific woman's facial identity — the exact eye shape and spacing, eyebrow arch, nose bridge and tip, lip shape, jawline and face oval. Then GENERATE her face fresh in the new scene's lighting and angle. The result must be instantly recognizable as the SAME woman as the references — a stranger comparing photos side-by-side must say "same person, different day". Do NOT face-swap or paste the reference face. Do NOT drift the identity: no slimmer face, no different nose, no changed eye shape.
 ```
+
+> เดิม (v6) เขียนว่า "Natural facial variations are expected and desired" — **เปิดช่องให้ identity drift** จนหน้าไม่เหมือน · v6.2 เปลี่ยนเป็น lock identity ทีละจุด แล้วให้ variation อยู่ที่แสง/มุม/วันเท่านั้น
+> QC ฝั่งเรา: เปิด ref เทียบ output ทีละจุด ตา-คิ้ว-จมูก-ปาก-กรอบหน้า — "ดูคล้าย" ไม่พอ ต้อง "คนเดียวกันชัดๆ"
 
 ---
 
@@ -106,7 +109,7 @@ Vertical 9:16, full body visible from head to feet, ALL LIMBS VISIBLE IN FRAME.
 
 🏝️ BACKGROUND: [DETAILED — e.g. charming Bangkok side street with yellow awning, flowers, colorful shophouses / modern minimalist living room with monstera, large windows].
 
-CRITICAL PROPORTION RULE: Head must be 1/8 of total visible height. Strict 1:7.5 head-to-body ratio. NOT stylized, NOT doll-like. If in doubt, make head slightly smaller.
+PROPORTIONS: A real woman photographed naturally by a professional photographer with an 85mm lens at eye level — her body exactly as it would appear in an ordinary photograph. No stylization or exaggeration in any direction.
 
 🎥 CAMERA: 85mm lens, f/2.8, sharp focus throughout, natural lighting, lifestyle fashion editorial, commercial campaign quality, ultra realistic, 8K, true-to-life skin texture and hair detail.
 
@@ -126,7 +129,7 @@ Masterpiece, Ultra Photorealistic, 8K Ultra HD, RAW Photo, ultra detailed skin t
 ## NEGATIVE PROMPT (ใหม่ v6 — ใส่ท้ายทุก prompt)
 
 ```
-🚫 NEGATIVE: low quality, blurry, out of focus, bad anatomy, malformed hands, extra fingers, extra arms, extra legs, duplicated limbs, asymmetrical eyes, crossed eyes, distorted face, deformed body, unrealistic proportions, plastic skin, cropped head, cut-off hands, cut-off feet, floating jewelry, missing jewelry, duplicate person, multiple people, watermark, text, logo, signature.
+🚫 NEGATIVE: low quality, blurry, out of focus, bad anatomy, malformed hands, extra fingers, extra arms, extra legs, duplicated limbs, asymmetrical eyes, crossed eyes, distorted face, deformed body, unrealistic proportions, elongated legs, stretched limbs, oversized head, fashion-doll proportions, plastic skin, cropped head, cut-off hands, cut-off feet, floating jewelry, missing jewelry, duplicate person, multiple people, watermark, text, logo, signature.
 ```
 
 ---
@@ -148,5 +151,8 @@ Masterpiece, Ultra Photorealistic, 8K Ultra HD, RAW Photo, ultra detailed skin t
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v6.3 | 2026-07-30 | **prompt ธรรมชาติ · วัดตอน QC เท่านั้น** — Master J: "หัวโตกว่าปกติ...fix มากจนเกินไป ทำไมไม่สร้างให้เป็นภาพธรรมชาติ" ← v6.1 เอาเกณฑ์ตัวเลข (legs ≤2.3x, make LEGS SHORTER) ยัดใส่ prompt → โมเดล overcompensate หดขา/หัวโต · ตัวเลข ratio ยังใช้อยู่แต่เฉพาะฝั่ง QC (จับของเสีย ไม่ใช่บังคับการสร้าง) · negative เหลือชุดสมดุล 2 ทาง (elongated legs + oversized head) |
+| v6.2 | 2026-07-30 | **identity-lock face ref**: เปลี่ยน FACE REF LINE จาก "natural variations desired" (เปิดช่อง drift) → LEARN identity ทีละจุดแล้ว generate ใหม่ในแสง/มุมของฉาก — Master J: "ให้ใช้ ref ใบหน้าเพื่อสร้างใหม่ ไม่ใช่เอาหน้าจาก ref มาใช้" |
+| v6.1 | 2026-07-30 | **anti-elongation**: proportion rule เปลี่ยนจาก "if in doubt, head smaller" (ดันไปทางขายืด) → "legs ≤2.3x torso, when in doubt make LEGS SHORTER" + negative prompt เพิ่ม elongated legs/stretched limbs/fashion-doll — เคส bookshop 29 ก.ค. ขายืด 2.8x หลุดไปโพสจริง Master J ทัก |
 | v6 | 2026-06-23 | 3 modes (close-up f/1.4 / half f/2.0 / full f/2.8), skin detail (glass skin + realistic texture), negative prompt, section headers with emoji, lighting direction+tone, expression separated, hair interaction, learnings from Master J prompts |
 | v5 | 2026-06-22 | proportion 1:7.5, Master J quality block, sharpness f/2.8, face ref v2 |

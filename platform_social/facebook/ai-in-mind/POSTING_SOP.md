@@ -115,6 +115,12 @@ print('IEND OK')
 | มือ/นิ้วปกติ | ✅ ไปต่อ | ❌ gen ใหม่ |
 | ชุดเหมาะสถานที่ (ดู outfit guideline) | ✅ ไปต่อ | ❌ gen ใหม่ |
 | **Framing ครบ — ไม่ตัดแขน/ขา/นิ้วกลางภาพ** | ✅ ไปต่อ | ❌ gen ใหม่ (บทเรียน S29) |
+| **สัดส่วน torso:leg — วัดจริง ไม่ใช่ดูผ่าน** (full-body เท่านั้น) | ✅ ไปต่อ | ❌ gen ใหม่ (บทเรียน bookshop 29 ก.ค.) |
+
+**วิธีวัดสัดส่วน (full-body):** ประมาณ px 3 จุดจากภาพ — ไหล่, เอว(เข็มขัด/ขอบกางเกง), พื้นที่เท้าแตะ
+`(เอว→เท้า) ÷ (ไหล่→เอว)` ต้องอยู่ **1.7–2.3** · เกิน 2.4 = ขายืด ❌ gen ใหม่
+เคสจริง: bookshop 29 ก.ค. ได้ 810÷290 = **2.8** → หลุดไปโพสจริง Master J ทัก
+"หัว = 1/8" อย่างเดียวไม่พอ — เคสนั้นหัวผ่านแต่ขายืด · half-body ไม่ต้องวัด (เฟรมตัดที่ต้นขา)
 
 **ไม่ผ่าน 2 รอบ = ข้าม slot** (ROUTINE.md กฎข้อ 2)
 
@@ -185,13 +191,21 @@ curl -s -X POST "https://graph.facebook.com/v25.0/${PAGE_ID}/photos" \
 
 ---
 
-## Paradex (codex:0) — เครื่องเดียวกัน ใช้ช่วยได้
+## Paradex — ส่งงาน gen รูป (แก้ 2026-07-30 ตามคำสั่ง Master J: prompt ยาว = ส่งเป็นไฟล์)
 
 ```bash
-# ส่งงาน gen รูปให้ Paradex (local — ไม่ต้อง SCP)
-maw send-text codex:0 "[prism→paradex] ขอรูปสวีท ... Output: [local path ตรงๆ]"
-# Paradex เขียนไฟล์ลง path เดียวกันได้เลย — เครื่องเดียวกัน
+# 1) เขียน job file (REF + OUTPUT + เกณฑ์ + prompt เต็ม)
+JOB="$HOME/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/jobs/$(date +%Y-%m-%d)_<task>.md"
+
+# 2) ส่งข้อความสั้นชี้ไฟล์ — ห้าม paste prompt ยาวเป็น text
+maw hey paradex:0 "[Prism→Paradex] job file: $JOB — อ่านแล้วทำตาม ตอบ FINAL พร้อม SHA256"
+
+# 3) ยืนยันว่าเริ่มจริง (Working) ก่อนไปทำอย่างอื่น + ตั้ง watcher เฝ้าไฟล์ output ทันที
+maw peek paradex:0
 ```
+
+**ทำไม**: ข้อความยาวผ่าน maw → Codex CLI แตกเป็น paste หลายก้อน Enter กลายเป็น newline ค้างใน input box (เกิดจริง 29-30 ก.ค. Master J ต้องมากดเอง)
+**ฝั่ง Paradex** (ตกลง 30 ก.ค.): เขียน output แบบ temp + atomic rename · regen/ทับ = ต้องแจ้ง · ตอบ FINAL พร้อม SHA256 เสมอ — เราเทียบ SHA กับไฟล์จริงก่อนใช้ทุกครั้ง
 
 ---
 

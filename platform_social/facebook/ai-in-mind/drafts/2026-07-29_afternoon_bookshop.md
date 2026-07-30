@@ -61,3 +61,21 @@ Masterpiece, Ultra Photorealistic, 8K Ultra HD, RAW Photo, ultra detailed skin t
 - [ ] dispatch Paradex
 - [ ] QC 5 ข้อ
 - [ ] schedule 15:35
+
+---
+
+## V2 REGEN (30 ก.ค.) — แก้สัดส่วน หลัง Master J ทัก "ภาพไม่สมส่วน"
+
+**วัดจาก v1**: ไหล่→เอว ~290px · เอว→เท้า ~810px = ratio **2.8** (เกณฑ์ 1.7–2.3) — ขายืด ~35%
+**แก้ใน prompt**: proportion rule v6.1 + ท่าเดิมแต่ลดการเอื้อม (มือแตะสันหนังสือระดับไหล่ ไม่ใช่เหนือหัว — ท่าเอื้อมสูงดันให้ AI ยืดตัว) + negative เพิ่มชุด elongation
+**Ref เดิม**: w12 (19) + w12 (24) — คงหน้าเดิมเพื่อความต่อเนื่อง
+**Output**: `2026-07-29_afternoon_bookshop_v2.png`
+**หลังผ่าน QC (วัด ratio จริง)**: ลบโพสเดิม `890652930768463` → โพสใหม่ caption เดิม → อัปเดต log
+
+### Prompt v2 (ส่วนที่ต่างจาก v1)
+
+🧍 POSE: Standing in a narrow aisle between two tall wooden bookshelves, seen at a three-quarter angle from slightly behind — her back and shoulder toward the camera, head turned to the side so the profile and cheek are visible. One hand pulling a book halfway out of a shelf at HER SHOULDER HEIGHT (not overhead), the other hand holding an already-chosen paperback against her hip. Both feet flat on the floor, relaxed natural stance.
+
+CRITICAL PROPORTION RULE: True anatomical proportions of a real average-height woman. Head-to-body ratio 1:7 to 1:7.5. Legs (waist to floor) must NOT exceed 2.3x the torso length (shoulder to waist) — NO elongated legs, NO fashion-editorial leg stretching. NOT stylized, NOT doll-like, NOT supermodel-idealized. When in doubt, make the LEGS SHORTER, not the head smaller.
+
+🚫 NEGATIVE (เพิ่มจาก v1): elongated legs, stretched limbs, exaggerated leg length, elongated torso, unnaturally long arms, fashion-doll proportions, low camera angle hero shot
