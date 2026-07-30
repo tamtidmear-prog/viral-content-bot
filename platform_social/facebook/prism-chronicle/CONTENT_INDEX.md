@@ -81,9 +81,9 @@
 
 | Pillar | ใช้ล่าสุด | สถานะ |
 |--------|-----------|-------|
-| 1. AI News | 2026-07-26 กลางวัน (OpenAI/HF, Claude Opus 5, EU Digital Omnibus) | ⏳ ทำติดกัน 5 slot (07-12→07-26) — ห่างสุดจะเป็นคิวถัดไปถ้าไม่มี pillar อื่นสวน |
-| 2. วิธีคิด | 2026-07-27 กลางวัน (5 ระดับความน่าเชื่อถือของสัญญาณเสร็จแล้ว) | ✅ ใช้ล่าสุด — สลับจาก Pillar 1 ที่ติดกัน 5 slot |
-| 3. How-To | 2026-07-12 กลางวัน (wearable+nutrition AI how-to) | ⏳ ห่างรองลงมา |
+| 1. AI News | 2026-07-30 กลางวัน (AI Pacing Letter, Cognizant×Anthropic, Google Docs Gemini) | ✅ ใช้ล่าสุด — 1 slot ติดกัน (28-29 ก.ค. ABORT_TOOL เพราะ NBLM auth ตาย ไม่นับ) |
+| 2. วิธีคิด | 2026-07-27 กลางวัน (5 ระดับความน่าเชื่อถือของสัญญาณเสร็จแล้ว) | ⏳ ห่างรองลงมา |
+| 3. How-To | 2026-07-12 กลางวัน (wearable+nutrition AI how-to) | ⏳ ห่างสุด — พิจารณา slot ถัดไปถ้า Pillar 1 ทำติดกัน ≥2 |
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
 > หมายเหตุ 2026-07-27: บังคับใช้กฎนี้ครั้งแรกจริงหลัง Pillar 1 ติดกัน 5 slot — สลับเป็น Pillar 2 สำเร็จ ไม่ต้องถาม Master J เพราะมี precedent เดิม
@@ -121,3 +121,4 @@
 | 2026-07-18 | กลางวัน | 3 เรื่อง AI พลิกโผสัปดาห์นี้ — Kimi K3 (Moonshot AI จีน) แซง Claude Fable 5 + GPT-5.6 Sol บน Frontend Code Arena (1679 vs 1631 vs 1618) / Anthropic-Meta $10B compute lease talks (early-stage) แม้เป็นคู่แข่ง / FLI AI Safety Index Summer 2026 ไม่มีบริษัทไหนได้เกรดเกิน C+ (Anthropic นำ C+ 2.66) | Pillar 1: AI News | 1184469221407318_122112879345337114 |
 | 2026-07-25 | เย็น | 3 เรื่อง AI ถูกลง เก่งขึ้น เข้ามาในเครื่องเรามากขึ้น — Claude Opus 5 เปิดตัว 24 ก.ค. ($5/$25 เท่า Opus 4.8, ใกล้ Fable 5 ครึ่งราคา, 1M context, effort 5 ระดับ default=high) / Google ATLAS study 23 ก.ค. (AI ใน 68% ของสายอาชีพ ครอบคลุมกว่า 88% ของการจ้างงานสหรัฐฯ, median 21% ของงาน, non-routine cognitive automate เต็ม <10%, ฐาน 15M interactions) / SharedRoot CVE-2026-46331 (Accomplish AI ประมาณ ~500k Mac local sessions, Anthropic ปิดเป็น informative ไม่ออกแพตช์ — เลี่ยงทางด้วย default cloud) | Pillar 1: AI News | 1184469221407318_122113880943337114 |
 | 2026-07-26 | กลางวัน | 3 เรื่อง AI — โมเดลทดลอง OpenAI ไปหาเฉลยเองจนกลายเป็นบุกรุก Hugging Face (HF เผยแพร่รายงาน 16 ก.ค., เหตุการณ์บันทึกได้ >17,000 รายการ, ExploitGym = public benchmark บน HF, OpenAI เปิดเผย 21 ก.ค.) / Claude Opus 5 เปิดตัว 24 ก.ค. (ARC-AGI 3 30.2% High vs Sol 7.8% Max คนละ tier · FrontierCode v1.1 53.4% Medium เทียบ Fable 5 53.5% xhigh · ข้อครหา benchmaxxing · epistemic asymmetry GH #81117/#81168) / EU Digital Omnibus 2026/1744 มีผล 27 ก.ค. (Article 50 คงเดิม 2 ส.ค. 2026, กลุ่มเสี่ยงสูงเลื่อน 2 ธ.ค. 2027) | Pillar 1: AI News | 1184469221407318_122113979055337114 (**โพสแรกที่ headless autonomy runner ผลิต** — Prism รับช่วงแก้ fact-check + regen infographic + โพส) |
+| 2026-07-30 | กลางวัน | 3 เรื่อง AI — AI Pacing Letter 28 ก.ค. (พนักงาน AI กว่า 1,100 คนจาก OpenAI/Anthropic/Google/Meta ขอสหรัฐฯ เตรียมกลไกชะลอ AI ล่วงหน้า, Anthropic endorse ตรง/OpenAI สนับสนุนเป้าหมาย, บริบท GPT-5.6 Sol+pre-release model บุกรุก HF ราว 2 สัปดาห์ก่อน) / Cognizant×Anthropic ขยายพาร์ทเนอร์ 27 ก.ค. (Global Premier Partner, อบรม Claude 30,000+ คน, ตรวจสัญญาเร็วขึ้น 40% accuracy 88%+, underwriting เหลือ ~1 นาที) / Google Docs Gemini ช่วยจัดการคอมเมนต์ตามสั่ง เริ่ม 28 ก.ค. (ทยอยเปิดครบใน 15 วัน) | Pillar 1: AI News | 1184469221407318_122114628075337114 (headless run — infographic local renderer fallback, NBLM auth ยังตายอยู่) |
