@@ -1,0 +1,6 @@
+file: 2026-07-31_afternoon_crochet.png
+ref: w12 (19).png + w12 (23).png (คู่สุดท้ายจาก 10 คู่)
+gen: Paradex gpt-5.6-sol, job file jobs/2026-07-31_crochet.md, round 1
+sha256: e6b685a8e1a2b0cdf5c9473021b2a1ab7b4e3be7c169a92f0f71c07a8e6d1925
+date: 2026-07-31
+prompt: ดู jobs/2026-07-31_crochet.md (template v6.3 — identity-lock + natural proportions)
