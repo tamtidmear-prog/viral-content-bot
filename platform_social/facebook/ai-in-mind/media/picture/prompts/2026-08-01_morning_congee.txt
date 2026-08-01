@@ -1,0 +1,6 @@
+file: 2026-08-01_morning_congee.png
+ref: w12 (20).png + w12 (53).png (คู่ห่างสุด — ใช้ล่าสุด 07-06)
+gen: Paradex gpt-5.6-sol, job file jobs/2026-08-01_congee.md, round 1 no regen
+sha256: d87b3581c3f28cda04c26a08817a060f5c8c8023490394435bccf19865925f64
+date: 2026-08-01
+prompt: ดู jobs/2026-08-01_congee.md (v6.3 identity-lock + natural proportions)
