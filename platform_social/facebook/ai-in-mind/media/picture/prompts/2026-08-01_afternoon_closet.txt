@@ -1,0 +1,6 @@
+file: 2026-08-01_afternoon_closet.png
+ref: w12 (23).png + w12 (24).png (คู่เก่าสุดในรอบ — ใช้ล่าสุด 07-25)
+gen: Paradex gpt-5.6-sol, job file jobs/2026-08-01_closet.md, regen round 2 (round 1 framing fail — Paradex แจ้งตามกติกา)
+sha256: 4bc459773266db82ed6c7daccdb67e26544fe5db0a438077524667699ffa10a9
+date: 2026-08-01
+prompt: ดู jobs/2026-08-01_closet.md (v6.3)
