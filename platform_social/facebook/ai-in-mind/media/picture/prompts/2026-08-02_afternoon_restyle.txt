@@ -1,0 +1,6 @@
+file: 2026-08-02_afternoon_restyle.png
+ref: w12 (20).png + w12 (24).png (คู่เก่าสุดในรอบ — ใช้ล่าสุด 07-28)
+gen: Paradex gpt-5.6-sol, job jobs/2026-08-02_restyle.md, regen round 2 (round 1 reflection mismatch — Paradex reject เองก่อนส่ง)
+sha256: 063566e1ce73d30524ce583a7ad2d49ba11f8cc64d8058d84de709668e2a7e8e
+date: 2026-08-02
+prompt: ดู jobs/2026-08-02_restyle.md (v6.3 + mirror-consistency spec)
