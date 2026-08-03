@@ -1,0 +1,8 @@
+job: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/jobs/2026-08-03_afternoon_cafe.md
+file: 2026-08-03_afternoon_cafe.png
+model: Paradex (gpt-5.6-sol) image gen
+sha256: cbdd1caf1ff203207e45a66c5b0e9bff764a86d9c14aa339c63393946b6cc175
+post_id: 108423905655889_895020020331754
+ref_images: [w12 (19).png, w12 (23).png]
+theme: คาเฟ่ อ่านหนังสือ บ่ายวันจันทร์ (half-body, caramel knit)
+date: 2026-08-03
