@@ -1,0 +1,6 @@
+file: 2026-08-03_morning_planner.png
+ref: w12 (24).png + w12 (53).png
+gen: Paradex gpt-5.6-sol, job jobs/2026-08-03_planner.md, round 1 no regen
+sha256: 8bc1a65c43779b964b79961ba22b1c6c9c5352efdca35a91903f909a782c72f7
+date: 2026-08-03
+prompt: ดู jobs/2026-08-03_planner.md (v6.3 · ห้ามตัวอักษรอ่านออกในสมุด)
