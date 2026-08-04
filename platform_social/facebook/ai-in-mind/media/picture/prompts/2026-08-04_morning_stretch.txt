@@ -1,0 +1,8 @@
+job: /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/jobs/2026-08-04_morning_stretch.md
+file: 2026-08-04_morning_stretch.png
+model: Paradex (gpt-5.6) image gen
+sha256: 9a599b3ac2e7be1fe014f12c4bf724f5d5e609bf0d6dcaa5704791f477a6269b
+post_id: 108423905655889_895646120269144
+ref_images: [w12 (20).png, w12 (53).png]
+theme: ยืดเส้นเช้าริมหน้าต่าง (wellness, half-body, coral athleisure)
+date: 2026-08-04
