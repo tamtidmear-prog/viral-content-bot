@@ -1,10 +1,50 @@
 {
- "generatedAt": "2026-08-03T21:30:02.805185+07:00",
+ "generatedAt": "2026-08-05T21:30:05.041816+07:00",
  "sinceDays": 14,
  "pages": {
   "prism_chronicle": {
    "followers": 4,
    "posts": [
+    {
+     "id": "1184469221407318_122115494517337114",
+     "created": "2026-08-05T11:37:56+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122115494517337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
+    {
+     "id": "1184469221407318_122115447879337114",
+     "created": "2026-08-05T05:25:13+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122115447879337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
+    {
+     "id": "1184469221407318_122115336027337114",
+     "created": "2026-08-04T07:29:27+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122115336027337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
+    {
+     "id": "1184469221407318_122115304851337114",
+     "created": "2026-08-04T00:53:52+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122115304851337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
     {
      "id": "1184469221407318_122115224271337114",
      "created": "2026-08-03T11:28:44+0000",
@@ -140,6 +180,36 @@
   "ai_in_mind": {
    "followers": 70,
    "posts": [
+    {
+     "id": "108423905655889_896718740161882",
+     "created": "2026-08-05T08:45:00+0000",
+     "permalink": "https://www.facebook.com/844030372097386/posts/896718740161882",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
+    {
+     "id": "108423905655889_896508423516247",
+     "created": "2026-08-05T02:38:48+0000",
+     "permalink": "https://www.facebook.com/844030372097386/posts/896508423516247",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
+    {
+     "id": "108423905655889_895646120269144",
+     "created": "2026-08-04T02:08:14+0000",
+     "permalink": "https://www.facebook.com/844030372097386/posts/895646120269144",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
     {
      "id": "108423905655889_895020020331754",
      "created": "2026-08-03T08:43:37+0000",
