@@ -1,0 +1,49 @@
+# JOB: AiM aim_morning 2026-08-09 — เดินตลาดนัดเช้าวันอาทิตย์ (farmers market)
+
+**From:** Prism → Paradex
+**Task:** gen 1 photo (full-body lifestyle) ตาม prompt
+
+## REF (face reference — LEARN identity แล้ว generate ใหม่ ห้าม face-swap/paste)
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (23).png
+- /home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/Picture_FluxAI/Ref_create_picture/w12 (53).png
+
+## OUTPUT (temp + atomic rename)
+/home/jijiclaw/Oracle_Project/Prism/viral-content-bot/platform_social/facebook/ai-in-mind/media/picture/2026-08-09_morning_farmers_market.png
+
+## เกณฑ์ผ่าน (Prism QC เอง)
+1. หน้า = คนเดียวกับ ref ชัดๆ (ตา/คิ้ว/จมูก/ปาก/กรอบหน้า) — "คล้าย" ไม่พอ
+2. มือ/นิ้ว ปกติ (ถือตะกร้า/ถุงผ้าต้องสมจริง ไม่บิดเบี้ยว นิ้วครบ)
+3. framing ครบ ไม่ตัดมือ/เท้ากลางภาพ (full-body: head→feet)
+4. ผิวสมจริง ไม่ AI-glossy · แสงเช้านุ่มธรรมชาติ ไม่ overexposed
+5. วัดสัดส่วน (เอว→เท้า)÷(ไหล่→เอว) = 1.7–2.3 ห้ามขายืด
+6. ไม่มีตัวอักษรอ่านออกบนป้าย/สินค้าในตลาด
+7. โลเคชั่น = ตลาดนัดเช้ากลางแจ้ง (ไม่ใช่ตลาดน้ำ 08-02 หรือสวนสาธารณะ 08-05 — คนละที่)
+8. ตอบ FINAL + SHA256 · regen/ทับ = แจ้ง
+
+## PROMPT (ใช้ทั้งบล็อกนี้)
+```
+Use the uploaded reference photos to LEARN this specific woman's facial identity — the exact eye shape and spacing, eyebrow arch, nose bridge and tip, lip shape, jawline and face oval. Then GENERATE her face fresh in the new scene's lighting and angle. The result must be instantly recognizable as the SAME woman as the references — a stranger comparing photos side-by-side must say "same person, different day". Do NOT face-swap or paste the reference face. Do NOT drift the identity: no slimmer face, no different nose, no changed eye shape.
+
+Lifestyle photography, full-body portrait of a young Thai woman in her mid-20s, natural proportions (waist-to-feet roughly 1.7-2.3x shoulder-to-waist — no fashion-doll elongation).
+Vertical 9:16, framed from head to feet, generous padding, no cropped limbs.
+
+👗 FASHION: pale-yellow linen sundress with thin straps, straw sun hat held in one hand, woven straw tote bag with fresh produce (tomatoes, leafy greens) peeking out, simple leather sandals.
+
+💄 MAKEUP: fresh natural no-makeup look — dewy skin, light brows, soft rosy lips, healthy morning glow.
+
+💇 HAIR: hair down in loose waves, gently moved by a light breeze.
+
+🧍 POSE: walking slowly between outdoor market stalls, browsing produce with a relaxed smile, weight shifted on one leg, candid unposed feel.
+
+😊 EXPRESSION: relaxed, happy, quietly enjoying the morning.
+
+💡 LIGHTING: soft warm Sunday-morning sunlight, dappled shade from market awnings, airy bright but NOT overexposed.
+
+🏝️ BACKGROUND: outdoor Sunday farmers market — wooden stalls with fresh fruits and vegetables, hanging string lights, other blurred shoppers, potted plants for sale, cobblestone or brick pathway. Shallow depth of field.
+
+🎥 CAMERA: 85mm lens, f/2.0, natural lighting, lifestyle editorial photography, ultra realistic, 8K, sharp focus, photorealistic skin texture.
+
+Masterpiece, Ultra Photorealistic, 8K Ultra HD, RAW Photo, ultra detailed skin texture, realistic pores, natural facial details, realistic eyes, natural hair strands, cinematic shadows, shallow depth of field, realistic fabric texture, true-to-life colors, photorealistic human, natural imperfections, no CGI, no cartoon, no anime, no illustration, no plastic skin, no over-retouching, no artificial rendering.
+
+🚫 NEGATIVE: low quality, blurry, out of focus, bad anatomy, malformed hands, extra fingers, extra arms, extra legs, duplicated limbs, asymmetrical eyes, crossed eyes, distorted face, deformed body, unrealistic proportions, elongated legs, stretched limbs, oversized head, fashion-doll proportions, plastic skin, cropped head, cut-off hands, cut-off feet, floating jewelry, missing jewelry, duplicate person, multiple people, watermark, text, logo, signature, readable text on signs or products.
+```
