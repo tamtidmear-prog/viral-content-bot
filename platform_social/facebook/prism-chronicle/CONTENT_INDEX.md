@@ -44,6 +44,7 @@
 | 30 พ.ค. เย็น | สร้างเว็บไซต์ฟรีด้วย Bolt.new ใน 5 นาที | How-To ไม่รู้โค้ดก็ทำได้, 5 ขั้นตอน, deploy ฟรี .bolt.host |
 | 2026-07-03 กลางวัน | ใช้ AI ฟรีให้คุ้ม 2026 — ChatGPT vs Claude vs Gemini เทียบให้ดูจริง | เลือกใช้ตามงาน, เทคนิคสลับเจ้าตามโควต้า, ทางเลือกอื่น (DeepSeek/open-weights) — `1184469221407318_122110537203337114` |
 | 2026-07-05 กลางวัน | NotebookLM คืออะไร ใช้ยังไงให้ได้ประโยชน์สุด | AI Research Assistant จาก Google ฟรี, ตอบจากเอกสารที่อัปโหลดเท่านั้น (ลด hallucination), Audio Overview 4 formats, step-by-step เริ่มใช้ — `1184469221407318_122110833477337114` |
+| 2026-08-16 กลางวัน | 5 เทคนิค prompt engineering จากคู่มือทางการ Anthropic + OpenAI | พูดตรงๆชัดเจน, บอกเหตุผลด้วย, ยกตัวอย่างให้ดู (few-shot), อนุญาตให้ตอบไม่แน่ใจ, งานใหญ่ตัดเป็นงานย่อย + สิ่งที่ไม่จำเป็นแล้ว (role prompting, XML tags) — quote verify ตรง primary claude.com — `1184469221407318_122117009031337114` |
 
 ## อื่นๆ
 
@@ -81,9 +82,9 @@
 
 | Pillar | ใช้ล่าสุด | สถานะ |
 |--------|-----------|-------|
-| 1. AI News | 2026-08-16 เช้า (xAI Grok 4.6, Google HEIR, Anthropic watermarking) | ห่าง 0 slot |
-| 2. วิธีคิด | 2026-08-15 เย็น (Harvard adaptive AI study — ทางแก้ automation bias) | ห่าง 1 slot |
-| 3. How-To | 2026-08-14 เย็น (เช็ควิดีโอ AI deepfake 2 ด่าน) | ห่าง 2 slot |
+| 1. AI News | 2026-08-16 เช้า (xAI Grok 4.6, Google HEIR, Anthropic watermarking) | ห่าง 1 slot |
+| 2. วิธีคิด | 2026-08-15 เย็น (Harvard adaptive AI study — ทางแก้ automation bias) | ห่าง 2 slot |
+| 3. How-To | 2026-08-16 กลางวัน (5 เทคนิค prompt engineering — Anthropic+OpenAI official guides) | ห่าง 0 slot |
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
 > หมายเหตุ 2026-07-27: บังคับใช้กฎนี้ครั้งแรกจริงหลัง Pillar 1 ติดกัน 5 slot — สลับเป็น Pillar 2 สำเร็จ ไม่ต้องถาม Master J เพราะมี precedent เดิม
