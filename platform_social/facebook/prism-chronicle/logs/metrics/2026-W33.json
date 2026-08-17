@@ -1,10 +1,40 @@
 {
- "generatedAt": "2026-08-15T21:30:01.820956+07:00",
+ "generatedAt": "2026-08-16T21:30:01.749081+07:00",
  "sinceDays": 14,
  "pages": {
   "prism_chronicle": {
    "followers": 4,
    "posts": [
+    {
+     "id": "1184469221407318_122117064711337114",
+     "created": "2026-08-16T11:41:00+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122117064711337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
+    {
+     "id": "1184469221407318_122117009031337114",
+     "created": "2026-08-16T05:00:29+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122117009031337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
+    {
+     "id": "1184469221407318_122116993179337114",
+     "created": "2026-08-16T00:59:53+0000",
+     "permalink": "https://www.facebook.com/122106553575337114/posts/122116993179337114",
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
     {
      "id": "1184469221407318_122116920081337114",
      "created": "2026-08-15T11:36:38+0000",
@@ -324,42 +354,22 @@
      "shares": 0,
      "reach": null,
      "engagementPct": null
-    },
-    {
-     "id": "1184469221407318_122114929521337114",
-     "created": "2026-08-01T11:14:46+0000",
-     "permalink": "https://www.facebook.com/122106553575337114/posts/122114929521337114",
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
-    },
-    {
-     "id": "1184469221407318_122114893215337114",
-     "created": "2026-08-01T05:00:01+0000",
-     "permalink": "https://www.facebook.com/122106553575337114/posts/122114893215337114",
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
-    },
-    {
-     "id": "1184469221407318_122114866317337114",
-     "created": "2026-08-01T00:42:11+0000",
-     "permalink": "https://www.facebook.com/122106553575337114/posts/122114866317337114",
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
     }
    ]
   },
   "ai_in_mind": {
    "followers": 70,
    "posts": [
+    {
+     "id": "108423905655889_906001432566946",
+     "created": "2026-08-16T07:58:04+0000",
+     "permalink": "https://www.facebook.com/reel/1066267655767580/",
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "reach": null,
+     "engagementPct": null
+    },
     {
      "id": "108423905655889_902531999580556",
      "created": "2026-08-12T06:30:58+0000",
@@ -464,26 +474,6 @@
      "id": "108423905655889_893972197103203",
      "created": "2026-08-02T02:12:01+0000",
      "permalink": "https://www.facebook.com/844030372097386/posts/893972197103203",
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
-    },
-    {
-     "id": "108423905655889_893344897165933",
-     "created": "2026-08-01T08:48:34+0000",
-     "permalink": "https://www.facebook.com/844030372097386/posts/893344897165933",
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "reach": null,
-     "engagementPct": null
-    },
-    {
-     "id": "108423905655889_893122210521535",
-     "created": "2026-08-01T02:08:09+0000",
-     "permalink": "https://www.facebook.com/844030372097386/posts/893122210521535",
      "likes": 0,
      "comments": 0,
      "shares": 0,
