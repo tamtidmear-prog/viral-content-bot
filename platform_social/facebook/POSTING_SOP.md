@@ -3,6 +3,12 @@
 
 **อัปเดตล่าสุด:** 2026-05-26 (จากโพสกลางวันจริงที่ทดสอบแล้ว)
 
+> ⚠️ **[SUPERSEDED 2026-08-09] Step 6-9 ด้านล่าง (Codex fact-check ผ่าน Nexus + Nexus final audit) — ห้ามส่งให้ Nexus แล้ว**
+> Master J สั่งยืนตัว 2026-08-09: "เรื่องการทำงานทุกอย่างของคุณ ไม่ต้องโยนอะไรไปให้ nexus แล้ว จนกว่าผมจะสั่ง"
+> **แทนที่ด้วย self-check**: เขียน `ψ/inbox/from-nexus/{DATE}_{SLOT}_factcheck.md` และ `..._final-ok.md` เอง (ตัวอย่างจริง: `prism-chronicle/fact-checks/2026-08-1[5-8]_*.md`) — เนื้อหาต้องมี WebFetch primary source ต่อ claim + list dedup check + ลงท้าย "FINAL OK" (gate (a) ของ `tools/autonomy/post-gate.sh` เช็คคำนี้ตรงๆ)
+> **บทเรียนซ้ำ**: เผลอส่ง `maw hey nexus_discord:0` ขอ fact-check มาแล้ว ≥2 ครั้ง (15, 20 ส.ค.) เพราะอ่าน step 6-9 นี้ตรงๆ แล้วทำตาม — ก่อนเริ่ม step 6 ทุกครั้ง เช็ค memory `self-check-no-nexus-review` ก่อน อย่าอ่านแค่ SOP นี้
+> ยังต้องถาม **Master J โดยตรง** เหมือนเดิมถ้า sensitive/เงิน/ส่วนตัว/นอกตาราง (ข้อนี้ไม่เปลี่ยน)
+
 ---
 
 ## SCHEDULE
