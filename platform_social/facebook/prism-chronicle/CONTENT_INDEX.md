@@ -89,6 +89,7 @@
 
 > หมายเหตุ 2026-08-20: slot 19 ส.ค. ทุกช่วง + 20 ส.ค. เช้า ไม่ได้โพส (ตรวจ ground truth ผ่าน Graph API confirm — ไม่มี backfill ตามกฎ ROUTINE.md ข้อ 2)
 > หมายเหตุ 2026-08-22: slot 21 ส.ค. ทุกช่วง ไม่ได้โพส (พบ draft+factcheck ค้างใน drafts/from-nexus แต่ไม่มี posted/ หรือ CONTENT_INDEX entry — ไม่ backfill ตามกฎเดิม)
+> หมายเหตุ 2026-08-25: slot 24 ส.ค. เย็น ไม่ได้โพส — draft (Pillar 2: 529 Overloaded) + infographic + podcast + self fact-check ทำเสร็จครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อน (session ย้ายไปทำ MV งานเร่งที่ Master J สั่งตรง) — ไม่ backfill ตาม ROUTINE.md ข้อ 2, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-24_เย็น_ai_news.md (Nothing is Deleted)
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
 > หมายเหตุ 2026-07-27: บังคับใช้กฎนี้ครั้งแรกจริงหลัง Pillar 1 ติดกัน 5 slot — สลับเป็น Pillar 2 สำเร็จ ไม่ต้องถาม Master J เพราะมี precedent เดิม
