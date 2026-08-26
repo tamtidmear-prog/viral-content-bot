@@ -91,6 +91,7 @@
 > หมายเหตุ 2026-08-22: slot 21 ส.ค. ทุกช่วง ไม่ได้โพส (พบ draft+factcheck ค้างใน drafts/from-nexus แต่ไม่มี posted/ หรือ CONTENT_INDEX entry — ไม่ backfill ตามกฎเดิม)
 > หมายเหตุ 2026-08-25: slot 24 ส.ค. เย็น ไม่ได้โพส — draft (Pillar 2: 529 Overloaded) + infographic + podcast + self fact-check ทำเสร็จครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อน (session ย้ายไปทำ MV งานเร่งที่ Master J สั่งตรง) — ไม่ backfill ตาม ROUTINE.md ข้อ 2, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-24_เย็น_ai_news.md (Nothing is Deleted)
 > หมายเหตุ 2026-08-26: slot 25 ส.ค. เย็น ไม่ได้โพส — draft (Pillar 3: เทียบฟีเจอร์ Memory 3 AI) + infographic (แก้ typo 5 จุดด้วย regen 2 รอบ + PIL patch สำเร็จ) + self fact-check ทำเสร็จครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อนวันเปลี่ยน — ไม่ backfill ตาม ROUTINE.md ข้อ 2, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-25_เย็น_ai_news.md (Nothing is Deleted)
+> หมายเหตุ 2026-08-26: slot 26 ส.ค. เช้า ไม่ได้โพส — reuse content เดิม (Pillar 3: เทียบฟีเจอร์ Memory 3 AI) เตรียมครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อน (07:30-08:45) — ไม่ backfill, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-26_เช้า_ai_news.md · slot 26 ส.ค. กลางวัน (autonomy:true) ก็ไม่ได้โพส — window ปิดก่อนที่ headless runner จะ spawn (ไม่มี draft ค้างให้ resume) — ไม่ backfill ตามกฎเดิม
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
 > หมายเหตุ 2026-07-27: บังคับใช้กฎนี้ครั้งแรกจริงหลัง Pillar 1 ติดกัน 5 slot — สลับเป็น Pillar 2 สำเร็จ ไม่ต้องถาม Master J เพราะมี precedent เดิม
