@@ -83,13 +83,14 @@
 
 | Pillar | ใช้ล่าสุด | สถานะ |
 |--------|-----------|-------|
-| 1. AI News | 2026-08-24 กลางวัน (Cloudflare Kitesurf, Claude text watermark, OpenAI GPT-5.6 price cut) | ห่าง 1 slot |
-| 2. วิธีคิด | 2026-08-25 เช้า (529 Overloaded — วินิจฉัย AI error) | ห่าง 0 slot |
-| 3. How-To | 2026-08-23 กลางวัน (5 ขั้นตอน AI Fact-Check) | ห่าง 2 slot |
+| 1. AI News | 2026-08-25 กลางวัน (CoSnitch CVE-2026-24301, Claude Academy, OpenAI Sol price cut) | ห่าง 0 slot |
+| 2. วิธีคิด | 2026-08-25 เช้า (529 Overloaded — วินิจฉัย AI error) | ห่าง 1 slot |
+| 3. How-To | 2026-08-23 กลางวัน (5 ขั้นตอน AI Fact-Check) | ห่าง 3 slot |
 
 > หมายเหตุ 2026-08-20: slot 19 ส.ค. ทุกช่วง + 20 ส.ค. เช้า ไม่ได้โพส (ตรวจ ground truth ผ่าน Graph API confirm — ไม่มี backfill ตามกฎ ROUTINE.md ข้อ 2)
 > หมายเหตุ 2026-08-22: slot 21 ส.ค. ทุกช่วง ไม่ได้โพส (พบ draft+factcheck ค้างใน drafts/from-nexus แต่ไม่มี posted/ หรือ CONTENT_INDEX entry — ไม่ backfill ตามกฎเดิม)
 > หมายเหตุ 2026-08-25: slot 24 ส.ค. เย็น ไม่ได้โพส — draft (Pillar 2: 529 Overloaded) + infographic + podcast + self fact-check ทำเสร็จครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อน (session ย้ายไปทำ MV งานเร่งที่ Master J สั่งตรง) — ไม่ backfill ตาม ROUTINE.md ข้อ 2, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-24_เย็น_ai_news.md (Nothing is Deleted)
+> หมายเหตุ 2026-08-26: slot 25 ส.ค. เย็น ไม่ได้โพส — draft (Pillar 3: เทียบฟีเจอร์ Memory 3 AI) + infographic (แก้ typo 5 จุดด้วย regen 2 รอบ + PIL patch สำเร็จ) + self fact-check ทำเสร็จครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อนวันเปลี่ยน — ไม่ backfill ตาม ROUTINE.md ข้อ 2, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-25_เย็น_ai_news.md (Nothing is Deleted)
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
 > หมายเหตุ 2026-07-27: บังคับใช้กฎนี้ครั้งแรกจริงหลัง Pillar 1 ติดกัน 5 slot — สลับเป็น Pillar 2 สำเร็จ ไม่ต้องถาม Master J เพราะมี precedent เดิม
