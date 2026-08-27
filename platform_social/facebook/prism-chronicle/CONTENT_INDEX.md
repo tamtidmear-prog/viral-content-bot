@@ -46,6 +46,7 @@
 | 2026-07-05 กลางวัน | NotebookLM คืออะไร ใช้ยังไงให้ได้ประโยชน์สุด | AI Research Assistant จาก Google ฟรี, ตอบจากเอกสารที่อัปโหลดเท่านั้น (ลด hallucination), Audio Overview 4 formats, step-by-step เริ่มใช้ — `1184469221407318_122110833477337114` |
 | 2026-08-16 กลางวัน | 5 เทคนิค prompt engineering จากคู่มือทางการ Anthropic + OpenAI | พูดตรงๆชัดเจน, บอกเหตุผลด้วย, ยกตัวอย่างให้ดู (few-shot), อนุญาตให้ตอบไม่แน่ใจ, งานใหญ่ตัดเป็นงานย่อย + สิ่งที่ไม่จำเป็นแล้ว (role prompting, XML tags) — quote verify ตรง primary claude.com — `1184469221407318_122117009031337114` |
 | 2026-08-23 กลางวัน | 5 ขั้นตอน AI Fact-Check ยังไงไม่ให้โดนหลอก | เปิดโหมดค้นเว็บสด, อย่าเชื่อสรุปเป็นคำพูดตรง (เปิดต้นฉบับก่อน), เช็คหลายแหล่งอิสระ ≥2, สังเกตคำเผื่อไว้ ("รายงานว่า"/"คาดว่า"), รู้ข้อจำกัดของ AI เอง — self-check WebFetch primary support.claude.com+ai.google.dev ตรง — `1184469221407318_122118003345337114` |
+| 2026-08-27 กลางวัน | เทียบฟีเจอร์ "จำเราได้ข้ามแชท" — Claude vs ChatGPT vs Gemini | Claude Memory (Team/Enterprise 11 ก.ย. 2025→Pro/Max 23 ต.ค. 2025→ฟรี 2 มี.ค. 2026→on-by-default ฟรี/Pro/Max 25 ส.ค. 2026), ChatGPT ฟรีตั้งแต่ 3 มิ.ย. 2025 + ระบบ Dreaming (มิ.ย. 2026), Gemini Personal Intelligence beta 14 ม.ค. 2026 (18+, บัญชีส่วนตัว) — self-check WebFetch primary claude.com/blog/memory + support.claude.com/release-notes + gemini.google/overview/personal-intelligence ตรง, พบ+แก้ fact เก่าผิด (draft เดิมเขียนว่า Claude ฟรีไม่มี Memory — ผิดไปแล้วตั้งแต่ มี.ค. 2026) — `1184469221407318_122118577473337114` |
 
 ## อื่นๆ
 
@@ -83,9 +84,9 @@
 
 | Pillar | ใช้ล่าสุด | สถานะ |
 |--------|-----------|-------|
-| 1. AI News | 2026-08-25 กลางวัน (CoSnitch CVE-2026-24301, Claude Academy, OpenAI Sol price cut) | ห่าง 0 slot |
-| 2. วิธีคิด | 2026-08-25 เช้า (529 Overloaded — วินิจฉัย AI error) | ห่าง 1 slot |
-| 3. How-To | 2026-08-23 กลางวัน (5 ขั้นตอน AI Fact-Check) | ห่าง 3 slot |
+| 1. AI News | 2026-08-25 กลางวัน (CoSnitch CVE-2026-24301, Claude Academy, OpenAI Sol price cut) | ห่าง 1 slot |
+| 2. วิธีคิด | 2026-08-25 เช้า (529 Overloaded — วินิจฉัย AI error) | ห่าง 2 slot |
+| 3. How-To | 2026-08-27 กลางวัน (เทียบฟีเจอร์ Memory 3 AI) | ห่าง 0 slot |
 
 > หมายเหตุ 2026-08-20: slot 19 ส.ค. ทุกช่วง + 20 ส.ค. เช้า ไม่ได้โพส (ตรวจ ground truth ผ่าน Graph API confirm — ไม่มี backfill ตามกฎ ROUTINE.md ข้อ 2)
 > หมายเหตุ 2026-08-22: slot 21 ส.ค. ทุกช่วง ไม่ได้โพส (พบ draft+factcheck ค้างใน drafts/from-nexus แต่ไม่มี posted/ หรือ CONTENT_INDEX entry — ไม่ backfill ตามกฎเดิม)
@@ -93,6 +94,7 @@
 > หมายเหตุ 2026-08-26: slot 25 ส.ค. เย็น ไม่ได้โพส — draft (Pillar 3: เทียบฟีเจอร์ Memory 3 AI) + infographic (แก้ typo 5 จุดด้วย regen 2 รอบ + PIL patch สำเร็จ) + self fact-check ทำเสร็จครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อนวันเปลี่ยน — ไม่ backfill ตาม ROUTINE.md ข้อ 2, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-25_เย็น_ai_news.md (Nothing is Deleted)
 > หมายเหตุ 2026-08-26: slot 26 ส.ค. เช้า ไม่ได้โพส — reuse content เดิม (Pillar 3: เทียบฟีเจอร์ Memory 3 AI) เตรียมครบ 100% รอ Master J อนุมัติ STEP 9 แต่ window ปิดก่อน (07:30-08:45) — ไม่ backfill, fable-gate abort แล้ว
 > **[แก้ไข]** slot 26 ส.ค. กลางวัน (autonomy:true) ไม่ได้โพส — **มี draft ค้างจริง** (autonomy runner เขียนไว้แล้ว: Pillar 1 Google A2A→Linux Foundation AAIF + Nvidia-Perplexity investment, drafts/2026-08-26_noon_ai_news.md) แต่ window ปิดก่อนโพสจริง (บันทึกผิดไว้ก่อนหน้าว่า "ไม่มี draft" — ตรวจพบทีหลังว่าผิด) — ไม่ backfill ตามกฎเดิม, เก็บ draft ไว้ใช้สล็อต P1 ถัดไปแทน (ยังใหม่ไม่ stale)
+> **[ปิดเคส] 2026-08-27**: หัวข้อ Memory 3 AI (พลาด window 3 รอบ: 25เย็น→26เช้า→26เย็น) โพสสำเร็จในที่สุดที่ slot 27 ส.ค. กลางวัน — แต่ก่อนโพส self fact-check รอบใหม่พบว่า **เนื้อหาเดิม stale จริง ไม่ใช่แค่ timing** (ตามที่บันทึกไว้ก่อนหน้าว่า "เป็นเรื่อง timing ไม่ใช่ปัญหาคอนเทนต์" — ผิด): Claude Memory มีอัปเดตสำคัญ 2 รอบระหว่างที่ draft ค้างอยู่ (2 มี.ค. 2026 ขยายให้ผู้ใช้ฟรี, 25 ส.ค. 2026 เปลี่ยนเป็น on-by-default) ทำให้ claim หลักของโพส ("Claude ฟรีไม่มี Memory") กลายเป็นเท็จ — เขียนใหม่ทั้ง section Claude + สรุปเทียบก่อนโพส บทเรียน: draft ที่ค้างข้ามหลายวัน/หลายสัปดาห์ต้อง re-verify เต็มรูปแบบเสมอ ไม่ใช่แค่เช็ค dedup/window — เนื้อหาที่ "ยัง valid" วันนี้อาจไม่ valid แล้ววันถัดไปถ้าเป็นเรื่องฟีเจอร์ผลิตภัณฑ์ที่อัปเดตบ่อย (ต่างจากข่าวประวัติศาสตร์/how-to เชิงหลักการที่ไม่ค่อยเปลี่ยน) — สลับจาก Pillar 1 (โพสจริงล่าสุด 25 ส.ค. กลางวัน) เป็น Pillar 3 ตามกฎ rotation
 > หมายเหตุ 2026-08-27: slot 26 ส.ค. เย็น ไม่ได้โพส (ครั้งที่ 3 ติดต่อกันของหัวข้อ Memory 3 AI — 25เย็น→26เช้า→26เย็น ล้วนพลาด window ก่อนอนุมัติ) — เนื้อหายัง valid ไม่มีปัญหา เป็นเรื่อง timing การอนุมัติ ไม่ใช่ปัญหาคอนเทนต์ — ไม่ backfill, fable-gate abort แล้ว, draft เก็บไว้ที่ drafts/2026-08-26_เย็น_ai_news.md
 
 > กฎ: ถ้า Pillar 1 ทำติดกัน ≥2 slot → slot ถัดไปสลับเป็น Pillar 2 หรือ 3
