@@ -25,6 +25,7 @@
 | 13 มิ.ย. | เย็น | Veo 3.1, Grok 3→4, OpenAI Realtime Voice, AI Coding Agents, EU AI Act |
 | 14 มิ.ย. | เช้า | MiniMax M3 (Sparse Attention 1M token), Anthropic IPO S-1 ($965B), Google TurboQuant (KV Cache 6x), NVIDIA×Cadence sim-to-real robotics, Colorado AI Act SB 26-189 repeal+reenact |
 | 21 มิ.ย. | เย็น | SpaceX×Cursor $60B, ChatGPT <50%, Fable 5 trial, Penn light-matter |
+| 2026-08-29 | กลางวัน | Anthropic Model Hardware Standard (MHS) research preview 27 ส.ค. 2026 — ให้ AI คุมหุ่นยนต์/เครื่องมือแล็บปลอดภัย / ศาลสหรัฐฯ (ผู้พิพากษา Rita Lin) ตัดสิน Pentagon ขึ้นบัญชีดำ Anthropic ผิดกฎหมาย (ละเมิด First+Fifth Amendment, คำตัดสิน 59 หน้า 27 ส.ค.) / Meta ปิดช่องโหว่ความเป็นส่วนตัวแว่น Ray-Ban รอบสอง (กล้องหยุดเมื่อปิดไฟ LED, ประกาศผ่าน Threads โดย Alex Himel 27 ส.ค.) — self-check ตามกฎ 9 ส.ค., Pentagon case: primary ศาล 403 ทั้ง 3 แหล่ง → cross-verify ≥8 แหล่งอิสระ, Meta LED: cross-verify ≥6 แหล่ง, quote "illegal and baseless" hedge attribution ชัดเจน — caption 4,545 ตัวอักษร — `1184469221407318_122118831837337114` |
 
 ## Pillar 2: วิธีคิด (Thinking Process)
 
@@ -85,9 +86,9 @@
 
 | Pillar | ใช้ล่าสุด | สถานะ |
 |--------|-----------|-------|
-| 1. AI News | 2026-08-25 กลางวัน (CoSnitch CVE-2026-24301, Claude Academy, OpenAI Sol price cut) | ห่าง 1 slot |
-| 2. วิธีคิด | 2026-08-25 เช้า (529 Overloaded — วินิจฉัย AI error) | ห่าง 2 slot |
-| 3. How-To | 2026-08-27 กลางวัน (เทียบฟีเจอร์ Memory 3 AI) | ห่าง 0 slot |
+| 1. AI News | 2026-08-29 กลางวัน (MHS, Pentagon-Anthropic คำตัดสินศาล, Meta Ray-Ban LED) | ห่าง 0 slot (ติดกัน 2 กับ 28 ส.ค. — ห้าม P1 ซ้ำ slot ถัดไป) |
+| 2. วิธีคิด | 2026-08-25 เช้า (529 Overloaded — วินิจฉัย AI error) | ห่าง 3 slot |
+| 3. How-To | 2026-08-27 กลางวัน (เทียบฟีเจอร์ Memory 3 AI) | ห่าง 1 slot |
 
 > หมายเหตุ 2026-08-20: slot 19 ส.ค. ทุกช่วง + 20 ส.ค. เช้า ไม่ได้โพส (ตรวจ ground truth ผ่าน Graph API confirm — ไม่มี backfill ตามกฎ ROUTINE.md ข้อ 2)
 > หมายเหตุ 2026-08-22: slot 21 ส.ค. ทุกช่วง ไม่ได้โพส (พบ draft+factcheck ค้างใน drafts/from-nexus แต่ไม่มี posted/ หรือ CONTENT_INDEX entry — ไม่ backfill ตามกฎเดิม)
